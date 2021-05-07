@@ -1,0 +1,115 @@
+---
+title: "Relationships"
+linktitle: "7: Relationships"
+date: "2021-01-11"
+start_date: "2021-01-11"
+end_date: "2021-01-15"
+menu:
+  content:
+    parent: Course content
+    weight: 7
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-tabs.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sGarIxAwCcmheAoKaLRGy1j"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "GnsuXEI3KoI", "Introduction", "1", TRUE,
+  "fhlbFgo5UQU", "The dangers of dual y-axes", "dual-y-axes", FALSE,
+  "emMc3qtw3z0", "Visualizing correlations", "correlations", FALSE,
+  "FsnM8e6P71g", "Visualizing regressions", "regression", FALSE
+)
+```
+
+## Readings
+
+- <i class="fas fa-book"></i> Chapter 9 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
+- <i class="fas fa-book"></i> [Chapter 12](https://serialmentor.com/dataviz/visualizing-associations.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- <i class="fas fa-external-link-square-alt"></i> Kieran Healy, ["Two y-axes"](https://kieranhealy.org/blog/archives/2016/01/16/two-y-axes/)
+- <i class="fas fa-external-link-square-alt"></i> [Two Alternatives to Using a Second Y-Axis](http://stephanieevergreen.com/two-alternatives-to-using-a-second-y-axis/) & [Illusion of success](http://junkcharts.typepad.com/junk_charts/2006/06/illusion_of_suc.html) & [Dissecting two axes](http://junkcharts.typepad.com/junk_charts/2006/01/dissecting_two_.html)
+- <i class="fas fa-external-link-square-alt"></i> [Dual-Scaled Axes in Graphs: Are They Ever the Best Solution?](http://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf) [@Few:2008]
+
+### Recommended
+
+- <i class="far fa-file-pdf"></i> ["A Study on Dual-Scale Data Charts"](https://www.lri.fr/~isenberg/publications/papers/Isenberg_2011_ASO.pdf) [@IsenbergBezerianosDragicevic:2011]
+
+### Questions to reflect on
+
+- How can you correctly and honestly communicate relationships between variables? How can you communicate the uncertainty in those relationships?
+- What are the dangers of visualizing two variables?
+- When is it appropriate to use two y-axes?
+
+
+## Slides
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+`r blogdown::shortcode("slide-buttons")`
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_tabs(slide_details, "/slides/07-slides.html")
+```
+
+:::fyi
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```
+
+
+```{cat include=FALSE, eval=FALSE}
+https://www.youtube.com/playlist?list=PLS6tnpTr39sGarIxAwCcmheAoKaLRGy1j
+
+https://youtu.be/GnsuXEI3KoI
+PMAP 8921 • (7) Relationships: (0) Introduction
+
+Introduction to the class session on relationships
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/07-content/
+
+
+https://youtu.be/fhlbFgo5UQU
+PMAP 8921 • (7) Relationships: (1) The dangers of dual y-axes
+
+Discussion about why dual y-axes are dangerous and how you can avoid them 
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/07-content/
+
+
+https://youtu.be/emMc3qtw3z0
+PMAP 8921 • (7) Relationships: (2) Visualizing correlations
+
+Overview of different methods for visualizing correlations, including scatterplots, scatterplot matrices, and correlograms
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/07-content/
+
+  
+https://youtu.be/FsnM8e6P71g
+PMAP 8921 • (7) Relationships: (3) Visualizing regressions
+
+Overview of different methods for visualizing regresison results, including coefficient plots and marginal effects plots
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/07-content/
+
+
+https://youtu.be/zfEAmJzfbkE
+PMAP 8921 • (7) Relationships: Example
+
+Demonstration of how to create dual y-axes, scatterplot matrices, coefficient plots, and marginal effects plots with ggplot2 and R
+
+Download the data and see the polished code at https://datavizm20.classes.andrewheiss.com/example/07-example/
+  
+```

@@ -1,0 +1,104 @@
+---
+title: "Uncertainty"
+linktitle: "6: Uncertainty"
+date: "2021-01-11"
+start_date: "2021-01-11"
+end_date: "2021-01-15"
+menu:
+  content:
+    parent: Course content
+    weight: 6
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-tabs.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sFmy596lUElQakCrKDSHUUU"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "eZTp8Hninv4", "Introduction", "1", TRUE,
+  "TCQwkwlj4kM", "Communicating uncertainty", "communicating", FALSE,
+  "X6zPEOPo-2M", "Visualizing uncertainty", "visualizing", FALSE
+)
+```
+
+## Readings
+
+- <i class="fas fa-book"></i> [Chapter 7](https://serialmentor.com/dataviz/histograms-density-plots.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- <i class="fas fa-book"></i> Chapters 4, 7, and 11 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
+- <i class="fas fa-external-link-square-alt"></i> [Why It's So Hard for Us to Visualize Uncertainty](https://hbr.org/2016/11/why-its-so-hard-for-us-to-visualize-uncertainty)
+- <i class="fab fa-youtube"></i> [Amanda Cox's keynote address at the 2017 OpenVis Conf](https://www.youtube.com/watch?v=0L1tGo-DvD0)
+- <i class="fas fa-external-link-square-alt"></i> [Communicating Uncertainty When Lives Are on the Line](https://eagereyes.org/blog/2017/communicating-uncertainty-when-lives-are-on-the-line)
+- <i class="fas fa-external-link-square-alt"></i> [Showing uncertainty during the live election forecast](https://flowingdata.com/2016/11/15/showing-uncertainty-during-the-live-election-forecast/) & [Trolling the uncertainty dial](https://flowingdata.com/2017/06/27/trolling-the-uncertainty-dial/)
+
+### Questions to reflect on
+
+- Why is it important to deal with uncertainty in data?
+- What was good or bad about the New York Times' 2016 live election guage?
+- Why is it so hard to visualize uncertainty?
+- Why is it so hard to communicate uncertainty to others?
+
+
+## Slides
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+`r blogdown::shortcode("slide-buttons")`
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_tabs(slide_details, "/slides/06-slides.html")
+```
+
+:::fyi
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```
+
+
+```{cat include=FALSE, eval=FALSE}
+https://www.youtube.com/playlist?list=PLS6tnpTr39sFmy596lUElQakCrKDSHUUU
+
+https://youtu.be/eZTp8Hninv4
+PMAP 8921 • (6) Uncertainty: (0) Introduction
+
+Introduction to the class session on uncertainty.
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/06-content/
+
+
+https://youtu.be/TCQwkwlj4kM
+PMAP 8921 • (6) Uncertainty: (1) Communicating uncertainty
+
+Discussion about why uncertainty is both important and difficult to communicate 
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/06-content/
+
+
+https://youtu.be/X6zPEOPo-2M
+PMAP 8921 • (6) Uncertainty: (2) Visualizing uncertainty
+
+Overview of different methods for visualizing uncertainty, including histograms, density plots, ridge plots, box plots, violin plots, and half-versions of all these plots
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/06-content/
+
+
+https://youtu.be/40dW63jTbsk
+PMAP 8921 • (6) Uncertainty: Example
+
+Demonstration of how to create histograms, density plots, ridge plots, box plots, violin plots with ggplot2 and R
+
+Download the data and see the polished code at https://datavizm20.classes.andrewheiss.com/example/06-example/
+  
+```

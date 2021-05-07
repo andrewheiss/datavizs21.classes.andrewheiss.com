@@ -1,0 +1,46 @@
+---
+title: "Mapping data to graphics"
+linktitle: "3: Mapping data to graphics"
+date: "2020-05-13"
+menu:
+  lesson:
+    parent: Lessons
+    weight: 3
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-syllabus-no-bib.csl"
+editor_options: 
+  chunk_output_type: console
+---
+
+## Part 1: Data visualization with **ggplot2**
+
+For the first part of today’s lesson, you need to work through RStudio’s introductory primers for **ggplot2**. You’ll do these in your browser and type code and see results there.
+
+It seems like there are a lot, but they’re short and go fairly quickly (especially as you get the hang of the `ggplot()` syntax). Complete these:
+
+-   **Visualize Data**
+    -   [Exploratory Data Analysis](https://rstudio.cloud/learn/primers/3.1)
+    -   [Bar Charts](https://rstudio.cloud/learn/primers/3.2)
+    -   [Histograms](https://rstudio.cloud/learn/primers/3.3)
+    -   [Boxplots and Counts](https://rstudio.cloud/learn/primers/3.4)
+    -   [Scatterplots](https://rstudio.cloud/learn/primers/3.5)
+    -   [Line plots](https://rstudio.cloud/learn/primers/3.6)
+    -   [Overplotting and Big Data](https://rstudio.cloud/learn/primers/3.7)
+    -   [Customize Your Plots](https://rstudio.cloud/learn/primers/3.8)
+
+## Part 2: Reshaping data with **tidyr**
+
+For the last part of today’s lesson, you’ll work through just one RStudio primer to learn how to use the **tidyr** package to reshape data from wide to long and back to wide.
+
+Complete this:
+
+-   **Tidy Your Data**
+    -   [Reshape Data](https://rstudio.cloud/learn/primers/4.1)
+
+<div class="note">
+
+Recent versions of **tidyr** have renamed these core functions: `gather()` is now `pivot_longer()` and `spread()` is now `pivot_wider()`. The syntax for these `pivot_*()` functions is *slightly* different from what it was in `gather()` and `spread()`, so you can’t just replace the names. Fortunately, both `gather()` and `spread()` still work and won’t go away for a while, so you can still use them as you learn about reshaping and tidying data. It would be worth learning how the newer `pivot_*()` functions work, eventually, though ([see here for examples](https://tidyr.tidyverse.org/articles/pivot.html)).
+
+</div>

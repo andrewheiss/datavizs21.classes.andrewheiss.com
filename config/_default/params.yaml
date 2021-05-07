@@ -1,0 +1,318 @@
+# SITE SETUP
+# Guide: https://sourcethemes.com/academic/docs/get-started/
+# Documentation: https://sourcethemes.com/academic/docs/
+
+############################
+## Theme
+############################
+
+# Choose a theme.
+#   Latest themes (may require updating): https://sourcethemes.com/academic/themes/
+#   Browse built-in themes in `themes/academic/data/themes/`
+#   Browse user installed themes in `data/themes/`
+theme: "plasma"
+
+# Enable users to switch between day and night mode?
+day_night: false
+
+# Override the theme's font set (optional).
+#   Latest font sets (may require updating): https://sourcethemes.com/academic/themes/
+#   Browse built-in font sets in `themes/academic/data/fonts/`
+#   Browse user installed font sets in `data/fonts/`
+font: "barlow"
+
+# Choose a font size.
+# Sizes: XS (extra small), S (small), M (medium), L (large - DEFAULT), XL (extra large)
+font_size: "L"
+
+
+############################
+## Basic Info
+############################
+
+# Website type
+#   Improve how search engines understand your site.
+#   For personal sites, choose "Person".
+#   For organizations and projects, choose from https://schema.org/Organization#subtypes
+#   E.g. Person, Organization, LocalBusiness, Project, EducationalOrganization
+site_type: "Course"
+
+# Description for social sharing and search engines. If undefined, superuser role is used in place.
+description: "Communicate science and statistics with beautiful graphics made with R and ggplot2"
+
+
+############################
+## Site Features
+############################
+
+# Enable source code highlighting? true/false
+# Documentation: https://sourcethemes.com/academic/docs/writing-markdown-latex/#highlighting-options
+highlight: false
+
+# Add support for highlighting additional languages
+highlight_languages: 
+  - r
+
+# highlight_style: "github-gist"  # For supported styles, see https://cdnjs.com/libraries/highlight.js/
+
+# Enable LaTeX math rendering? true/false
+#   If false, you can enable math on a per page basis as needed.
+math: true
+
+# Enable diagram rendering? true/false
+#   If false, you can enable diagrams on a per page basis as needed.
+diagram: false
+
+# Privacy pack
+#   Show a cookie consent message to visitors
+#   Anonymize IP in Google Analytics (if enabled)
+privacy_pack: false
+
+# Enable visitors to edit pages?
+#   `repo` defines the repository URL. `editable` defines which page types can be edited.
+edit_page:
+  repo_url: 'https://github.com/andrewheiss/datavizs21.classes.andrewheiss.com'
+  content_dir: ''
+  repo_branch: master
+  editable:
+    docs: true
+    page: false
+    post: false
+
+# Show related content at the bottom of pages?
+show_related:
+  docs: false
+  page: false
+  post: false
+  project: false
+  publication: false
+  talk: false
+
+
+############################
+## Contact details
+##
+## These details power the Contact widget (if enabled).
+## Additionally, for organizations, these details may be used to enrich search engine results.
+############################
+
+author: Andrew Heiss
+
+instructor: 
+  name: Dr. Andrew Heiss
+  email: aheiss@gsu.edu
+  url: "https://www.andrewheiss.com"
+  twitter: andrewheiss
+  github: andrewheiss
+  office: "357 Andrew Young School"
+  contact_policy: >-
+    E-mail and Slack are the best ways to get in contact with me. I will try to respond to all course-related e-mails and Slack messages within 24 hours (*really*), but also remember that life can be busy and chaotic for everyone (including me!), so if I don't respond right away, don't worry!
+  appointment_url: https://calendly.com/andrewheiss/meeting/
+
+course:
+  number: "PMAP 8921"
+  semester: "Summer 2021"
+  days: "Any day"
+  time: "Any time"
+  # location: "Online only (thanks, COVID-19, for ruining everything)"
+  dates: "June 7–July 26, 2021"
+  github: "andrewheiss/datavizs21.classes.andrewheiss.com"
+  copyrightYear: "2021"
+  slack: "https://gsudatavizs21.slack.com"
+
+university: 
+  name: Georgia State University
+  url: "https://www.gsu.edu"
+
+school:
+  name: Andrew Young School of Policy Studies
+  url: "https://aysps.gsu.edu/"
+
+
+############################
+## Social
+############################
+
+# Default image for social sharing and search engines. Place image in `static/img/` folder and specify image name here.
+sharing_image: "social-image-s21.png"
+
+# Twitter username (without @). Used when a visitor shares your site on Twitter.
+twitter: "andrewheiss"
+
+
+############################
+## Regional Settings
+############################
+
+# Date and time format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
+#   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+date_format: "January 2, 2006"
+#   Examples: "3:04 pm" or "15:04"
+time_format: "3:04 PM"
+
+
+############################
+## Advanced
+############################
+
+# Main menu alignment (l = left, c = center, r = right) and logo options.
+main_menu:
+  enable: true
+  align: r
+  show_logo: true
+  highlight_active_link: true
+  show_language: false
+  show_day_night: false
+  show_search: false
+
+# Show estimated reading time for posts? (true/false)
+reading_time: false
+
+# Display next/previous section pager? (true/false)
+section_pager: false
+docs_section_pager: false  # Display pager in Docs layout (e.g. tutorials)?
+
+# Enable in-built social sharing buttons? (true/false)
+sharing: false
+
+# Show a copyright license from creativecommons.org in the site footer?
+# Page specific copyright licenses are also possible by adding this option to a page's front matter.
+copyright_license:
+  enable: false
+  allow_derivatives: false
+  share_alike: true
+  allow_commercial: false
+  notice: 'This work is licensed under {license}'
+
+# Abstract length (characters) in the Compact and Portfolio Card list views. Also, see `summaryLength` in `config.toml`.
+abstract_length: 135
+
+# Load JS plugins
+#   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
+plugins_js: []
+
+# Avatars.
+# An avatar is an image that appears next to a user's name.
+# An avatar can be uploaded as an image named `avatar` to each user's profile or fetched from Gravatar.com.
+avatar:
+  # Get user avatars from Gravatar.com? (true/false)
+  gravatar: false
+  # Choose a shape for avatar images. Options: circle, square.
+  shape: circle
+
+# Configuration of publication pages.
+publications:
+  # Date format (refer to https://sourcethemes.com/academic/docs/customization/#date-format )
+  #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
+  date_format: January 2006
+
+  # Citation style ("apa" or "mla")
+  citation_style: apa
+
+# Configuration of project pages.
+projects:
+  # Views for associated content.
+  #   1: List
+  #   2: Compact
+  #   3: Card
+  #   4: Citation (publications only)
+  post_view: 2
+  publication_view: 2
+  talk_view: 2
+
+
+############################
+## Comments
+############################
+
+comments:
+  # Comment provider:
+  #   0: Disabled
+  #   1: Disqus (https://disqus.com)
+  #   2: Commento (https://commento.io)
+  engine: 0
+
+  # Which page types are commentable?
+  commentable:
+    page: true
+    post: true
+    docs: true
+    project: true
+    publication: true
+    talk: true
+
+  # Configuration of Disqus.
+  disqus:
+    shortname: ''  # Paste the shortname from your Disqus dashboard
+    show_count: true  # Show comment count in page header? (true/false)
+
+  # Configuration of Commento.
+  commento:
+    # If self-hosting Commento, enter its URL here (e.g. "https://commento.?.com"), otherwise leave empty.
+    url: ''
+
+
+############################
+## Search
+############################
+search:
+  # Search provider:
+  #   0: No search engine
+  #   1: Academic (built-in)
+  #   2: Algolia (https://www.algolia.com)
+  engine: 0
+
+  # Configuration of Algolia search engine.
+  # Paste the values from your Algolia dashboard.
+  algolia:
+    app_id: ''
+    api_key: ''
+    index_name: ''
+    show_logo: false
+
+
+############################
+## Maps
+############################
+map:
+  # To show your address on a map in the Contact widget, enter your latitude and longitude (above)
+  # and choose a map provider below.
+  #
+  # To use Google Maps, set `engine` to 1 and enter your API key that can be obtained here:
+  #   https://developers.google.com/maps/documentation/javascript/get-api-key
+  # To use OpenStreetMap tiles, set `engine` to 2.
+  # To use OpenStreetMap on a high traffic site, set `engine` to 3 and enter your API key that can be obtained here:
+  #   https://www.mapbox.com/studio/account/tokens
+  #
+  # Map provider:
+  #   0: No map
+  #   1: Google Maps
+  #   2: OpenStreetMap (Mapnik)
+  #   3: OpenStreetMap (Mapbox)
+  engine: 0
+  api_key: ''
+  zoom: 15
+
+
+############################
+## Marketing
+############################
+marketing:
+  google_analytics: ''
+  google_tag_manager: ''
+
+
+############################
+## Content Management System
+############################
+cms:
+  # See https://sourcethemes.com/academic/docs/install/#install-with-web-browser
+  netlify_cms: true
+
+
+############################
+## Icon Pack Extensions
+############################
+icon:
+  pack:
+    ai: false  # Academicons icon pack https://jpswalsh.github.io/academicons/

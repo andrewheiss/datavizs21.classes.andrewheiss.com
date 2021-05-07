@@ -1,0 +1,95 @@
+---
+title: "Truth, beauty, and data revisited"
+linktitle: "15: Truth, beauty, and data revisited"
+date: "2021-01-11"
+start_date: "2021-01-11"
+end_date: "2021-01-15"
+menu:
+  content:
+    parent: Course content
+    weight: 1
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-tabs.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sFYqZMtanRbtB1dKRBN2Rzt"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "TDP_G1RiUmQ", "Introduction", "1", TRUE,
+  "UyVJlbZjwhY", "Telling stories with data", "telling-stories", FALSE,
+  "KHfF8zdxWzM", "Curiosity", "curiosity", FALSE
+)
+```
+
+## Readings
+
+- <i class="fas fa-book"></i> Chapter 12 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
+- <i class="fas fa-book"></i> [Chapter 26](https://serialmentor.com/dataviz/telling-a-story.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- <i class="fas fa-file-pdf"></i> Martin Krzywinski and Alberto Cairo, ["Storytelling"](https://www.nature.com/articles/nmeth.2571.pdf)
+- <i class="fab fa-youtube"></i> Ben Wellington, ["Making data mean more through storytelling"](https://www.youtube.com/watch?v=6xsvGYIxJok)
+- <i class="fab fa-vimeo"></i> Jonathan Schwabish, ["Better Data Communication,"](https://vimeo.com/230757062) National Bureau of Economic Research
+- <i class="fas fa-external-link-square-alt"></i> [Why People Make Bad Charts (and What to Do When it Happens)](https://flowingdata.com/2018/06/28/why-people-make-bad-charts-and-what-to-do-when-it-happens/)
+
+### Questions to reflect on
+
+- Why are stories so powerful?
+- How are stories related to truth?
+- Is it ethical to emphasize certain aspects of the facts in data more than others? How do you decide which facts to use to convince audiences?
+- When you're telling a story about data, you're inherently manipulating audience emotions. Is that okay?
+
+
+## Slides
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+`r blogdown::shortcode("slide-buttons")`
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_tabs(slide_details, "/slides/15-slides.html")
+```
+
+:::fyi
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```
+
+
+```{cat include=FALSE, eval=FALSE}
+https://www.youtube.com/playlist?list=PLS6tnpTr39sFYqZMtanRbtB1dKRBN2Rzt
+
+https://youtu.be/TDP_G1RiUmQ
+PMAP 8921 • (15) Truth, beauty, and data revisited: (0) Introduction
+
+Introduction to the final class session
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/15-content/
+
+
+https://youtu.be/UyVJlbZjwhY
+PMAP 8921 • (15) Truth, beauty, and data revisited: (1) Telling stories with data
+
+Discussion of why it's important to tell stories with data and how to avoid major pitfalls related to manipulation, misinterpretation, ethos, and equity
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/15-content/
+
+  
+https://youtu.be/KHfF8zdxWzM
+PMAP 8921 • (15) Truth, beauty, and data revisited: (2) Curiosity
+
+Discussion of how to continue to learn R by embracing your curiosity and working in public
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/15-content/
+```

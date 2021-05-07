@@ -1,0 +1,297 @@
+---
+title: Syllabus
+slug: syllabus
+citeproc: true
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    toc: true
+    fig_caption: false
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#course-objectives">Course objectives</a></li>
+<li><a href="#important-pep-talk">Important pep talk!</a></li>
+<li><a href="#course-materials">Course materials</a>
+<ul>
+<li><a href="#books-articles-and-other-materials">Books, articles, and other materials</a></li>
+<li><a href="#r-and-rstudio">R and RStudio</a></li>
+<li><a href="#online-help">Online help</a></li>
+</ul></li>
+<li><a href="#course-schedule">Course schedule</a></li>
+<li><a href="#course-policies">Course policies</a>
+<ul>
+<li><a href="#student-hours">Student hours</a></li>
+<li><a href="#learning-during-a-pandemic">Learning during a pandemic</a></li>
+<li><a href="#late-work">Late work</a></li>
+<li><a href="#counseling-and-psychological-services-cps">Counseling and Psychological Services (CPS)</a></li>
+<li><a href="#basic-needs-security">Basic needs security</a></li>
+<li><a href="#laurens-promise">Lauren’s Promise</a></li>
+<li><a href="#academic-honesty">Academic honesty</a></li>
+<li><a href="#special-needs">Special needs</a></li>
+</ul></li>
+<li><a href="#assignments-and-grades">Assignments and grades</a></li>
+<li><a href="#star-wars">Star Wars</a></li>
+</ul>
+</div>
+
+<p>{{% courseinfo %}}</p>
+<div id="course-objectives" class="section level2">
+<h2>Course objectives</h2>
+<p><strong>Data rarely speaks for itself.</strong> On their own, the facts contained in raw data are difficult to understand, and in the absence of beauty and order, it is impossible to understand the truth that the data shows.</p>
+<p>In this class, you’ll learn how to use industry-standard graphic and data design techniques to create beautiful, understandable visualizations and uncover truth in data.</p>
+<p>By the end of this course, you will become (1) literate in data and graphic design principles, and (2) an ethical data communicator, by producing beautiful, powerful, and clear visualizations of your own data. Specifically, you should:</p>
+<ul>
+<li>Understand the principles of data and graphic design</li>
+<li>Evaluate the credibility, ethics, and aesthetics of data visualizations</li>
+<li>Create well-designed data visualizations with appropriate tools</li>
+<li>Share data and graphics in open forums</li>
+<li>Be curious and confident in consuming and producing data visualizations</li>
+</ul>
+<p>This class will expose you to <a href="https://cran.r-project.org/">R</a>—one of the most popular, sought-after, and in-demand statistical programming languages. Armed with the foundation of R skills you’ll learn in this class, you’ll know enough to be able to find how to visualize and analyze any sort of data-based question in the future.</p>
+</div>
+<div id="important-pep-talk" class="section level2">
+<h2>Important pep talk!</h2>
+<p>I <em>promise</em> you can succeed in this class.</p>
+<p>Learning R can be difficult at first—it’s like learning a new language, just like Spanish, French, or Chinese. Hadley Wickham—the chief data scientist at RStudio and the author of some amazing R packages you’ll be using like <strong>ggplot2</strong>—<a href="https://r-posts.com/advice-to-young-and-old-programmers-a-conversation-with-hadley-wickham/">made this wise observation</a>:</p>
+<blockquote>
+<p>It’s easy when you start out programming to get really frustrated and think, “Oh it’s me, I’m really stupid,” or, “I’m not made out to program.” But, that is absolutely not the case. Everyone gets frustrated. I still get frustrated occasionally when writing R code. It’s just a natural part of programming. So, it happens to everyone and gets less and less over time. Don’t blame yourself. Just take a break, do something fun, and then come back and try again later.</p>
+</blockquote>
+<p>Even experienced programmers find themselves bashing their heads against seemingly intractable errors. If you’re finding yourself taking way too long hitting your head against a wall and not understanding, take a break, talk to classmates, e-mail me, etc.</p>
+<p><img src="/img/syllabus/hosrt_error_tweet.png" width="60%" /></p>
+<p><a href="https://twitter.com/allison_horst/status/1213275783675822080"><img src="/img/syllabus/gator_error.jpg" alt="Alison Horst: Gator error" /></a></p>
+</div>
+<div id="course-materials" class="section level2">
+<h2>Course materials</h2>
+<p>All of the readings and software in this class are <strong>free</strong>. There are free online version of all the textbooks, R and RStudio are inherently free, and GSU provides <a href="https://technology.gsu.edu/technology-services/it-services/software-computer-purchase/software-download-and-purchase/adobe-creative-cloud/">free access to Adobe Illustrator</a>.</p>
+<div id="books-articles-and-other-materials" class="section level3">
+<h3>Books, articles, and other materials</h3>
+<p>We’ll rely heavily on these books, which are all available online (<strong>for free!</strong>). I recommend getting the printed versions of these books if you are interested, but it is not required.</p>
+<ul>
+<li><p><span class="citation"><a href="#ref-Cairo:2016" role="doc-biblioref">Alberto Cairo, <em>The Truthful Art: Data, Charts, and Maps for Communication</em> (Berkeley, California: New Riders, 2016)</a>.</span></p>
+<blockquote>
+<p><span>$27</span> used, <span>$32</span> new at <a href="https://www.amazon.com/Truthful-Art-Data-Charts-Communication/dp/0321934075">Amazon</a>. A <strong>free</strong> eBook version is available through GSU’s library through O’Reilly’s Higher Education database. The easiest way to access it is to visit a special URL (<a href="http://go.oreilly.com/georgia-state-university" class="uri">http://go.oreilly.com/georgia-state-university</a>), log in with your GSU account, and then search for “The Truthful Art.”</p>
+</blockquote></li>
+<li><p><span class="citation"><a href="#ref-Healy:2018" role="doc-biblioref">Kieran Healy, <em>Data Visualization: A Practical Introduction</em> (Princeton: Princeton University Press, 2018), <a href="http://socviz.co/" role="doc-biblioref">http://socviz.co/</a></a>.</span></p>
+<blockquote>
+<p><a href="http://socviz.co/"><strong>FREE</strong> online</a>; <span>$30</span> used, <span>$36</span> new at <a href="https://www.amazon.com/Data-Visualization-Introduction-Kieran-Healy/dp/0691181624/">Amazon</a>.</p>
+</blockquote></li>
+<li><p><span class="citation"><a href="#ref-Wilke:2018" role="doc-biblioref">Claus E. Wilke, <em>Fundamentals of Data Visualization</em> (Sebastopol, California: O’Reilly Media, 2018), <a href="https://serialmentor.com/dataviz/" role="doc-biblioref">https://serialmentor.com/dataviz/</a></a>.</span></p>
+<blockquote>
+<p><a href="https://serialmentor.com/dataviz/"><strong>FREE</strong> online</a>; <span>$32</span> new at <a href="https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089">Amazon</a>. An eBook version is also available through <a href="http://go.oreilly.com/georgia-state-university">the O’Reilly database</a>, but you can just use <a href="https://serialmentor.com/dataviz/">the online version</a>.</p>
+</blockquote></li>
+</ul>
+<p>There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.</p>
+<p>I also highly recommend subscribing to the <a href="https://rweekly.org/">R Weekly newsletter</a>. This e-mail is sent every Monday and is full of helpful tutorials about how to do stuff with R.</p>
+</div>
+<div id="r-and-rstudio" class="section level3">
+<h3>R and RStudio</h3>
+<p>You will do all of your analysis with the open source (and free!) programming language <a href="https://cran.r-project.org/">R</a>. You will use <a href="https://www.rstudio.com/">RStudio</a> as the main program to access R. <strong>Think of R as an engine and RStudio as a car dashboard</strong>—R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code.</p>
+<p>R is free, but it can sometimes be a pain to install and configure. To make life easier, you can (and should!) use the free <a href="http://rstudio.cloud/">RStudio.cloud</a> service, which lets you run a full instance of RStudio in your web browser. This means you won’t have to install anything on your computer to get started with R! We will have a shared class workspace in RStudio.cloud that will let you quickly copy templates for examples, exercises, and mini projects.</p>
+<p>RStudio.cloud is convenient, but it can be slow and it is not designed to be able to handle larger datasets or more complicated analysis and graphics. You also can’t use your own custom fonts with RStudio.cloud. Over the course of the semester, you’ll probably want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud. This isn’t 100% necessary, but it’s helpful.</p>
+<p>You can <a href="/resource/install/">find instructions for installing R, RStudio, and all the tidyverse packages here.</a></p>
+</div>
+<div id="online-help" class="section level3">
+<h3>Online help</h3>
+<p>Data science and statistical programming can be difficult. Computers are stupid and little errors in your code can cause hours of headache (even if you’ve been doing this stuff for years!).</p>
+<p>Fortunately there are tons of online resources to help you with this. Two of the most important are <a href="https://stackoverflow.com/">StackOverflow</a> (a Q&amp;A site with hundreds of thousands of answers to all sorts of programming questions) and <a href="https://community.rstudio.com/">RStudio Community</a> (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)).</p>
+<p>If you use Twitter, post R-related questions and content with <a href="https://twitter.com/search?q=%23rstats">#rstats</a>. The community there is exceptionally generous and helpful.</p>
+<p>Searching for help with R on Google can sometimes be tricky because the program name is, um, a single letter. Google is generally smart enough to figure out what you mean when you search for “r scatterplot,” but if it does struggle, try searching for “rstats” instead (e.g. “rstats scatterplot”). Also, since most of your R work will deal with <strong>ggplot2</strong>, it’s often easier to just search for that instead of the letter “r” (e.g. “ggplot scatterplot”).</p>
+<p>Additionally, we have a class chatroom at <a href="https://gsudatavizs20.slack.com">Slack</a> where anyone in the class can ask questions and anyone can answer. <strong>I will monitor Slack regularly and will respond quickly.</strong> (It’s one of the rare Slack workspaces where I actually have notifications enabled!) Ask questions about the readings, exercises, and mini projects. You’ll likely have similar questions as your peers, and you’ll likely be able to answer other peoples’ questions too.</p>
+</div>
+</div>
+<div id="course-schedule" class="section level2">
+<h2>Course schedule</h2>
+<p>We have no regularly scheduled meeting times.</p>
+<p>Instead, 100% of the class content is asynchronous. You can do the readings and watch the videos on your own schedule at whatever time works best for you. Many of you work full time and you have childcare and parental care responsibilities, leaving you with only evenings for coursework. I’ve designed this asynchronous system with <em>you specifically</em> in mind. I also can only really do teaching work at night when my kids are in bed—I recorded all these videos between like 10 PM and 2 AM. We’re all in similar pandemic boats.</p>
+<p>Each session has (1) a set of readings and an accompanying lecture, (2) a lesson, (3) an example with lots of reference code, and (4) a short assignment. The <a href="/schedule/">schedule page</a> provides an overview of all these moving parts.</p>
+<p>I recommend following this general process for each session:</p>
+<ul>
+<li>Do everything on the content (<i class="fas fa-book-reader"></i>) page</li>
+<li>Work through the lesson (<i class="fas fa-chalkboard-teacher"></i>) page</li>
+<li>Complete the assignment (<i class="fas fa-pencil-ruler"></i>) while referencing the example (<i class="fas fa-laptop-code"></i>)</li>
+</ul>
+</div>
+<div id="course-policies" class="section level2">
+<h2>Course policies</h2>
+<p><strong>Be nice. Be honest. Don’t cheat.</strong></p>
+<p>We will also follow <a href="https://codeofconduct.gsu.edu/">Georgia State’s Code of Conduct</a>.</p>
+<p>This syllabus reflects a plan for the mini-mester. Deviations may become necessary as the course progresses.</p>
+<div id="student-hours" class="section level3">
+<h3>Student hours</h3>
+<p>Please watch this video:</p>
+<iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="display: block; margin: 0 auto 1rem;">
+</iframe>
+<p>Student hours are set times dedicated to all of you (most professors call these “office hours”; I don’t<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>). This means that I will be <del>in my office</del> at home (wistfully) waiting for you to <del>come by</del> talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.</p>
+<p>Because of the pandemic, we cannot meet in person. I can meet you online via Webex. Use this link for regular student hours: <a href="https://gsumeetings.webex.com/meet/aheiss" class="uri">https://gsumeetings.webex.com/meet/aheiss</a>. You can also easily [make an appointment You can also find me through e-mail and Slack.</p>
+</div>
+<div id="learning-during-a-pandemic" class="section level3">
+<h3>Learning during a pandemic</h3>
+<p>Life absolutely sucks right now. None of us is really okay. <strong>We’re all just pretending.</strong></p>
+<p>You most likely know people who have lost their jobs, have tested positive for COVID-19, have been hospitalized, or perhaps have even died. You all have increased (or possibly decreased) work responsibilities and increased family care responsibilities—you might be caring for extra people (young and/or old!) right now, and you are likely facing uncertain job prospects (or have been laid off!).</p>
+<p><strong>I’m fully committed to making sure that you learn everything you were hoping to learn from this class!</strong> I will make whatever accommodations I can to help you finish your exercises, do well on your projects, and learn and understand the class material. Under ordinary conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges. Under pandemic conditions, that flexibility and leniency is intensified.</p>
+<p>If you tell me you’re having trouble, I will not judge you or think less of you. I hope you’ll extend me the same grace.</p>
+<p>You <em>never</em> owe me personal information about your health (mental or physical). You are <em>always</em> welcome to talk to me about things that you’re going through, though. If I can’t help you, I usually know somebody who can.</p>
+<p>If you need extra help, or if you need more time with something, or if you feel like you’re behind or not understanding everything, <strong>do not suffer in silence!</strong> Talk to me! I will work with you. <strong>I promise.</strong></p>
+<p><em>Please</em> sign up for a time to meet with me during student hours at <a href="https://calendly.com/andrewheiss/" class="uri">https://calendly.com/andrewheiss/</a>. I’m also available through e-mail and Slack. I’ve enabled notifications on my Slack account, so I’ll see your messages quickly!</p>
+<p>I want you to learn lots of things from this class (Graphic design! Fancy charts! R! ggplot!), but I primarily want you to stay healthy, balanced, and grounded during this crisis.</p>
+</div>
+<div id="late-work" class="section level3">
+<h3>Late work</h3>
+<p>With the exception of the mini projects and the final project, there’s no such late work. I would <strong>highly recommend</strong> staying caught up as much as possible, but if you need to turn something in late, that’s fine—there <strong>no penalty</strong>.</p>
+</div>
+<div id="counseling-and-psychological-services-cps" class="section level3">
+<h3>Counseling and Psychological Services (CPS)</h3>
+<p>Life at GSU can be complicated and challenging (especially during a pandemic!). You might feel overwhelmed, experience anxiety or depression, or struggle with relationships or family responsibilities. <a href="https://education.gsu.edu/cps/">Counseling and Psychological Services (CPS)</a> provides free, <em>confidential</em> support for students who are struggling with mental health and emotional challenges. The CPS office is staffed by professional psychologists who are attuned to the needs of all types of college and professional students. Please do not hesitate to contact CPS for assistance—getting help is a smart and courageous thing to do.</p>
+</div>
+<div id="basic-needs-security" class="section level3">
+<h3>Basic needs security</h3>
+<p>If you have difficulty affording groceries or accessing sufficient food to eat every day, or if you lack a safe and stable place to live, and you believe this may affect your performance in this course, please contact the <a href="https://deanofstudents.gsu.edu/">Dean of Students</a> for support. They can provide a host of services including free groceries from the <a href="https://nutrition.gsu.edu/panther-pantry/">Panther Pantry</a> and assisting with homelessness with the <a href="https://deanofstudents.gsu.edu/student-assistance/embark/">Embark Network</a>. Additionally, please talk to me if you are comfortable in doing so. This will enable me to provide any resources that I might possess.</p>
+</div>
+<div id="laurens-promise" class="section level3">
+<h3>Lauren’s Promise</h3>
+<p><strong>I will listen and believe you if someone is threatening you.</strong></p>
+<p>Lauren McCluskey, a 21-year-old honors student athlete, <a href="https://www.sltrib.com/opinion/commentary/2019/02/10/commentary-failing-lauren/">was murdered on October 22, 2018 by a man she briefly dated on the University of Utah campus</a>. We must all take action to ensure that this never happens again.</p>
+<p>If you are in immediate danger, call 911 or GSU police (404-413-3333).</p>
+<p>If you are experiencing sexual assault, domestic violence, or stalking, please report it to me and I will connect you to resources or call <a href="https://counselingcenter.gsu.edu/crisis-services/concern-self/immediate-help/">GSU’s Counseling and Psychological Services</a> (404-413-1640).</p>
+<p>Any form of sexual harassment or violence will not be excused or tolerated at Georgia State. GSU has instituted procedures to respond to violations of these laws and standards, programs aimed at the prevention of such conduct, and intervention on behalf of the victims. Georgia State University Police officers will treat victims of sexual assault, domestic violence, and stalking with respect and dignity. Advocates on campus and in the community can help with victims’ physical and emotional health, reporting options, and academic concerns.</p>
+</div>
+<div id="academic-honesty" class="section level3">
+<h3>Academic honesty</h3>
+<p>Violation of <a href="https://deanofstudents.gsu.edu/faculty-staff-resources/academic-honesty/">GSU’s Policy on Academic Honesty</a> will result in an F in the course and possible disciplinary action.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> All violations will be formally reported to the Dean of Students.</p>
+</div>
+<div id="special-needs" class="section level3">
+<h3>Special needs</h3>
+<p>Students who wish to request accommodation for a disability may do so by registering with the <a href="https://disability.gsu.edu/">Office of Disability Services</a>. Students may only be accommodated upon issuance by the Office of Disability Services of a signed <a href="https://disability.gsu.edu/services/how-to-register/">Accommodation Plan</a> and are responsible for providing a copy of that plan to instructors of all classes in which accommodations are sought.</p>
+<p>Students with special needs should then make an appointment with me during the first week of class to discuss any accommodations that need to be made.</p>
+</div>
+</div>
+<div id="assignments-and-grades" class="section level2">
+<h2>Assignments and grades</h2>
+<p>You can find descriptions for all the assignments on the <a href="/assignment/">assignments page</a>.</p>
+<div class="centered-table">
+<table style="width:60%;">
+<colgroup>
+<col width="33%" />
+<col width="12%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Assignment</th>
+<th align="center">Points</th>
+<th align="center">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Reflections (15 × 10)</td>
+<td align="center">150</td>
+<td align="center">23%</td>
+</tr>
+<tr class="even">
+<td align="left">Exercises (15 × 10)</td>
+<td align="center">150</td>
+<td align="center">23%</td>
+</tr>
+<tr class="odd">
+<td align="left">Mini project 1</td>
+<td align="center">75</td>
+<td align="center">12%</td>
+</tr>
+<tr class="even">
+<td align="left">Mini project 2</td>
+<td align="center">75</td>
+<td align="center">12%</td>
+</tr>
+<tr class="odd">
+<td align="left">Final project</td>
+<td align="center">200</td>
+<td align="center">31%</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="center">650</td>
+<td align="center">—</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="centered-table">
+
+
+<table style="width:49%;">
+<colgroup>
+<col width="11%" />
+<col width="13%" />
+<col width="11%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Grade</th>
+<th align="center">Range</th>
+<th align="left">Grade</th>
+<th align="center">Range</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">A</td>
+<td align="center">93–100%</td>
+<td align="left">C</td>
+<td align="center">73–76%</td>
+</tr>
+<tr class="even">
+<td align="left">A−</td>
+<td align="center">90–92%</td>
+<td align="left">C−</td>
+<td align="center">70–72%</td>
+</tr>
+<tr class="odd">
+<td align="left">B+</td>
+<td align="center">87–89%</td>
+<td align="left">D+</td>
+<td align="center">67–69%</td>
+</tr>
+<tr class="even">
+<td align="left">B</td>
+<td align="center">83–86%</td>
+<td align="left">D</td>
+<td align="center">63–66%</td>
+</tr>
+<tr class="odd">
+<td align="left">B−</td>
+<td align="center">80–82%</td>
+<td align="left">D−</td>
+<td align="center">60–62%</td>
+</tr>
+<tr class="even">
+<td align="left">C+</td>
+<td align="center">77–79%</td>
+<td align="left">F</td>
+<td align="center">&lt; 60%</td>
+</tr>
+</tbody>
+</table>
+<div>
+
+
+</div>
+<div id="star-wars" class="section level2">
+<h2>Star Wars</h2>
+<p>Once you have read this entire syllabus and <a href="/assignment/">the assignments page</a>, please <a href="mailto:aheiss@gsu.edu">click here</a> and e-mail me a picture of a <em>cute</em> Star Wars character.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> Brownie points if it’s animated.</p>
+<p>{{% figure src="https://media.giphy.com/media/j4q4h9uWKWwnYT1k3Z/giphy.gif" alt="Baby Yoda with IG-11" lightbox="false" %}}</p>
+</div>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>There’s fairly widespread misunderstanding about what office hours actually are! <a href="https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/">Many students often think that they are the times I <em>shouldn’t</em> be disturbed</a>, which is the exact opposite of what they’re for!<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>So seriously, just don’t cheat or plagiarize!<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Baby Yoda, Babu Frik, porgs, etc. are all super fair game.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

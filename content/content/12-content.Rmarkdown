@@ -1,0 +1,117 @@
+---
+title: "Space"
+linktitle: "12: Space"
+date: "2021-01-11"
+start_date: "2021-01-11"
+end_date: "2021-01-15"
+menu:
+  content:
+    parent: Course content
+    weight: 12
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-tabs.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sGd_PCE07nym2Df9120FW1U"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "fOpsbd6-PzU", "Introduction", "1", TRUE,
+  "acP8mwyLNt0", "Maps and truth", "maps-truth", FALSE,
+  "OqKdU0qzfjA", "Putting data on maps", "data-on-maps", FALSE,
+  "qbrnzSRPyb0", "GIS in R with sf", "gis-sf", FALSE
+)
+```
+
+## Readings
+
+- <i class="fas fa-book"></i> Chapter 10 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
+- <i class="fas fa-book"></i> [Chapter 7](http://socviz.co/maps.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
+
+It looks like this is a lot of reading, but lots of these are short videos or tweets or interactive websites, so don't worry!
+
+- <i class="fab fa-youtube"></i> [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)
+- <i class="fas fa-external-link-square-alt"></i> [The True Size Of…](https://thetruesize.com)
+- <i class="fas fa-external-link-square-alt"></i> [Map projections](https://xkcd.com/977/)
+- <i class="fab fa-youtube"></i> [Gall-Peters Projection](https://www.youtube.com/watch?v=vVX-PrBRtTY)
+- <i class="fas fa-external-link-square-alt"></i> ["When Maps Lie"](https://www.citylab.com/design/2015/06/when-maps-lie/396761/)
+- <i class="fas fa-external-link-square-alt"></i> [Animated Mercator distortion](https://twitter.com/neilrkaye/status/1050740679008296967)
+- <i class="fas fa-external-link-square-alt"></i> ["These Twisted Maps Prove That America Isn't a Red Country"](https://newrepublic.com/article/115550/cartograms-are-important-inforgraphic-tool)
+- <i class="fas fa-external-link-square-alt"></i> ["The next great fake news threat? Bot-designed maps"](https://www.fastcompany.com/90230916/the-next-great-fake-news-threat-bot-designed-maps)
+- <i class="fas fa-external-link-square-alt"></i> ["New World Map That Accurately Shows Earth in 2D Created by Scientists"](https://www.newsweek.com/equal-earth-map-continents-accurate-2d-1102404)
+
+### Questions to reflect on
+
+- How can you know if a map projection is truthful or misleading?
+- What's wrong (or not wrong) with using points on maps? Choropleths? Lines?
+
+
+## Slides
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+`r blogdown::shortcode("slide-buttons")`
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_tabs(slide_details, "/slides/12-slides.html")
+```
+
+:::fyi
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```
+
+
+```{cat include=FALSE, eval=FALSE}
+https://www.youtube.com/playlist?list=PLS6tnpTr39sGd_PCE07nym2Df9120FW1U
+
+https://youtu.be/fOpsbd6-PzU
+PMAP 8921 • (12) Space: (0) Introduction
+
+Introduction to the class session on visualizing space and geography
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/12-content/
+
+
+https://youtu.be/acP8mwyLNt0
+PMAP 8921 • (12) Space: (1) Maps and truth
+
+Discussion of how not to lie with maps and different projections can distort or enhance the truth
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/12-content/
+
+  
+https://youtu.be/OqKdU0qzfjA
+PMAP 8921 • (12) Space: (2) Putting data on maps
+
+Discussion of different methods for visualizing data in maps
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/12-content/
+  
+  
+https://youtu.be/qbrnzSRPyb0
+PMAP 8921 • (12) Space: (3) GIS in R with sf
+
+Brief overview of key GIS concepts + how to use the sf package in R to make maps
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/12-content/
+  
+https://youtu.be/Opzwtegvuv4
+PMAP 8921 • (12) Time: Example
+
+Demonstration of how to use the sf and ggplot2 packages in R to plot shapefiles and make maps
+
+Download the data and see the polished code at https://datavizm20.classes.andrewheiss.com/example/12-example/
+```

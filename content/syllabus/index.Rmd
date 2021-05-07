@@ -1,0 +1,245 @@
+---
+title: Syllabus
+slug: syllabus
+citeproc: true
+bibliography: ../../static/bib/references.bib
+csl: ../../static/bib/chicago-syllabus-no-bib.csl
+output:
+  blogdown::html_page:
+    toc: true
+    fig_caption: false
+---
+
+```{r setup, message=FALSE, warning=FALSE, include=FALSE}
+library(dplyr)
+library(tibble)
+library(pander)
+```
+
+`r blogdown::shortcode("courseinfo")`
+
+
+## Course objectives
+
+**Data rarely speaks for itself.** On their own, the facts contained in raw data are difficult to understand, and in the absence of beauty and order, it is impossible to understand the truth that the data shows.
+
+In this class, you'll learn how to use industry-standard graphic and data design techniques to create beautiful, understandable visualizations and uncover truth in data.
+
+By the end of this course, you will become (1) literate in data and graphic design principles, and (2) an ethical data communicator, by producing beautiful, powerful, and clear visualizations of your own data. Specifically, you should:
+
+- Understand the principles of data and graphic design
+- Evaluate the credibility, ethics, and aesthetics of data visualizations
+- Create well-designed data visualizations with appropriate tools
+- Share data and graphics in open forums
+- Be curious and confident in consuming and producing data visualizations
+
+This class will expose you to [R](https://cran.r-project.org/)—one of the most popular, sought-after, and in-demand statistical programming languages. Armed with the foundation of R skills you'll learn in this class, you'll know enough to be able to find how to visualize and analyze any sort of data-based question in the future.
+
+
+## Important pep talk!
+
+I *promise* you can succeed in this class.
+
+Learning R can be difficult at first—it's like learning a new language, just like Spanish, French, or Chinese. Hadley Wickham—the chief data scientist at RStudio and the author of some amazing R packages you'll be using like **ggplot2**—[made this wise observation](https://r-posts.com/advice-to-young-and-old-programmers-a-conversation-with-hadley-wickham/): 
+
+> It's easy when you start out programming to get really frustrated and think, "Oh it's me, I'm really stupid," or, "I'm not made out to program." But, that is absolutely not the case. Everyone gets frustrated. I still get frustrated occasionally when writing R code. It's just a natural part of programming. So, it happens to everyone and gets less and less over time. Don't blame yourself. Just take a break, do something fun, and then come back and try again later.
+
+Even experienced programmers find themselves bashing their heads against seemingly intractable errors. If you're finding yourself taking way too long hitting your head against a wall and not understanding, take a break, talk to classmates, e-mail me, etc. 
+
+```{r echo=FALSE, out.width="60%"}
+# https://twitter.com/allison_horst/status/1213275783675822080
+knitr::include_graphics("/img/syllabus/hosrt_error_tweet.png", error = FALSE)
+```
+
+[![Alison Horst: Gator error](/img/syllabus/gator_error.jpg)](https://twitter.com/allison_horst/status/1213275783675822080)
+
+
+## Course materials
+
+All of the readings and software in this class are **free**. There are free online version of all the textbooks, R and RStudio are inherently free, and GSU provides [free access to Adobe Illustrator](https://technology.gsu.edu/technology-services/it-services/software-computer-purchase/software-download-and-purchase/adobe-creative-cloud/).
+
+### Books, articles, and other materials
+
+We'll rely heavily on these books, which are all available online (**for free!**). I recommend getting the printed versions of these books if you are interested, but it is not required.
+
+- [@Cairo:2016]
+
+    > <span>$27</span> used, <span>$32</span> new at [Amazon](https://www.amazon.com/Truthful-Art-Data-Charts-Communication/dp/0321934075). A **free** eBook version is available through GSU's library through O'Reilly's Higher Education database. The easiest way to access it is to visit a special URL (<http://go.oreilly.com/georgia-state-university>), log in with your GSU account, and then search for "The Truthful Art".
+
+- [@Healy:2018]
+
+    > [**FREE** online](http://socviz.co/); <span>$30</span> used, <span>$36</span> new at [Amazon](https://www.amazon.com/Data-Visualization-Introduction-Kieran-Healy/dp/0691181624/).
+
+- [@Wilke:2018]
+
+    > [**FREE** online](https://serialmentor.com/dataviz/); <span>$32</span> new at [Amazon](https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089). An eBook version is also available through [the O'Reilly database](http://go.oreilly.com/georgia-state-university), but you can just use [the online version](https://serialmentor.com/dataviz/).
+
+There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
+
+I also highly recommend subscribing to the [R Weekly newsletter](https://rweekly.org/). This e-mail is sent every Monday and is full of helpful tutorials about how to do stuff with R.
+
+### R and RStudio
+
+You will do all of your analysis with the open source (and free!) programming language [R](https://cran.r-project.org/). You will use [RStudio](https://www.rstudio.com/) as the main program to access R. **Think of R as an engine and RStudio as a car dashboard**—R handles all the calculations produces the actual statistics and graphical output, while RStudio provides a nice interface for running R code.
+
+R is free, but it can sometimes be a pain to install and configure. To make life easier, you can (and should!) use the free [RStudio.cloud](http://rstudio.cloud/) service, which lets you run a full instance of RStudio in your web browser. This means you won't have to install anything on your computer to get started with R! We will have a shared class workspace in RStudio.cloud that will let you quickly copy templates for examples, exercises, and mini projects.
+
+RStudio.cloud is convenient, but it can be slow and it is not designed to be able to handle larger datasets or more complicated analysis and graphics. You also can't use your own custom fonts with RStudio.cloud. Over the course of the semester, you'll probably want to get around to installing R, RStudio, and other R packages on your computer and wean yourself off of RStudio.cloud. This isn't 100% necessary, but it's helpful.
+
+You can [find instructions for installing R, RStudio, and all the tidyverse packages here.](/resource/install/)
+
+### Online help
+
+Data science and statistical programming can be difficult. Computers are stupid and little errors in your code can cause hours of headache (even if you've been doing this stuff for years!).
+
+Fortunately there are tons of online resources to help you with this. Two of the most important are [StackOverflow](https://stackoverflow.com/) (a Q&A site with hundreds of thousands of answers to all sorts of programming questions) and [RStudio Community](https://community.rstudio.com/) (a forum specifically designed for people using RStudio and the tidyverse (i.e. you)).
+
+If you use Twitter, post R-related questions and content with [#rstats](https://twitter.com/search?q=%23rstats). The community there is exceptionally generous and helpful.
+
+Searching for help with R on Google can sometimes be tricky because the program name is, um, a single letter. Google is generally smart enough to figure out what you mean when you search for "r scatterplot", but if it does struggle, try searching for "rstats" instead (e.g. "rstats scatterplot"). Also, since most of your R work will deal with **ggplot2**, it's often easier to just search for that instead of the letter "r" (e.g. "ggplot scatterplot"). 
+
+Additionally, we have a class chatroom at [Slack](https://gsudatavizs20.slack.com) where anyone in the class can ask questions and anyone can answer. **I will monitor Slack regularly and will respond quickly.** (It's one of the rare Slack workspaces where I actually have notifications enabled!) Ask questions about the readings, exercises, and mini projects. You'll likely have similar questions as your peers, and you'll likely be able to answer other peoples' questions too.
+
+
+## Course schedule
+
+We have no regularly scheduled meeting times. 
+
+Instead, 100% of the class content is asynchronous. You can do the readings and watch the videos on your own schedule at whatever time works best for you. Many of you work full time and you have childcare and parental care responsibilities, leaving you with only evenings for coursework. I've designed this asynchronous system with *you specifically* in mind. I also can only really do teaching work at night when my kids are in bed—I recorded all these videos between like 10 PM and 2 AM. We're all in similar pandemic boats.
+
+Each session has (1) a set of readings and an accompanying lecture, (2) a lesson, (3) an example with lots of reference code, and (4) a short assignment. The [schedule page](/schedule/) provides an overview of all these moving parts.
+
+I recommend following this general process for each session:
+
+- Do everything on the content (<i class="fas fa-book-reader"></i>) page
+- Work through the lesson (<i class="fas fa-chalkboard-teacher"></i>) page
+- Complete the assignment (<i class="fas fa-pencil-ruler"></i>) while referencing the example (<i class="fas fa-laptop-code"></i>)
+
+
+## Course policies
+
+**Be nice. Be honest. Don't cheat.**
+
+We will also follow [Georgia State's Code of Conduct](https://codeofconduct.gsu.edu/).
+
+This syllabus reflects a plan for the mini-mester. Deviations may become necessary as the course progresses.
+
+### Student hours
+
+Please watch this video:
+
+<iframe src="https://player.vimeo.com/video/270014784" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen style="display: block; margin: 0 auto 1rem;"></iframe>
+
+Student hours are set times dedicated to all of you (most professors call these "office hours"; I don't^[There's fairly widespread misunderstanding about what office hours actually are! [Many students often think that they are the times I *shouldn't* be disturbed](https://www.chronicle.com/article/Can-This-Man-Change-How-Elite/245714/), which is the exact opposite of what they're for!]). This means that I will be ~~in my office~~ at home (wistfully) waiting for you to ~~come by~~ talk to me remotely with whatever questions you have. This is the best and easiest way to find me and the best chance for discussing class material and concerns.
+
+Because of the pandemic, we cannot meet in person. I can meet you online via Webex. Use this link for regular student hours: <https://gsumeetings.webex.com/meet/aheiss>. You can also easily [make an appointment You can also find me through e-mail and Slack. 
+
+### Learning during a pandemic
+
+Life absolutely sucks right now. None of us is really okay. **We're all just pretending.**
+
+You most likely know people who have lost their jobs, have tested positive for COVID-19, have been hospitalized, or perhaps have even died. You all have increased (or possibly decreased) work responsibilities and increased family care responsibilities—you might be caring for extra people (young and/or old!) right now, and you are likely facing uncertain job prospects (or have been laid off!).
+
+**I'm fully committed to making sure that you learn everything you were hoping to learn from this class!** I will make whatever accommodations I can to help you finish your exercises, do well on your projects, and learn and understand the class material. Under ordinary conditions, I am flexible and lenient with grading and course expectations when students face difficult challenges. Under pandemic conditions, that flexibility and leniency is intensified.
+
+If you tell me you're having trouble, I will not judge you or think less of you. I hope you'll extend me the same grace.
+
+You *never* owe me personal information about your health (mental or physical). You are *always* welcome to talk to me about things that you're going through, though. If I can't help you, I usually know somebody who can.
+
+If you need extra help, or if you need more time with something, or if you feel like you're behind or not understanding everything, **do not suffer in silence!** Talk to me! I will work with you. **I promise.**
+
+*Please* sign up for a time to meet with me during student hours at <https://calendly.com/andrewheiss/>. I'm also available through e-mail and Slack. I've enabled notifications on my Slack account, so I'll see your messages quickly!
+
+I want you to learn lots of things from this class (Graphic design! Fancy charts! R! ggplot!), but I primarily want you to stay healthy, balanced, and grounded during this crisis. 
+
+### Late work
+
+With the exception of the mini projects and the final project, there's no such late work. I would **highly recommend** staying caught up as much as possible, but if you need to turn something in late, that's fine—there **no penalty**.
+
+### Counseling and Psychological Services (CPS)
+
+Life at GSU can be complicated and challenging (especially during a pandemic!). You might feel overwhelmed, experience anxiety or depression, or struggle with relationships or family responsibilities. [Counseling and Psychological Services (CPS)](https://education.gsu.edu/cps/) provides free, *confidential* support for students who are struggling with mental health and emotional challenges. The CPS office is staffed by professional psychologists who are attuned to the needs of all types of college and professional students. Please do not hesitate to contact CPS for assistance—getting help is a smart and courageous thing to do.
+
+### Basic needs security
+
+If you have difficulty affording groceries or accessing sufficient food to eat every day, or if you lack a safe and stable place to live, and you believe this may affect your performance in this course, please contact the [Dean of Students](https://deanofstudents.gsu.edu/) for support. They can provide a host of services including free groceries from the [Panther Pantry](https://nutrition.gsu.edu/panther-pantry/) and assisting with homelessness with the [Embark Network](https://deanofstudents.gsu.edu/student-assistance/embark/). Additionally, please talk to me if you are comfortable in doing so. This will enable me to provide any resources that I might possess.
+
+### Lauren's Promise
+
+**I will listen and believe you if someone is threatening you.**
+
+Lauren McCluskey, a 21-year-old honors student athlete, [was murdered on October 22, 2018 by a man she briefly dated on the University of Utah campus](https://www.sltrib.com/opinion/commentary/2019/02/10/commentary-failing-lauren/). We must all take action to ensure that this never happens again.
+
+If you are in immediate danger, call 911 or GSU police (404-413-3333).
+
+If you are experiencing sexual assault, domestic violence, or stalking, please report it to me and I will connect you to resources or call [GSU's Counseling and Psychological Services](https://counselingcenter.gsu.edu/crisis-services/concern-self/immediate-help/) (404-413-1640).
+
+Any form of sexual harassment or violence will not be excused or tolerated at Georgia State. GSU has instituted procedures to respond to violations of these laws and standards, programs aimed at the prevention of such conduct, and intervention on behalf of the victims. Georgia State University Police officers will treat victims of sexual assault, domestic violence, and stalking with respect and dignity. Advocates on campus and in the community can help with victims' physical and emotional health, reporting options, and academic concerns.
+
+### Academic honesty
+
+Violation of [GSU's Policy on Academic Honesty](https://deanofstudents.gsu.edu/faculty-staff-resources/academic-honesty/) will result in an F in the course and possible disciplinary action.^[So seriously, just don't cheat or plagiarize!] All violations will be formally reported to the Dean of Students.
+
+### Special needs
+
+Students who wish to request accommodation for a disability may do so by registering with the [Office of Disability Services](https://disability.gsu.edu/). Students may only be accommodated upon issuance by the Office of Disability Services of a signed [Accommodation Plan](https://disability.gsu.edu/services/how-to-register/) and are responsible for providing a copy of that plan to instructors of all classes in which accommodations are sought.
+
+Students with special needs should then make an appointment with me during the first week of class to discuss any accommodations that need to be made.
+
+
+## Assignments and grades
+
+You can find descriptions for all the assignments on the [assignments page](/assignment/).
+
+```{r assignments-grades, include=FALSE}
+assignments <- tribble(
+  ~Points,  ~Assignment,
+  15 * 10 , "Reflections (15 × 10)",
+  15 * 10 , "Exercises (15 × 10)",
+  75      , "Mini project 1",
+  75      , "Mini project 2",
+  200     , "Final project"
+) %>%
+  mutate(Percent = Points / sum(Points),
+         Percent = scales::percent(Percent, accuracy = 1))
+
+grading <- tribble(
+  ~Grade, ~Range,  ~Grade1, ~Range1,
+  "A",  "93–100%", "C",  "73–76%",
+  "A−", "90–92%",  "C−", "70–72%",
+  "B+", "87–89%",  "D+", "67–69%",
+  "B",  "83–86%",  "D",  "63–66%",
+  "B−", "80–82%",  "D−", "60–62%",
+  "C+", "77–79%",  "F",  "< 60%"
+)
+```
+
+<div class="centered-table">
+
+```{r show-assignments-table, echo=FALSE, results="asis"}
+assignments_total <- tibble(Assignment = "Total",
+                            Points = sum(assignments$Points),
+                            Percent = NA)
+
+bind_rows(assignments, assignments_total) %>% 
+  select(Assignment, Points, Percent) %>% 
+  pandoc.table(justify = "lcc", missing = "—")
+```
+</div>
+
+<div class="centered-table">
+
+```{r show-grades-table, echo=FALSE, results="asis"}
+grading %>%
+  pandoc.table(justify = "lclc", 
+               col.names = c("Grade", "Range", "Grade", "Range"))
+```
+
+<div>
+
+
+## Star Wars
+
+Once you have read this entire syllabus and [the assignments page](/assignment/), please [click here](mailto:aheiss@gsu.edu) and e-mail me a picture of a *cute* Star Wars character.^[Baby Yoda, Babu Frik, porgs, etc. are all super fair game.] Brownie points if it's animated. 
+
+`r blogdown::shortcode("figure", src = "https://media.giphy.com/media/j4q4h9uWKWwnYT1k3Z/giphy.gif", alt = "Baby Yoda with IG-11", lightbox = "false")`

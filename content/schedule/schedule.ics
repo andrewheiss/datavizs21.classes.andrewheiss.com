@@ -1,0 +1,314 @@
+BEGIN:VCALENDAR
+PRODID:ATFutures/calendar
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ical-3855fae6-7433-4ca1-b342-cb61821fad0c
+DTSTART;VALUE=DATE:20210111
+DTEND;VALUE=DATE:20210116
+SUMMARY:PMAP 8521: (Session 1) Evaluation and the causal revolution
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/01-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-3ee1e334-723d-41d3-ab49-5e1919cbc81b
+DTSTART;VALUE=DATE:20210119
+DTEND;VALUE=DATE:20210120
+SUMMARY:PMAP 8521: Weekly check-in 1
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-95b501e1-707a-4a33-8909-cf1710c9c20e
+DTSTART;VALUE=DATE:20210119
+DTEND;VALUE=DATE:20210120
+SUMMARY:PMAP 8521: Problem set 1
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/01-problem-set/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-85c7ad62-7718-4f90-8cf1-731e54380976
+DTSTART;VALUE=DATE:20210119
+DTEND;VALUE=DATE:20210123
+SUMMARY:PMAP 8521: (Session 2) Regression and inference
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/02-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-3e32253a-b212-44d3-ae03-a012f7299a70
+DTSTART;VALUE=DATE:20210125
+DTEND;VALUE=DATE:20210126
+SUMMARY:PMAP 8521: Weekly check-in 2
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-17b60cda-b63e-4392-953b-d2f5caad2baf
+DTSTART;VALUE=DATE:20210125
+DTEND;VALUE=DATE:20210126
+SUMMARY:PMAP 8521: Problem set 2
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/02-problem-set/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-58a53d47-ae26-4f8f-9c26-4c4daab03546
+DTSTART;VALUE=DATE:20210125
+DTEND;VALUE=DATE:20210130
+SUMMARY:PMAP 8521: (Session 3) Theories of change and logic models
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/03-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-a72f3957-2cda-4921-ac2f-00dc8f802159
+DTSTART;VALUE=DATE:20210201
+DTEND;VALUE=DATE:20210202
+SUMMARY:PMAP 8521: Weekly check-in 3
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-8c199077-9117-4fc2-8e56-976f24571f5e
+DTSTART;VALUE=DATE:20210201
+DTEND;VALUE=DATE:20210202
+SUMMARY:PMAP 8521: Evaluation: Background and theory
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/01-eval-background-theory/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-4f42cf2f-3cc2-415f-8d16-a1eaa5a645fe
+DTSTART;VALUE=DATE:20210201
+DTEND;VALUE=DATE:20210206
+SUMMARY:PMAP 8521: (Session 4) Measurement and DAGs
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/04-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-e62f2157-5112-44f5-9202-435b59e089f9
+DTSTART;VALUE=DATE:20210208
+DTEND;VALUE=DATE:20210209
+SUMMARY:PMAP 8521: Weekly check-in 4
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-878c8075-9854-42d3-bf79-cf403d7de8b3
+DTSTART;VALUE=DATE:20210208
+DTEND;VALUE=DATE:20210209
+SUMMARY:PMAP 8521: Evaluation: Measurement
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/02-eval-measurement/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-c49d18bb-23d2-4d9b-875e-92e20ba83543
+DTSTART;VALUE=DATE:20210208
+DTEND;VALUE=DATE:20210213
+SUMMARY:PMAP 8521: (Session 5) DAGs and potential outcomes
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/05-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-49db4fb0-1b71-4a1d-b18a-486926cebcbb
+DTSTART;VALUE=DATE:20210215
+DTEND;VALUE=DATE:20210216
+SUMMARY:PMAP 8521: Weekly check-in 5
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-63d033f6-93b8-4335-b1ea-8f61c89482d0
+DTSTART;VALUE=DATE:20210215
+DTEND;VALUE=DATE:20210216
+SUMMARY:PMAP 8521: Evaluation: Causal model
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/03-eval-dag/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-eeade416-0391-4148-9807-bf275ca44e52
+DTSTART;VALUE=DATE:20210215
+DTEND;VALUE=DATE:20210220
+SUMMARY:PMAP 8521: (Session 6) Threats to validity
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/06-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-2637fc5b-028f-455e-aef3-bb06ef65fa08
+DTSTART;VALUE=DATE:20210222
+DTEND;VALUE=DATE:20210223
+SUMMARY:PMAP 8521: Weekly check-in 6
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-9e6a11cc-4dcf-4271-b5d5-404c70ea96f8
+DTSTART;VALUE=DATE:20210222
+DTEND;VALUE=DATE:20210223
+SUMMARY:PMAP 8521: Evaluation: Threats to validity
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/04-eval-threats/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-2c0a3ecb-aaf8-4974-a1bc-813059f5e647
+DTSTART;VALUE=DATE:20210222
+DTEND;VALUE=DATE:20210302
+SUMMARY:PMAP 8521:  **Exam 1**
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-4f646561-2acd-471e-83b5-87604477731e
+DTSTART;VALUE=DATE:20210222
+DTEND;VALUE=DATE:20210227
+SUMMARY:PMAP 8521: (Session 7) Randomization and matching
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/07-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-789f27cb-493b-4a4a-ae90-150a0d70e104
+DTSTART;VALUE=DATE:20210301
+DTEND;VALUE=DATE:20210302
+SUMMARY:PMAP 8521: Weekly check-in 7
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-b2e8a56e-97ce-41c0-a2fa-fb52838e1760
+DTSTART;VALUE=DATE:20210301
+DTEND;VALUE=DATE:20210302
+SUMMARY:PMAP 8521: Problem set 3
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/03-problem-set/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-3b42dc5d-66f1-48fa-923b-ccf4d650aabb
+DTSTART;VALUE=DATE:20210312
+DTEND;VALUE=DATE:20210313
+SUMMARY:PMAP 8521: (Sessions 8–9) Difference-in-differences I + II
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/08-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-43e5c03d-f291-4dd8-a094-3c2ac179ba37
+DTSTART;VALUE=DATE:20210308
+DTEND;VALUE=DATE:20210309
+SUMMARY:PMAP 8521: Weekly check-in 8
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-4e63ec69-0c5b-4b01-8d85-da0b01e99b76
+DTSTART;VALUE=DATE:20210308
+DTEND;VALUE=DATE:20210309
+SUMMARY:PMAP 8521: Problem set 4
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/04-problem-set/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-d53091b6-2e0c-4b48-be00-d0e48d777ef3
+DTSTART;VALUE=DATE:20210322
+DTEND;VALUE=DATE:20210323
+SUMMARY:PMAP 8521: Weekly check-in 9
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-1ef7c26a-0a39-452f-a736-567829e148fc
+DTSTART;VALUE=DATE:20210322
+DTEND;VALUE=DATE:20210323
+SUMMARY:PMAP 8521: Problem set 5
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/05-problem-set/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-d7186f79-2886-40c5-a0cf-b156f64451c5
+DTSTART;VALUE=DATE:20210322
+DTEND;VALUE=DATE:20210327
+SUMMARY:PMAP 8521: (Session 10) Regression discontinuity I
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/10-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-1fe56192-e3b7-4721-ba35-5bcd04556cc8
+DTSTART;VALUE=DATE:20210329
+DTEND;VALUE=DATE:20210330
+SUMMARY:PMAP 8521: Weekly check-in 10
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-2599db1d-b0b7-4e3a-8a70-70338f5cd9a5
+DTSTART;VALUE=DATE:20210329
+DTEND;VALUE=DATE:20210330
+SUMMARY:PMAP 8521: Problem set 6
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/06-problem-set/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-73ef6b8c-051b-47c0-8cfc-5cf05f9de8cf
+DTSTART;VALUE=DATE:20210329
+DTEND;VALUE=DATE:20210403
+SUMMARY:PMAP 8521: (Session 11) Instrumental variables I
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/11-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-afad1979-080f-4e6f-8dde-1eb716e38bf9
+DTSTART;VALUE=DATE:20210405
+DTEND;VALUE=DATE:20210406
+SUMMARY:PMAP 8521: Weekly check-in 11
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-e354d4dc-f7d4-46b8-8d2a-28f91ed8ea17
+DTSTART;VALUE=DATE:20210405
+DTEND;VALUE=DATE:20210406
+SUMMARY:PMAP 8521: Problem set 7
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/07-problem-set/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-52bd8722-e56f-4682-93b0-2e299ab9c1f1
+DTSTART;VALUE=DATE:20210405
+DTEND;VALUE=DATE:20210410
+SUMMARY:PMAP 8521: (Session 12) Instrumental variables II + Regression discontinuity II
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/12-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-789f56a2-6a84-472b-9f6b-70cfce3bf138
+DTSTART;VALUE=DATE:20210412
+DTEND;VALUE=DATE:20210413
+SUMMARY:PMAP 8521: Weekly check-in 12
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-ed069392-5fdd-4967-bf56-3ebc821d39f3
+DTSTART;VALUE=DATE:20210412
+DTEND;VALUE=DATE:20210413
+SUMMARY:PMAP 8521: Problem set 8
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/08-problem-set/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-a95642a3-468c-4854-8695-ad66140a268c
+DTSTART;VALUE=DATE:20210412
+DTEND;VALUE=DATE:20210419
+SUMMARY:PMAP 8521:  **Exam 2**
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-35b0dc6c-0c4f-4993-9f15-0a43b18340b9
+DTSTART;VALUE=DATE:20210412
+DTEND;VALUE=DATE:20210417
+SUMMARY:PMAP 8521: (Session 13) Choosing and planning ethical evaluations
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/13-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-4de8b896-bb49-49bd-8ad2-0971063d8d59
+DTSTART;VALUE=DATE:20210419
+DTEND;VALUE=DATE:20210420
+SUMMARY:PMAP 8521: Weekly check-in 13
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-5691edd9-358d-4803-b37a-e68c5bee0468
+DTSTART;VALUE=DATE:20210419
+DTEND;VALUE=DATE:20210420
+SUMMARY:PMAP 8521: Problem set 9
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/09-problem-set/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-c5b9c045-279f-49ea-b737-2711e2c2d75b
+DTSTART;VALUE=DATE:20210419
+DTEND;VALUE=DATE:20210424
+SUMMARY:PMAP 8521: (Session 14) Ethics, stories, and curiosity
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/content/14-content/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-4a1ded72-28b1-4392-a9af-b9c4f366591c
+DTSTART;VALUE=DATE:20210426
+DTEND;VALUE=DATE:20210427
+SUMMARY:PMAP 8521: Weekly check-in 14
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/weekly-check-in/
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-4169fc6a-68c9-4432-8e1c-54cd362a3ea8
+DTSTART;VALUE=DATE:20210426
+DTEND;VALUE=DATE:20210427
+SUMMARY:PMAP 8521: Work session
+DESCRIPTION:
+END:VEVENT
+BEGIN:VEVENT
+UID:ical-99bf7b00-1df0-4296-9421-8ee96372ad00
+DTSTART;VALUE=DATE:20210503
+DTEND;VALUE=DATE:20210504
+SUMMARY:PMAP 8521:  **Final project due** (submit online by 11:59 PM)
+DESCRIPTION:https://datavizs21.classes.andrewheiss.com/assignment/final-project/
+END:VEVENT
+END:VCALENDAR

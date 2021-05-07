@@ -1,0 +1,102 @@
+---
+title: "Annotations"
+linktitle: "9: Annotations"
+date: "2021-01-11"
+start_date: "2021-01-11"
+end_date: "2021-01-15"
+menu:
+  content:
+    parent: Course content
+    weight: 9
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-tabs.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sG4NCNqLqHhIE7khPgrdRJD"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "1c51k2tmjBI", "Introduction", "1", TRUE,
+  "6p4K5_6KU9k", "Fretting the little things", "little-things", FALSE,
+  "fdR78oXb_fI", "Text in plots", "text", FALSE,
+  "lV_Qak75E6I", "Seeds", "seeds", FALSE
+)
+```
+
+## Readings
+
+- <i class="fas fa-book"></i> [Chapter 17](https://serialmentor.com/dataviz/redundant-coding.html), [Chapter 18](https://serialmentor.com/dataviz/multi-panel-figures.html), [Chapter 19](https://serialmentor.com/dataviz/figure-titles-captions.html), and [Chapter 21](https://serialmentor.com/dataviz/small-axis-labels.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- <i class="fas fa-book"></i> [Chapter 5](http://socviz.co/workgeoms.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
+
+
+## Slides
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+`r blogdown::shortcode("slide-buttons")`
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_tabs(slide_details, "/slides/09-slides.html")
+```
+
+:::fyi
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```
+
+
+```{cat include=FALSE, eval=FALSE}
+https://www.youtube.com/playlist?list=PLS6tnpTr39sG4NCNqLqHhIE7khPgrdRJD
+
+https://youtu.be/1c51k2tmjBI
+PMAP 8921 • (9) Annotations: (0) Introduction
+
+Introduction to the class session on annotations
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/09-content/
+
+
+https://youtu.be/6p4K5_6KU9k
+PMAP 8921 • (9) Annotations: (1) Fretting the little things
+
+Discussion of why it's important to fret about little details when designing plots and how little tweaks can enhance the accessibility and usability of your plots
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/09-content/
+
+
+https://youtu.be/fdR78oXb_fI
+PMAP 8921 • (9) Annotations: (2) Text in plots
+
+Overview and examples of three main ways of adding text to ggplot plots in R
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/09-content/
+  
+
+https://youtu.be/lV_Qak75E6I
+PMAP 8921 • (9) Annotations: (3) Seeds
+
+Discussion of what seeds are and why they're important when dealing with pseudorandom numbers in R and ggplot2
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/09-content/
+
+
+https://youtu.be/gMSMsOy7KF0
+PMAP 8921 • (9) Annotations: Example
+
+Demonstration of how to create add text, shape, and arrow annotations to a ggplot, as well as enhance minor graphical elements and use ggtext to style text
+
+Download the data and see the polished code at https://datavizm20.classes.andrewheiss.com/example/09-example/
+
+```

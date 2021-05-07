@@ -1,0 +1,122 @@
+---
+title: "Time"
+linktitle: "11: Time"
+date: "2021-01-11"
+start_date: "2021-01-11"
+end_date: "2021-01-15"
+menu:
+  content:
+    parent: Course content
+    weight: 11
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-tabs.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sG0DXT1Bvx0-hQkHrWBABa1"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "nBVnR_bT8j0", "Introduction", "1", TRUE,
+  "yuBMJF0ncyI", "Axis issues", "axis-issues", FALSE,
+  "EGTUsCjpAQw", "Visualizing time", "visualizing-time", FALSE,
+  "xP6rvggkk9w", "Starting, ending, and decomposing time", "decomposing", FALSE
+)
+```
+
+## Readings
+
+- <i class="fas fa-book"></i> Chapter 8 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
+- <i class="fas fa-video"></i> [The Nuclear Threat—The Shadow Peace, part 1](http://www.fallen.io/shadow-peace/1/)
+- <i class="fas fa-external-link-square-alt"></i> [11 Ways to Visualize Changes Over Time – A Guide](https://flowingdata.com/2010/01/07/11-ways-to-visualize-changes-over-time-a-guide/)
+- A bunch of (really) short blog posts:
+    - <i class="fas fa-external-link-square-alt"></i> [What a Hundred Million Calls to 311 Reveal About New York](https://www.wired.com/2010/11/ff_311_new_york/) (just look at the picture; you don't need to read this unless you're really curious about trends in 311 calls)
+    - <i class="fas fa-external-link-square-alt"></i> [A century of ocean shipping animated](https://flowingdata.com/2012/04/12/a-century-of-ocean-shipping-animated/)
+    - <i class="fas fa-external-link-square-alt"></i> [What is seasonal adjustment and why is it used?](http://junkcharts.typepad.com/junk_charts/2010/11/what-is-seasonal-adjustment-and-why-is-it-used.html)
+    - <i class="fas fa-external-link-square-alt"></i> [The start-at-zero rule](http://junkcharts.typepad.com/junk_charts/2005/09/the_startatzero.html)
+    - <i class="fas fa-external-link-square-alt"></i> [Keeping one's appetite after touring the sausage factory](http://junkcharts.typepad.com/numbersruleyourworld/2011/02/keeping-ones-appetite-after-touring-the-sausage-factory.html)
+    - <i class="fas fa-external-link-square-alt"></i> [How Common is Your Birthday? This Visualization Might Surprise You](http://thedailyviz.com/2016/09/17/how-common-is-your-birthday-dailyviz/)
+
+
+### Recommended
+
+- <i class="fas fa-video"></i> [The Fallen of World War II](http://www.fallen.io/ww2/)
+- <i class="far fa-file-pdf"></i> [Visualizing Statistical Mix Effects and Simpson's Paradox](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42901.pdf) [@ArmstrongWattenberg:2014]
+- <i class="fas fa-external-link-square-alt"></i> [How To Fix a Toilet (And Other Things We Couldn't Do Without Search)](http://how-to-fix-a-toilet.com/)
+
+
+### Questions to reflect on
+
+- When is it okay (or not) to truncate the y-axis?
+- It is remarkably easy to mislead people with many of these chart types. Why? How can you avoid the same mistakes?
+- All these types of charts are good at communicating change over time, but some are more appropriate in different situations. When is it best to use these different types (e.g. line graphs vs. area graphs vs. horizon charts vs. heatmaps, etc.)?
+
+
+## Slides
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+`r blogdown::shortcode("slide-buttons")`
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_tabs(slide_details, "/slides/11-slides.html")
+```
+
+:::fyi
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```
+
+
+```{cat include=FALSE, eval=FALSE}
+https://www.youtube.com/playlist?list=PLS6tnpTr39sG0DXT1Bvx0-hQkHrWBABa1
+
+https://youtu.be/nBVnR_bT8j0
+PMAP 8921 • (11) Time: (0) Introduction
+
+Introduction to the class session on visualizing time
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/11-content/
+
+
+https://youtu.be/yuBMJF0ncyI
+PMAP 8921 • (11) Time: (1) Axis issues
+
+Discussion of when it's okay and not okay to truncate axes
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/11-content/
+
+
+https://youtu.be/EGTUsCjpAQw
+PMAP 8921 • (11) Time: (2) Visualizing time
+
+Discussion of different methods for visualizing trends in time
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/11-content/
+  
+  
+https://youtu.be/xP6rvggkk9w
+PMAP 8921 • (11) Time: (3) Starting, ending, and decomposing time
+
+Discussion of the importance of choosing good start and end points when visualizing time + the need to watch out for seasonality and other underlying trends in your data
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/11-content/
+
+https://youtu.be/ObnRqO4zTY8
+PMAP 8921 • (11) Time: Example
+
+Demonstration of how to use the tidyquant package in R to plot changes in time with ggplot2 using data from the US Federal Reserve
+
+Download the data and see the polished code at https://datavizm20.classes.andrewheiss.com/example/11-example/
+```

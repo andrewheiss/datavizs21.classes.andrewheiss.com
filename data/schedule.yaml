@@ -1,0 +1,195 @@
+lessons:
+  - title: 'Foundations'
+    header: True
+
+  - title: '<span class="content-title">Truth, beauty, and data + R and tidyverse</span>'
+    session: "Session 1"
+    date: "June 7–11"
+    date_start: "June 7"
+    date_end: "June 11"
+    content: "01-content"
+    lesson: "01-lesson"
+    example: "01-example"
+    assignment: "01-exercise"
+    bg: 1
+
+  - title: '<span class="content-title">Graphic design</span>'
+    session: "Session 2"
+    date: "June 7–11"
+    date_start: "June 7"
+    date_end: "June 11"
+    content: "02-content"
+    lesson: "02-lesson"
+    example: "02-example"
+    assignment: "02-exercise"
+    bg: 2
+
+  - title: '<span class="content-title">Mapping data to graphics</span>'
+    session: "Session 3"
+    date: "June 14–18"
+    date_start: "June 14"
+    date_end: "June 18"
+    content: "03-content"
+    lesson: "03-lesson"
+    example: "03-example"
+    assignment: "03-exercise"
+    bg: 1
+    bottomborder: True
+
+  - title: 'Core types of graphics'
+    header: True
+
+  - title: '<span class="content-title">Amounts and proportions</span>'
+    session: "Session 4"
+    date: "June 14–18"
+    date_start: "June 14"
+    date_end: "June 18"
+    content: "04-content"
+    lesson: "04-lesson"
+    example: "04-example"
+    assignment: "04-exercise"
+    bg: 1
+
+  - title: '<span class="content-title">Themes</span>'
+    session: "Session 5"
+    date: "June 21–25"
+    date_start: "June 21"
+    date_end: "June 25"
+    content: "05-content"
+    lesson: "05-lesson"
+    example: "05-example"
+    assignment: "05-exercise"
+    bg: 2
+
+  - title: '<span class="content-title">Uncertainty</span>'
+    session: "Session 6"
+    date: "June 21–25"
+    date_start: "June 21"
+    date_end: "June 25"
+    content: "06-content"
+    lesson: "06-lesson"
+    example: "06-example"
+    assignment: "06-exercise"
+    bg: 1
+  
+  - title: '<span class="content-title">Relationships</span>'
+    session: "Session 7"
+    date: "June 28–July 2"
+    date_start: "June 28"
+    date_end: "July 2"
+    content: "07-content"
+    lesson: "07-lesson"
+    example: "07-example"
+    assignment: "07-exercise"
+    bg: 2
+  
+  - title: '<span class="content-title">Comparisons</span>'
+    session: "Session 8"
+    date: "June 28–July 2"
+    date_start: "June 28"
+    date_end: "July 2"
+    content: "08-content"
+    lesson: "08-lesson"
+    example: "08-example"
+    assignment: "08-exercise"
+    bg: 1
+  
+  - title: '<span class="content-title">Annotations</span>'
+    session: "Session 9"
+    date: "July 5–8"
+    date_start: "July 5"
+    date_end: "July 9"
+    content: "09-content"
+    lesson: "09-lesson"
+    example: "09-example"
+    assignment: "09-exercise"
+    bg: 2
+
+  - title: '<i class="fas fa-star"></i> **Mini project 1 due**'
+    date: "July 8"
+    assignment: "01-mini-project"
+    bg: 3
+    bottomborder: True
+  
+  - title: 'Special applications'
+    header: True
+
+  - title: '<span class="content-title">Interactivity</span>'
+    session: "Session 10"
+    date: "July 5–8"
+    date_start: "July 5"
+    date_end: "July 9"
+    content: "10-content"
+    lesson: "10-lesson"
+    example: "10-example"
+    assignment: "10-exercise"
+    bg: 1
+  
+  - title: '<span class="content-title">Time</span>'
+    session: "Session 11"
+    date: "July 12–16"
+    date_start: "July 12"
+    date_end: "July 16"
+    content: "11-content"
+    lesson: "11-lesson"
+    example: "11-example"
+    assignment: "11-exercise"
+    bg: 2
+
+  - title: '<span class="content-title">Space</span>'
+    session: "Session 12"
+    date: "July 12–16"
+    date_start: "July 12"
+    date_end: "July 16"
+    content: "12-content"
+    lesson: "12-lesson"
+    example: "12-example"
+    assignment: "12-exercise"
+    bg: 1
+  
+  - title: '<span class="content-title">Text</span>'
+    session: "Session 13"
+    date: "July 19–23"
+    date_start: "July 19"
+    date_end: "July 23"
+    content: "13-content"
+    lesson: "13-lesson"
+    example: "13-example"
+    assignment: "13-exercise"
+    bg: 2
+  
+  - title: '<span class="content-title">Enhancing graphics</span>'
+    session: "Session 14"
+    date: "July 19–23"
+    date_start: "July 19"
+    date_end: "July 23"
+    content: "14-content"
+    lesson: "14-lesson"
+    example: "14-example"
+    assignment: "14-exercise"
+    bg: 1
+  
+  - title: '<i class="fas fa-star"></i> **Mini project 2 due**'
+    date: "July 23"
+    assignment: "02-mini-project"
+    bg: 3
+    bottomborder: True
+
+  - title: 'Conclusions'
+    header: True
+  
+  - title: '<span class="content-title">Truth, beauty, and data revisited</span>'
+    session: "Session 15"
+    date: "July 26"
+    date_start: "July 26"
+    date_end: "July 26"
+    content: "15-content"
+    lesson: "15-lesson"
+    example: "15-example"
+    assignment: "15-exercise"
+    bg: 1
+  
+  - title: '<i class="fas fa-star"></i> **Final project due** (submit online by 11:59 PM)'
+    date: "July 31"
+    assignment: "final-project"
+    bg: 3

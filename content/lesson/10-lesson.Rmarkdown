@@ -1,0 +1,19 @@
+---
+title: "Interactivity"
+linktitle: "10: Interactivity"
+date: "2020-05-22"
+menu:
+  lesson:
+    parent: Lessons
+    weight: 10
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-syllabus-no-bib.csl"
+editor_options: 
+  chunk_output_type: console
+---
+
+Again, there's no lesson for this. The only way to learn how to use `ggplotly()` and create dashboards with **flexdashboard** is to try them out in RStudio, not in a mini browser-based R session here.
+
+So [head over to the exercise](/assignment/10-exercise/) to get started!

@@ -1,0 +1,65 @@
+---
+title: "Mapping data to graphics"
+linktitle: "3: Mapping data to graphics"
+date: "2021-01-11"
+start_date: "2021-01-11"
+end_date: "2021-01-15"
+menu:
+  content:
+    parent: Course content
+    weight: 3
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-tabs.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sF-mpzuaQaDw5VoOgp359Z9"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "ukDGvD3XXHg", "Introduction", "1", TRUE,
+  "S56YAocj-hk", "Data, aesthetics, and the grammar of graphics", "grammar-of-graphics", FALSE,
+  "DVr8ubJ7JHk", "Grammatical layers", "grammatical-layers", FALSE,
+  "pfYkWZcTHAM", "Aesthetics in extra dimensions", "extra-dimensions", FALSE,
+  "KHpZ1oa_99g", "Tidy data", "tidy-data", FALSE
+)
+```
+
+## Readings
+
+- <i class="fab fa-youtube"></i> Hans Rosling, ["200 Countries, 200 Years, 4 Minutes"](https://www.youtube.com/watch?v=jbkSRLYSojo)
+- <i class="fas fa-book"></i> [Chapter 2](https://serialmentor.com/dataviz/aesthetic-mapping.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- <i class="fas fa-book"></i> [Chapter 3](http://socviz.co/makeplot.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
+
+### Questions to reflect on
+
+- Why is it important to visualize variables and data?
+- What does it mean to map data to graph aesthetics?
+- What data was mapped to which aesthetics in Rosling's video?
+
+
+## Slides
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+`r blogdown::shortcode("slide-buttons")`
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_tabs(slide_details, "/slides/03-slides.html")
+```
+
+:::fyi
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```

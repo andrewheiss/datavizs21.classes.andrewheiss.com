@@ -1,0 +1,19 @@
+---
+title: "Enhancing graphics"
+linktitle: "14: Enhancing graphics"
+date: "2020-05-29"
+menu:
+  lesson:
+    parent: Lessons
+    weight: 14
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-syllabus-no-bib.csl"
+editor_options: 
+  chunk_output_type: console
+---
+
+There's no lesson for this session. In your exercise today you'll export a plot from ggplot, open it in a vector editor like [Illustrator](https://www.adobe.com/products/illustrator.html), [Inkscape](https://inkscape.org/), or [Gravit Designer](https://www.designer.io/en/), and make it extra pretty and well-designed. The best way to learn this is by actually doing it.
+
+So head over to [the example](/example/14-example/) to see how it's done, or [the exercise](/assignment/14-exercise/) to get started!

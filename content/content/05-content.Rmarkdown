@@ -1,0 +1,102 @@
+---
+title: "Themes"
+linktitle: "5: Themes"
+date: "2021-01-11"
+start_date: "2021-01-11"
+end_date: "2021-01-15"
+menu:
+  content:
+    parent: Course content
+    weight: 5
+type: docs
+toc: true
+bibliography: "../../static/bib/references.bib"
+csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
+---
+
+```{r slides-videos, echo=FALSE, include=FALSE}
+source(here::here("R", "slide-tabs.R"))
+source(here::here("R", "youtube-playlist.R"))
+
+playlist_id <- "PLS6tnpTr39sEsSJ16BKgXPNFcl3y6gjEv"
+
+slide_details <- tibble::tribble(
+  ~youtube_id,   ~title, ~slide, ~active,
+  "s9YBf8Rf21s", "Introduction", "1", TRUE,
+  "BQ3wRMAMeBQ", "CRAP and ggplot", "crap-ggplot", FALSE,
+  "V0CzheP9yMc", "The anatomy of a ggplot theme", "anatomy", FALSE
+)
+```
+
+## Readings
+
+- <i class="fas fa-book"></i> [Chapter 22](https://serialmentor.com/dataviz/figure-titles-captions.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- <i class="fas fa-external-link-square-alt"></i> [Naomi Robbins, "Are Grid Lines Useful or Chartjunk?"](https://www.forbes.com/sites/naomirobbins/2012/02/22/are-grid-lines-useful-or-chartjunk/#3b49a4044283)
+- <i class="fas fa-external-link-square-alt"></i> [Stephen Few, "Grid Lines in Graphs are Rarely Useful"](http://www.perceptualedge.com/articles/dmreview/grid_lines.pdf)
+- <i class="fas fa-external-link-square-alt"></i> [Henry Wang, "ggplot2 Theme Elements Demonstration"](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
+- <i class="fas fa-external-link-square-alt"></i> Glance through the documentation for ggplot's [complete themes](https://ggplot2.tidyverse.org/reference/ggtheme.html) and [`theme()`](https://ggplot2.tidyverse.org/reference/theme.html), especially the examples near the bottom
+
+### Questions to reflect on
+
+- How do the principles of CRAP apply to graph design and other theme elements?
+- Should plots use gridlines? Naomi Robbins says yes; Stephen Few says no—what do you say?
+
+
+## Slides
+
+The slides for today's lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.
+
+`r blogdown::shortcode("slide-buttons")`
+
+```{r show-slide-tabs, echo=FALSE, results="asis"}
+slide_tabs(slide_details, "/slides/05-slides.html")
+```
+
+:::fyi
+**Fun fact**: If you type <kbd>?</kbd> (or <kbd>shift</kbd> + <kbd>/</kbd>) while going through the slides, you can see a list of special slide-specific commands.
+:::
+
+
+## Videos
+
+```{r show-youtube-list, echo=FALSE, results="asis"}
+youtube_list(slide_details, playlist_id)
+```
+
+
+```{cat include=FALSE, eval=FALSE}
+https://www.youtube.com/playlist?list=PLS6tnpTr39sEsSJ16BKgXPNFcl3y6gjEv
+
+https://youtu.be/s9YBf8Rf21s
+PMAP 8921 • (5) Themes: (0) Introduction
+
+Introduction to the class session on ggplot themes.
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/05-content/
+
+
+https://youtu.be/BQ3wRMAMeBQ
+PMAP 8921 • (5) Themes: (1) CRAP and ggplot
+
+Brief discussion about the application of the principles of graphic design to data-based graphs
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/05-content/
+
+
+https://youtu.be/V0CzheP9yMc
+PMAP 8921 • (5) Themes: (2) The anatomy of a ggplot theme
+
+Brief overview of the different parts of a ggplot plot and how to target those elements with specific theme functions
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/05-content/
+
+
+https://youtu.be/9ldrTCUSReM
+PMAP 8921 • (5) Themes: Example
+
+Brief demonstration of how to use ggThemeAssist to modify elements of a ggplot theme
+
+Access the slides, code, and other materials at the course website at https://datavizm20.classes.andrewheiss.com/content/05-content/
+  
+See the documentation for ggThemeAssist: https://github.com/calligross/ggthemeassist
+```

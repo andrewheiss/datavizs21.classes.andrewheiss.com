@@ -1,0 +1,41 @@
+---
+title: "Truth, beauty, and data revisited"
+linktitle: "15: Truth, beauty, and data revisited"
+date: "2020-06-01"
+due_date: "2020-06-01"
+due_time: "11:59 PM"
+toc: true
+menu:
+  assignment:
+    parent: Exercises
+    weight: 15
+type: docs
+editor_options: 
+  chunk_output_type: console
+---
+
+For your final exercise, you won't do anything with R. You'll instead have two writing tasks. You can write these in R Markdown if you want, or you can do it in Word or Google Docs or wherever else. 
+
+## Task 1: Storytelling reflection
+
+Write your standard reflection about the storytelling readings and videos.
+
+
+## Task 2: Summary reflection
+
+Write a longer (400ish words) reflection on what you learned in the course in general. What was new? What was exciting? What will you remember? How has this class changed the way you look at data and graphics?
+
+You might explore a few of these summative questions (but definitely don't just go through and answer each of these!):
+
+- What is truth?
+- How do we find truth?
+- Are facts truth?
+- What's the difference between content and form?
+- Does beauty matter when describing truth?
+- How does any of this philosophical humanities stuff relate to data visualization?
+
+## Turning everything in
+
+When you're all done, upload the document with both reflection to iCollege.
+
+Congratulations! You did it!

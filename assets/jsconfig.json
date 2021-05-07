@@ -1,0 +1,10 @@
+{
+ "compilerOptions": {
+  "baseUrl": ".",
+  "paths": {
+   "*": [
+    "../themes/wowchemy-hugo-modules/wowchemy/assets/*"
+   ]
+  }
+ }
+}

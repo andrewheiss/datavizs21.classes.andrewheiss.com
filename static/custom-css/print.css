@@ -1,0 +1,9 @@
+.docs-sidebar, 
+#slide-tabs, 
+#slide-tabs + .fyi, 
+.embed-responsive, 
+.course-info,
+#TOC,
+#TableOfContents {
+    display: none;
+}

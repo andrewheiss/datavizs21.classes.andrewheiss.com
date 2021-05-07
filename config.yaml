@@ -1,0 +1,90 @@
+title: "Data Visualization"
+baseurl: https://datavizs21.classes.andrewheiss.com/
+
+
+# ------------------
+# Building options
+# ------------------
+permalinks:
+  post: "/:year/:month/:day/:slug/"
+buildFuture: True
+
+ignoreFiles:
+  - \.ipynb$
+  - .ipynb_checkpoints$
+  - \.Rmd$
+  - \.Rmarkdown$
+  - _cache$
+  - \.Rproj.user$
+  - \.Rhistory$
+  - \.knit\.md$
+  - \.utf8\.md$
+
+# No taxonomy
+disableKinds:
+  - taxonomy
+  - taxonomyTerm
+
+imaging:
+  anchor: smart
+  quality: 75
+  resampleFilter: lanczos
+
+# Markdown options
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    style: "monokai"
+  tableOfContents:
+    startLevel: 2
+    endLevel: 4
+footnotereturnlinkcontents: <sup>^</sup>
+
+defaultContentLanguage: en
+copyright: ''
+enableGitInfo: no
+hasCJKLanguage: no
+defaultContentLanguageInSubdir: no
+removePathAccents: yes
+summaryLength: 30
+paginate: 10
+enableEmoji: yes
+
+
+# ----------------
+# Output options
+# ----------------
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+    - WebAppManifest
+  section:
+    - HTML
+    - RSS
+mediaTypes:
+  application/manifest+json:
+    suffixes: webmanifest
+outputFormats:
+  WebAppManifest:
+    mediaType: application/manifest+json
+    rel: manifest
+enableRobotsTXT: yes
+
+taxonomies:
+  author: authors
+  category: categories
+  publication_type: publication_types
+  tag: tags
+
+theme: wowchemy-hugo-modules
+
+module:
+  imports:
+    - path: wowchemy-hugo-modules/wowchemy
