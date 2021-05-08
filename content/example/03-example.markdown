@@ -1,8 +1,9 @@
 ---
 title: "Mapping data to graphics"
 linktitle: "3: Mapping data to graphics"
-date: "2020-05-13"
-class_date: "2020-05-13"
+date: "2021-06-14"
+start_date: "2021-06-14"
+end_date: "2021-06-18"
 toc: yes
 menu:
   example:

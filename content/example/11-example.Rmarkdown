@@ -1,8 +1,9 @@
 ---
 title: "Time"
 linktitle: "11: Time"
-date: "2020-05-26"
-class_date: "2020-05-26"
+date: "2021-07-12"
+start_date: "2021-07-12"
+end_date: "2021-07-16"
 toc: yes
 menu:
   example:

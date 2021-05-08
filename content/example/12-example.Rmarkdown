@@ -1,8 +1,9 @@
 ---
 title: "Space"
 linktitle: "12: Space"
-date: "2020-05-27"
-class_date: "2020-05-27"
+date: "2021-07-12"
+start_date: "2021-07-12"
+end_date: "2021-07-16"
 toc: yes
 menu:
   example:

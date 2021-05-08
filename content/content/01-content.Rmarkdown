@@ -1,9 +1,9 @@
 ---
 title: "Truth, beauty, and data + R and tidyverse"
 linktitle: "1: Truth, beauty, and data + the tidyverse"
-date: "2021-01-11"
-start_date: "2021-01-11"
-end_date: "2021-01-15"
+date: "2021-06-07"
+start_date: "2021-06-07"
+end_date: "2021-06-11"
 menu:
   content:
     parent: Course content

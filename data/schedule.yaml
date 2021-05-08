@@ -23,6 +23,10 @@ lessons:
     example: "02-example"
     assignment: "02-exercise"
     bg: 2
+  
+  - title: 'Assignments for sessions 1 and 2 due'
+    date: "June 14"
+    bg: 4
 
   - title: '<span class="content-title">Mapping data to graphics</span>'
     session: "Session 3"
@@ -50,6 +54,10 @@ lessons:
     assignment: "04-exercise"
     bg: 1
 
+  - title: 'Assignments for sessions 3 and 4 due'
+    date: "June 21"
+    bg: 4
+
   - title: '<span class="content-title">Themes</span>'
     session: "Session 5"
     date: "June 21–25"
@@ -71,7 +79,11 @@ lessons:
     example: "06-example"
     assignment: "06-exercise"
     bg: 1
-  
+
+  - title: 'Assignments for sessions 5 and 6 due'
+    date: "June 28"
+    bg: 4
+
   - title: '<span class="content-title">Relationships</span>'
     session: "Session 7"
     date: "June 28–July 2"
@@ -93,7 +105,20 @@ lessons:
     example: "08-example"
     assignment: "08-exercise"
     bg: 1
+
+  - title: 'Assignments for sessions 7 and 8 due'
+    date: "July 5"
+    bg: 4
+
+  - title: '<i class="fas fa-star"></i> **Mini project 1 due**'
+    date: "July 5"
+    assignment: "01-mini-project"
+    bg: 3
+    bottomborder: True
   
+  - title: 'Special applications'
+    header: True
+
   - title: '<span class="content-title">Annotations</span>'
     session: "Session 9"
     date: "July 5–8"
@@ -103,16 +128,7 @@ lessons:
     lesson: "09-lesson"
     example: "09-example"
     assignment: "09-exercise"
-    bg: 2
-
-  - title: '<i class="fas fa-star"></i> **Mini project 1 due**'
-    date: "July 8"
-    assignment: "01-mini-project"
-    bg: 3
-    bottomborder: True
-  
-  - title: 'Special applications'
-    header: True
+    bg: 1
 
   - title: '<span class="content-title">Interactivity</span>'
     session: "Session 10"
@@ -123,7 +139,11 @@ lessons:
     lesson: "10-lesson"
     example: "10-example"
     assignment: "10-exercise"
-    bg: 1
+    bg: 2
+  
+  - title: 'Assignments for sessions 9 and 10 due'
+    date: "July 12"
+    bg: 4
   
   - title: '<span class="content-title">Time</span>'
     session: "Session 11"
@@ -134,7 +154,7 @@ lessons:
     lesson: "11-lesson"
     example: "11-example"
     assignment: "11-exercise"
-    bg: 2
+    bg: 1
 
   - title: '<span class="content-title">Space</span>'
     session: "Session 12"
@@ -145,7 +165,16 @@ lessons:
     lesson: "12-lesson"
     example: "12-example"
     assignment: "12-exercise"
-    bg: 1
+    bg: 2
+
+  - title: 'Assignments for sessions 11 and 12 due'
+    date: "July 19"
+    bg: 4
+
+  - title: '<i class="fas fa-star"></i> **Mini project 2 due**'
+    date: "July 19"
+    assignment: "02-mini-project"
+    bg: 3
   
   - title: '<span class="content-title">Text</span>'
     session: "Session 13"
@@ -156,7 +185,7 @@ lessons:
     lesson: "13-lesson"
     example: "13-example"
     assignment: "13-exercise"
-    bg: 2
+    bg: 1
   
   - title: '<span class="content-title">Enhancing graphics</span>'
     session: "Session 14"
@@ -167,12 +196,11 @@ lessons:
     lesson: "14-lesson"
     example: "14-example"
     assignment: "14-exercise"
-    bg: 1
-  
-  - title: '<i class="fas fa-star"></i> **Mini project 2 due**'
-    date: "July 23"
-    assignment: "02-mini-project"
-    bg: 3
+    bg: 2
+
+  - title: 'Assignments for sessions 13 and 14 due'
+    date: "July 26"
+    bg: 4
     bottomborder: True
 
   - title: 'Conclusions'
@@ -188,6 +216,10 @@ lessons:
     example: "15-example"
     assignment: "15-exercise"
     bg: 1
+  
+  - title: 'Assignment for session 15 due'
+    date: "July 26"
+    bg: 4
   
   - title: '<i class="fas fa-star"></i> **Final project due** (submit online by 11:59 PM)'
     date: "July 31"

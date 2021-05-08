@@ -1,8 +1,9 @@
 ---
 title: "Annotations"
 linktitle: "9: Annotations"
-date: "2020-05-21"
-class_date: "2020-05-21"
+date: "2021-07-05"
+start_date: "2021-07-05"
+end_date: "2021-07-08"
 toc: yes
 menu:
   example:

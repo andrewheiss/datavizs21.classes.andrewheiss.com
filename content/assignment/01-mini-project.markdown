@@ -1,7 +1,7 @@
 ---
 title: "Mini project 1"
-date: "2020-05-22"
-due_date: "2020-05-22"
+date: "2021-07-05"
+due_date: "2021-07-05"
 due_time: "11:59 PM"
 menu:
   assignment:
@@ -63,8 +63,8 @@ Here’s what you need to do:
 8.  **Upload** the following outputs to iCollege:
 
     -   A PDF or Word file of your memo with your final code and graphic embedded in it.[^1] This means you’ll need to do all your coding in an R Markdown file and embed your code in chunks.
-    -   A standalone PNG version of your graphic. Use \`ggsave(plot\_name, filename = “output/blah.png,” width = XX, height = XX)
-    -   A standalone PDF version of your graphic. Use \`ggsave(plot\_name, filename = “output/blah.pdf,” width = XX, height = XX)
+    -   A standalone PNG version of your graphic. Use `ggsave(plot_name, filename = "output/blah.png", width = XX, height = XX)`
+    -   A standalone PDF version of your graphic. Use `ggsave(plot_name, filename = "output/blah.pdf", width = XX, height = XX)`
 
 You will be graded based on completion using the standard ✓ system, but I’ll provide comments on how you use R and **ggplot2**, how well you apply the principles of CRAP, *The Truthful Art*, and *Effective Data Visualization*, and how appropriate the graph is for the data and the story you’re telling. I will use [this rubric](/files/mini-project-1-rubric.pdf) to make comments and provide you with a simulated grade.
 

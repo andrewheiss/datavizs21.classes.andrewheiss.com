@@ -1,8 +1,8 @@
 ---
 title: "Comparisons"
 linktitle: "8: Comparisons"
-date: "2020-05-20"
-due_date: "2020-05-20"
+date: "2021-07-05"
+due_date: "2021-07-05"
 due_time: "11:59 PM"
 toc: true
 menu:

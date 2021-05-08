@@ -1,7 +1,7 @@
 ---
 title: "Mini project 1"
-date: "2020-05-22"
-due_date: "2020-05-22"
+date: "2021-07-05"
+due_date: "2021-07-05"
 due_time: "11:59 PM"
 menu:
   assignment:
@@ -107,8 +107,8 @@ Here's what you need to do:
 8. **Upload** the following outputs to iCollege:
 
     - A PDF or Word file of your memo with your final code and graphic embedded in it.[^note] This means you'll need to do all your coding in an R Markdown file and embed your code in chunks.
-    - A standalone PNG version of your graphic. Use `ggsave(plot_name, filename = "output/blah.png", width = XX, height = XX)
-    - A standalone PDF version of your graphic. Use `ggsave(plot_name, filename = "output/blah.pdf", width = XX, height = XX)
+    - A standalone PNG version of your graphic. Use `ggsave(plot_name, filename = "output/blah.png", width = XX, height = XX)`
+    - A standalone PDF version of your graphic. Use `ggsave(plot_name, filename = "output/blah.pdf", width = XX, height = XX)`
 
 [^note]: You can approach this in a couple different ways—you can write the memo and then include the full figure and code at the end, [similar to this blog post](https://rud.is/b/2017/09/18/mapping-fall-foliage-with-sf/), or you can write the memo in an incremental way, describing the different steps of creating the figure, ultimately arriving at a clean final figure, [like this blog post](https://rudeboybert.github.io/fivethirtyeight/articles/bechdel.html).
 

@@ -1,8 +1,8 @@
 ---
 title: "Enhancing graphics"
 linktitle: "14: Enhancing graphics"
-date: "2020-05-29"
-due_date: "2020-05-29"
+date: "2021-07-26"
+due_date: "2021-07-26"
 due_time: "11:59 PM"
 toc: true
 menu:

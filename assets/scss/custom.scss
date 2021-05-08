@@ -306,6 +306,11 @@ table.schedule>tbody>tr.schedule-bg-3:nth-child(2n+1)>td {
     background-color: lighten(nth($colors, 4), 46%);
 }
 
+table.schedule tr.schedule-bg-4,
+table.schedule>tbody>tr.schedule-bg-4:nth-child(2n+1)>td {
+    background-color: lighten(nth($colors, 3), 63%);
+}
+
 table.schedule .content-title {
     font-weight: bold;
     color: nth($colors, 1);

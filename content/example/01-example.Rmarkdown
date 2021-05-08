@@ -1,8 +1,9 @@
 ---
 title: "Introduction to R and the tidyverse"
 linktitle: "1: Introduction to R and the tidyverse"
-date: "2020-05-11"
-class_date: "2020-05-11"
+date: "2021-06-07"
+start_date: "2021-06-07"
+end_date: "2021-06-11"
 toc: yes
 menu:
   example:

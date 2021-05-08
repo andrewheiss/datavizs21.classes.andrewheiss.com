@@ -1,8 +1,9 @@
 ---
 title: "Enhancing graphics"
 linktitle: "14: Enhancing graphics"
-date: "2020-05-29"
-class_date: "2020-05-29"
+date: "2021-07-19"
+start_date: "2021-07-19"
+end_date: "2021-07-23"
 toc: yes
 menu:
   example:
@@ -32,15 +33,15 @@ For instance, in his first chapter, he guides you through the process of creatin
 
 <img src="/img/assignments/hot-dogs.gif" width="100%" />
 
-## Enhancing graphics in 2020
+## Enhancing graphics in 2021
 
 In 2011, that was the best possible workflow because ggplot couldn't deal with subtitles, captions, repelled labels, embedded fonts, and differently-styled text (like **bold** in the middle of a title). Illustrator was the only way to do this stuff.
 
-Nowadays in 2020, though, you can do nearly all of this annotating and enhancing with packages like **ggtext** and **patchwork** and **ggrepel**. You can almost perfectly replicate in-house style guides with the `theme()` function and put text and arrows and labels and text boxes wherever you want with `annotate()`. It's a brave exciting new world.
+Nowadays in 2021, though, you can do nearly all of this annotating and enhancing with packages like **ggtext** and **patchwork** and **ggrepel**. You can almost perfectly replicate in-house style guides with the `theme()` function and put text and arrows and labels and text boxes wherever you want with `annotate()`. It's a brave exciting new world.
 
 You still can't do everything with R. ggplot can't create fancy font ligatures like "ﬁ" in words that have an "f" followed by an "i", and it can't handle automatic hyphenation and full text justification, among other limitations. But these are the minorest of graphic design issues (and [the ggplot team is working on them](https://www.tidyverse.org/blog/2020/05/updates-to-ragg-and-systemfonts/)!).
 
-*That all said*, it's still often faster and easier to make edits to your graphs in Illustrator rather than fight with a reluctant `annotate()` layer that just won't put an arrow exactly where you want. And **ggtext** is so new (it's not on CRAN yet) that lots of people haven't heard of it yet. This is all cutting edge stuff.
+*That all said*, it's still often faster and easier to make edits to your graphs in Illustrator rather than fight with a reluctant `annotate()` layer that just won't put an arrow exactly where you want. And **ggtext** is so new that lots of people haven't heard of it yet. This is all cutting edge stuff.
 
 So it's still a good idea to understand how to follow the standard workflow of exporting from R and enhancing in Illustrator.
 

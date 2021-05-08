@@ -1,8 +1,8 @@
 ---
 title: "Uncertainty"
 linktitle: "6: Uncertainty"
-date: "2020-05-18"
-due_date: "2020-05-18"
+date: "2021-06-28"
+due_date: "2021-06-28"
 due_time: "11:59 PM"
 toc: true
 menu:

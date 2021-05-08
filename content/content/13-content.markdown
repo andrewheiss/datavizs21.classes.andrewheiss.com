@@ -1,9 +1,9 @@
 ---
 title: "Text"
 linktitle: "13: Text"
-date: "2021-01-11"
-start_date: "2021-01-11"
-end_date: "2021-01-15"
+date: "2021-07-19"
+start_date: "2021-07-19"
+end_date: "2021-07-23"
 menu:
   content:
     parent: Course content

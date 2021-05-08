@@ -1,18 +1,15 @@
 ---
 title: "Introduction to R and the tidyverse"
 linktitle: "1: Introduction to R and the tidyverse"
-date: "2020-05-11"
-due_date: "2020-05-11"
+date: "2021-06-14"
+due_date: "2021-06-14"
 due_time: "11:59 PM"
-output:
-  blogdown::html_page:
-    toc: true
+toc: true
 menu:
   assignment:
     parent: Exercises
     weight: 1
 type: docs
-weight: 1
 editor_options: 
   chunk_output_type: console
 ---
@@ -82,8 +79,8 @@ editor_options:
 
 6. 🎉 Party! 🎉
 
+---
 
-:::fyi
 You'll be doing this same process for all your future exercises. Each exercise will involve an R Markdown file. You can either create a new RStudio Project directory for all your work:
 
 <img src="/img/reference/rproj-one-folder.png" width="30%" />
@@ -91,5 +88,3 @@ You'll be doing this same process for all your future exercises. Each exercise w
 Or you can create individual projects for each assignment and mini-project:
 
 <img src="/img/reference/rproj-multiple-folders.png" width="30%" />
-
-:::

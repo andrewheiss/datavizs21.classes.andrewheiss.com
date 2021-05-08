@@ -1,8 +1,8 @@
 ---
 title: "Text"
 linktitle: "13: Text"
-date: "2020-05-28"
-due_date: "2020-05-28"
+date: "2021-07-26"
+due_date: "2021-07-26"
 due_time: "11:59 PM"
 toc: true
 menu:

@@ -1,9 +1,9 @@
 ---
 title: "Uncertainty"
 linktitle: "6: Uncertainty"
-date: "2021-01-11"
-start_date: "2021-01-11"
-end_date: "2021-01-15"
+date: "2021-06-21"
+start_date: "2021-06-21"
+end_date: "2021-06-25"
 menu:
   content:
     parent: Course content

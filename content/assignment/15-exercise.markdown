@@ -1,8 +1,8 @@
 ---
 title: "Truth, beauty, and data revisited"
 linktitle: "15: Truth, beauty, and data revisited"
-date: "2020-06-01"
-due_date: "2020-06-01"
+date: "2021-07-26"
+due_date: "2021-07-26"
 due_time: "11:59 PM"
 toc: true
 menu:

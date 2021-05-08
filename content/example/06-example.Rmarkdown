@@ -1,8 +1,9 @@
 ---
 title: "Uncertainty"
 linktitle: "6: Uncertainty"
-date: "2020-05-18"
-class_date: "2020-05-18"
+date: "2021-06-21"
+start_date: "2021-06-21"
+end_date: "2021-06-25"
 toc: yes
 menu:
   example:

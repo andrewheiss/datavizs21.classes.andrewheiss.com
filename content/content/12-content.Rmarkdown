@@ -1,9 +1,9 @@
 ---
 title: "Space"
 linktitle: "12: Space"
-date: "2021-01-11"
-start_date: "2021-01-11"
-end_date: "2021-01-15"
+date: "2021-07-12"
+start_date: "2021-07-12"
+end_date: "2021-07-16"
 menu:
   content:
     parent: Course content

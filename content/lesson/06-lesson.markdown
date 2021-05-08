@@ -17,7 +17,7 @@ shiny: true
 
 Throughout this lesson, you’ll use the built-in `mpg` dataset to make histograms, density plots, box plots, violin plots, and other graphics that show uncertainty.
 
-Sorry if `mpg` is getting repetitive! For short interactive things like this, it’s easier to use built-in and easy-to-load datasets like `mpg` and `gapminder` instead of loading CSV files, hence our constant reuse of the dataset. This is fairly normal too—the majority of examples in R help pages (and in peoples’ blog posts) use things like `mpg` or`gapminder`, or even `iris`, which measures the lengths and widths of a bunch of iris flowers in the 1930s (fun fact! I don’t like using `iris` because the data was originally used in an article in the *Annals of Eugenics* (😬) in 1936, and the data was collected to advance eugenics, and [there’s no good reason to use data like that in 2020](https://armchairecology.blog/iris-dataset/).)
+Sorry if `mpg` is getting repetitive! For short interactive things like this, it’s easier to use built-in and easy-to-load datasets like `mpg` and `gapminder` instead of loading CSV files, hence our constant reuse of the dataset. This is fairly normal too—the majority of examples in R help pages (and in peoples’ blog posts) use things like `mpg` or`gapminder`, or even `iris`, which measures the lengths and widths of a bunch of iris flowers in the 1930s (fun fact! I don’t like using `iris` because the data was originally used in an article in the *Annals of Eugenics* (😬) in 1936, and the data was collected to advance eugenics, and [there’s no good reason to use data like that in 2021](https://armchairecology.blog/iris-dataset/).)
 
 So we work with cars instead of racist flower data.
 

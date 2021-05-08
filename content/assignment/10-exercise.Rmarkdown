@@ -1,8 +1,8 @@
 ---
 title: "Interactivity"
 linktitle: "10: Interactivity"
-date: "2020-05-22"
-due_date: "2020-05-22"
+date: "2021-07-12"
+due_date: "2021-07-12"
 due_time: "11:59 PM"
 toc: true
 menu:

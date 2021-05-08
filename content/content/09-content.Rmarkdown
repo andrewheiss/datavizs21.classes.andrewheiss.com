@@ -1,9 +1,9 @@
 ---
 title: "Annotations"
 linktitle: "9: Annotations"
-date: "2021-01-11"
-start_date: "2021-01-11"
-end_date: "2021-01-15"
+date: "2021-07-05"
+start_date: "2021-07-05"
+end_date: "2021-07-08"
 menu:
   content:
     parent: Course content

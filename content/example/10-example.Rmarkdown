@@ -1,8 +1,9 @@
 ---
 title: "Interactivity"
 linktitle: "10: Interactivity"
-date: "2020-05-22"
-class_date: "2020-05-22"
+date: "2021-07-05"
+start_date: "2021-07-05"
+end_date: "2021-07-08"
 toc: yes
 menu:
   example:

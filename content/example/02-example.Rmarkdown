@@ -1,8 +1,9 @@
 ---
 title: "Graphic design"
 linktitle: "2: Graphic design"
-date: "2020-05-12"
-class_date: "2020-05-12"
+date: "2021-06-07"
+start_date: "2021-06-07"
+end_date: "2021-06-11"
 toc: yes
 menu:
   example:

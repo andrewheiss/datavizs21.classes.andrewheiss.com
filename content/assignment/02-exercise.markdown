@@ -1,8 +1,8 @@
 ---
 title: "Graphic design"
 linktitle: "2: Graphic design"
-date: "2020-05-12"
-due_date: "2020-05-12"
+date: "2021-06-14"
+due_date: "2021-06-14"
 due_time: "11:59 PM"
 toc: true
 menu:
@@ -22,7 +22,7 @@ Write your reflection for the day's readings.
 
 Critique the design of the poster for the BYU Student Wellness Center workshop below. Go through the CRAP checklist and analyze how well or poorly the poster follows each of the principles. Discuss how the poster's adherence to (or non-adherence to) these principles influences its effectiveness.
 
-(*This would have been some random poster from GSU, but I haven't been on campus since mid-March* 😭)
+(*This would have been some random poster from GSU, but I haven't been on campus since mid-March 2020* 😭)
 
 <img src="/img/assignments/student-wellness.jpg" width="60%" />
 

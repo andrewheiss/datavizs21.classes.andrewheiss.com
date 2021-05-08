@@ -1,8 +1,9 @@
 ---
 title: "Sharing R output online"
 linktitle: "15: Sharing R output online"
-date: "2020-06-01"
-class_date: "2020-06-01"
+date: "2021-07-26"
+start_date: "2021-07-26"
+end_date: "2021-07-31"
 toc: yes
 menu:
   example:

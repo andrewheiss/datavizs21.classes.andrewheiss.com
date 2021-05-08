@@ -1,9 +1,9 @@
 ---
 title: "Relationships"
 linktitle: "7: Relationships"
-date: "2021-01-11"
-start_date: "2021-01-11"
-end_date: "2021-01-15"
+date: "2021-06-28"
+start_date: "2021-06-28"
+end_date: "2021-07-02"
 menu:
   content:
     parent: Course content

@@ -1,8 +1,9 @@
 ---
 title: "Text"
 linktitle: "13: Text"
-date: "2020-05-28"
-class_date: "2020-05-28"
+date: "2021-07-19"
+start_date: "2021-07-19"
+end_date: "2021-07-23"
 toc: yes
 menu:
   example:
@@ -555,10 +556,10 @@ main_characters_by_chapter
 And here's the polished plot:
 
 ```{r lw-props-plot, fig.width=8, fig.height=5}
-ggplot(main_characters_by_chapter, aes(x = prop, y = 1, fill = fct_rev(name))) + 
+ggplot(main_characters_by_chapter, aes(x = prop, y = "1", fill = fct_rev(name))) + 
   geom_col(position = position_stack()) +
   scale_x_continuous(expand = c(0, 0)) +
-  scale_y_continuous(expand = c(0, 0)) +
+  scale_y_discrete(expand = c(0, 0)) +
   scale_fill_viridis_d(option = "plasma", end = 0.9, name = NULL) +
   guides(fill = guide_legend(reverse = TRUE)) +
   labs(x = NULL, y = NULL,

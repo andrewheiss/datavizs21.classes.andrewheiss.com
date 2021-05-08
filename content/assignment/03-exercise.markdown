@@ -1,8 +1,8 @@
 ---
 title: "Mapping data to graphics"
 linktitle: "3: Mapping data to graphics"
-date: "2020-05-13"
-due_date: "2020-05-13"
+date: "2021-06-21"
+due_date: "2021-06-21"
 due_time: "11:59 PM"
 toc: true
 menu:

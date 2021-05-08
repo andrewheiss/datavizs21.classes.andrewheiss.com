@@ -1,7 +1,7 @@
 ---
 title: "Mini project 2"
-date: "2020-05-29"
-due_date: "2020-05-29"
+date: "2021-07-19"
+due_date: "2021-07-19"
 due_time: "11:59 PM"
 menu:
   assignment:
@@ -24,17 +24,17 @@ In this mini project, you will use **R, ggplot, and [Illustrator](https://www.ad
 
 Here's what you need to do:
 
-#. **Create** a new RStudio project and place it on your computer somewhere. Open that new folder in Windows File Explorer or macOS Finder (however you navigate around the files on your computer), and create two subfolders there named `data` and `output`.
+1. **Create** a new RStudio project and place it on your computer somewhere. Open that new folder in Windows File Explorer or macOS Finder (however you navigate around the files on your computer), and create two subfolders there named `data` and `output`.
 
-#. **Download** the Department of Homeland Security's annual count of people granted refugee status between 2006-2015:
+2. **Download** the Department of Homeland Security's annual count of people granted refugee status between 2006-2015:
 
     [<i class="fas fa-file-csv"></i> DHS refugees, 2006-2015](/data/refugee_status.csv)
     
     Place this in the `data` subfolder you created in step 1. You might need to right click on this link and choose "Save link as…", since your browser may try to display it as text. This data was originally [uploaded by the Department of Homeland Security to Kaggle](https://www.kaggle.com/dhs/refugee-report), and is provided with a public domain license.
 
-#. **Create** a new R Markdown file and save it in your project. In RStudio go to File > New File > R Markdown…, choose the default options, and delete all the placeholder text in the new file except for the metadata at the top, which is between `---` and `---`. 
+3. **Create** a new R Markdown file and save it in your project. In RStudio go to File > New File > R Markdown…, choose the default options, and delete all the placeholder text in the new file except for the metadata at the top, which is between `---` and `---`. 
 
-#. **Verify** that your project folder is structured like this:
+4. **Verify** that your project folder is structured like this:
 
     ```text
     your-project-name/
@@ -46,25 +46,25 @@ Here's what you need to do:
         NOTHING
     ```
 
-#. **Clean** the data using the code I've given you below.
+5. **Clean** the data using the code I've given you below.
 
-#. **Summarize** the data somehow. There is data for 60 countries over 10 years, so you'll probably need to aggregate or reshape the data somehow (unless you do a 60-country sparkline). I've included some examples down below.
+6. **Summarize** the data somehow. There is data for 60 countries over 10 years, so you'll probably need to aggregate or reshape the data somehow (unless you do a 60-country sparkline). I've included some examples down below.
 
-#. **Create** an appropriate time-based visualization based on the data. I've shown a few different ways to summarize the data so that it's plottable down below. Don't just calculate overall averages or totals per country—the visualization needs to deal with change over time. *Do as much polishing and refining in R*—make adjustments to the colors, scales, labels, grid lines, and even fonts, etc.
+7. **Create** an appropriate time-based visualization based on the data. I've shown a few different ways to summarize the data so that it's plottable down below. Don't just calculate overall averages or totals per country—the visualization needs to deal with change over time. *Do as much polishing and refining in R*—make adjustments to the colors, scales, labels, grid lines, and even fonts, etc.
 
-#. **Save** the figure as a PDF. Use `ggsave(plot_name, filename = "output/blah.pdf", width = XX, height = XX)`
+8. **Save** the figure as a PDF. Use `ggsave(plot_name, filename = "output/blah.pdf", width = XX, height = XX)`
 
-#. **Refine and polish** the saved PDF in [Illustrator](https://www.adobe.com/products/illustrator.html) or [Inkscape](https://inkscape.org/en/) or [Gravit Designer](https://www.designer.io/), adding annotations, changing colors, and otherwise enhancing it.
+9. **Refine and polish** the saved PDF in [Illustrator](https://www.adobe.com/products/illustrator.html) or [Inkscape](https://inkscape.org/en/) or [Gravit Designer](https://www.designer.io/), adding annotations, changing colors, and otherwise enhancing it.
 
-#. **Export** the polished image as a PDF and a PNG file.
+10. **Export** the polished image as a PDF and a PNG file.
 
-#. **Write** a memo (no word limit) explaining your process. I'm specifically looking for the following:
+11. **Write** a memo (no word limit) explaining your process. I'm specifically looking for the following:
 
     - What story are you telling with your graphic?
     - How did you apply the principles of CRAP?
     - How did you apply Kieran Healy's principles of great visualizations or Alberto Cairo's five qualities of great visualizations?
 
-#. **Upload** the following outputs to iCollege:
+12. **Upload** the following outputs to iCollege:
 
     - A PDF or Word file of your memo with your final code, intermediate graphic (the one you create in R), and final graphic (the one you enhance) in it. Remember to use `![Caption](path/to/figure/here)` to place external images in Markdown.
     - A standalone PNG version of your graphic. You'll export this from Illustrator or Inkscape.
@@ -93,17 +93,24 @@ These are the main issues with the data:
 
 - The data generally includes rows for dozens of countries, but there are also rows for some continents, "unknown," "other," and a total row. Because [Africa is not a country](https://twitter.com/africasacountry), and neither are the other continents, we want to exclude all non-countries.
 
-- Maintaining consistent country names across different datasets is *literally* the woooooooorst. Countries have different formal official names and datasets are never consistent in how they use those names.^[For instance, "North Korea", "Korea, North", "DPRK", "Korea, Democratic People's Republic of", and "Democratic People's Republic of Korea", and "Korea (DPRK)" are all perfectly normal versions of the country's name and you'll find them all in the wild.] It's such a tricky problem that social scientists have spent their careers just figuring out how to properly name and code countries. Really.^[See Gleditsch, Kristian S. & Michael D. Ward. 1999. ["Interstate System Membership: A Revised List of the Independent States since 1816."](https://www.tandfonline.com/doi/abs/10.1080/03050629908434958) *International Interactions* 25: 393-413; or the ["ICOW Historical State Names Data Set"](http://www.paulhensel.org/icownames.html).] There are international standards for country codes, though, like [ISO 3166-1 alpha 3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) (my favorite), also known as ISO3. It's not perfect—it omits microstates (some Polynesian countries) and gray area states (Palestine, Kosovo)—but it's an international standard, so it has that going for it.
+- Maintaining consistent country names across different datasets is *literally* the woooooooorst. Countries have different formal official names and datasets are never consistent in how they use those names.[^names] It's such a tricky problem that social scientists have spent their careers just figuring out how to properly name and code countries. Really.[^ccodes] There are international standards for country codes, though, like [ISO 3166-1 alpha 3](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3) (my favorite), also known as ISO3. It's not perfect—it omits microstates (some Polynesian countries) and gray area states (Palestine, Kosovo)—but it's an international standard, so it has that going for it.
 
 - To ensure that country names are consistent in this data, we use the **countrycode** package (install it if you don't have it), which is amazing. The `countrycode()` function will take a country name in a given coding scheme and convert it to a different coding scheme using this syntax:
 
-        countrycode(variable, "current-coding-scheme", "new-coding-scheme")
     
+    ```r
+    countrycode(variable, "current-coding-scheme", "new-coding-scheme")
+    ```
+
     It also does a farily good job at guessing and parsing inconsistent country names (e.g. it will recognize "Congo, Democratic Republic", even though it should technically be "Democratic Republic of the Congo"). Here, we use `countrycode()` to convert the inconsistent country names into ISO3 codes. We then create a cleaner version of the `origin_country` column by converting the ISO3 codes back into country names. Note that the function chokes on North Korea initially, since it's included as "Korea, North"—we use the `custom_match` argument to help the function out.
 
 - The data isn't tidy—there are individual columns for each year. `gather()` takes every column and changes it to a row. We exclude the country, region, continent, and ISO3 code from the change-into-rows transformation with `-origin_country, -iso3, -origin_region, -origin_continent`.
 
 - Currently, the year is being treated as a number, but it's helpful to also treat it as an actual date. We create a new variable named `year_date` that converts the raw number (e.g. 2009) into a date. The date needs to have at least a month, day, and year, so we actually convert it to January 1, 2009 with `ymd(paste0(year, "-01-01"))`.
+
+[^names]: For instance, "North Korea", "Korea, North", "DPRK", "Korea, Democratic People's Republic of", and "Democratic People's Republic of Korea", and "Korea (DPRK)" are all perfectly normal versions of the country's name and you'll find them all in the wild.
+
+[^ccodes]: See Gleditsch, Kristian S. & Michael D. Ward. 1999. ["Interstate System Membership: A Revised List of the Independent States since 1816."](https://www.tandfonline.com/doi/abs/10.1080/03050629908434958) *International Interactions* 25: 393-413; or the ["ICOW Historical State Names Data Set"](http://www.paulhensel.org/icownames.html).
 
 
 ```r

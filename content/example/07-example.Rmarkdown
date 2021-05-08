@@ -1,8 +1,9 @@
 ---
 title: "Relationships"
 linktitle: "7: Relationships"
-date: "2020-05-19"
-class_date: "2020-05-19"
+date: "2021-06-28"
+start_date: "2021-06-28"
+end_date: "2021-07-02"
 toc: yes
 menu:
   example:

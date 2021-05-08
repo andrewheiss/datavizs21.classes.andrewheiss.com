@@ -1,13 +1,13 @@
 ---
 title: "Truth, beauty, and data revisited"
 linktitle: "15: Truth, beauty, and data revisited"
-date: "2021-01-11"
-start_date: "2021-01-11"
-end_date: "2021-01-15"
+date: "2021-07-26"
+start_date: "2021-07-26"
+end_date: "2021-07-31"
 menu:
   content:
     parent: Course content
-    weight: 1
+    weight: 15
 type: docs
 toc: true
 bibliography: "../../static/bib/references.bib"

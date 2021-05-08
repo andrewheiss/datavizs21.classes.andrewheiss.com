@@ -1,8 +1,9 @@
 ---
 title: "Amounts and proportions"
 linktitle: "4: Amounts and proportions"
-date: "2020-05-14"
-class_date: "2020-05-14"
+date: "2021-06-14"
+start_date: "2021-06-14"
+end_date: "2021-06-18"
 toc: yes
 menu:
   example:

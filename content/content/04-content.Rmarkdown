@@ -1,9 +1,9 @@
 ---
 title: "Amounts and proportions"
 linktitle: "4: Amounts and proportions"
-date: "2021-01-11"
-start_date: "2021-01-11"
-end_date: "2021-01-15"
+date: "2021-06-14"
+start_date: "2021-06-14"
+end_date: "2021-06-18"
 menu:
   content:
     parent: Course content
