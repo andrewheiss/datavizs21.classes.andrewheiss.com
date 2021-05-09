@@ -47,6 +47,8 @@ slide_details <- tibble::tribble(
 
 ### Questions to reflect on
 
+*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 - How do these types of visualizations help or hinder our search for truth in data?
 - What do you think of the *Financial Times* explanations of their use of absolute numbers (not per capita numbers) and log scales (not regular scales)? How have these decisions affected your perception of the pandemic? How have they affected others' perceptions?
 

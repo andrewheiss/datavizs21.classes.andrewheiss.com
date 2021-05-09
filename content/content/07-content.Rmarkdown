@@ -43,6 +43,8 @@ slide_details <- tibble::tribble(
 
 ### Questions to reflect on
 
+*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 - How can you correctly and honestly communicate relationships between variables? How can you communicate the uncertainty in those relationships?
 - What are the dangers of visualizing two variables?
 - When is it appropriate to use two y-axes?

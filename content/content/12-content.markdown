@@ -33,6 +33,8 @@ It looks like this is a lot of reading, but lots of these are short videos or tw
 
 ### Questions to reflect on
 
+*(Remember, you don’t need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 -   How can you know if a map projection is truthful or misleading?
 -   What’s wrong (or not wrong) with using points on maps? Choropleths? Lines?
 

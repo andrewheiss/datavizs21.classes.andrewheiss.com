@@ -34,6 +34,8 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ### Questions to reflect on
 
+*(Remember, you don’t need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 -   How helpful (or unhelpful) are explorable explanations?
 -   Have you seen examples of good dashboards before this class? Bad dashboards? What makes them good or bad?
 

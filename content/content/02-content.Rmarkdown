@@ -27,18 +27,6 @@ slide_details <- tibble::tribble(
   "iuEwh2EnIcw", "Graphic design and CRAP", "design-crap", FALSE,
   "j0aqBmRV66A", "Image types", "image-types", FALSE
 )
-
-# sections <- tibble::tribble(
-#     ~name, ~slide, ~active,
-#     "Graphic design", "1", TRUE,
-#     "Truth, beauty, stories, design", "truth-beauty-design", FALSE,
-#     "Graphic design and CRAP", "design-crap", FALSE,
-#     "Contrast", "contrast", FALSE,
-#     "Repetition", "repetition", FALSE,
-#     "Alignment", "alignment", FALSE,
-#     "Proximity", "proximity", FALSE,
-#     "Image types", "image-types", FALSE
-# )
 ```
 
 ## Readings
@@ -51,6 +39,8 @@ slide_details <- tibble::tribble(
 - <i class="fas fa-external-link-square-alt"></i> ["File formats explained"](https://www.theglowstudio.com/file-formats-explained/)
 
 ### Questions to reflect on
+
+*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
 
 - Why does graphic design matter when conveying truth?
 - What makes something well designed (vs. poorly designed)?

@@ -24,6 +24,8 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ### Questions to reflect on
 
+*(Remember, you don’t need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 -   How do the principles of CRAP apply to graph design and other theme elements?
 -   Should plots use gridlines? Naomi Robbins says yes; Stephen Few says no—what do you say?
 

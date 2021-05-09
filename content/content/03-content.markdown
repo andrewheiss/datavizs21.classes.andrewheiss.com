@@ -22,6 +22,8 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ### Questions to reflect on
 
+*(Remember, you don’t need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 -   Why is it important to visualize variables and data?
 -   What does it mean to map data to graph aesthetics?
 -   What data was mapped to which aesthetics in Rosling’s video?

@@ -39,6 +39,8 @@ slide_details <- tibble::tribble(
 
 ### Questions to reflect on
 
+*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 - Why are stories so powerful?
 - How are stories related to truth?
 - Is it ethical to emphasize certain aspects of the facts in data more than others? How do you decide which facts to use to convince audiences?

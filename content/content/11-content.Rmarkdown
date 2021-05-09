@@ -52,6 +52,8 @@ slide_details <- tibble::tribble(
 
 ### Questions to reflect on
 
+*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 - When is it okay (or not) to truncate the y-axis?
 - It is remarkably easy to mislead people with many of these chart types. Why? How can you avoid the same mistakes?
 - All these types of charts are good at communicating change over time, but some are more appropriate in different situations. When is it best to use these different types (e.g. line graphs vs. area graphs vs. horizon charts vs. heatmaps, etc.)?

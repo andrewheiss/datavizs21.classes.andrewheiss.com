@@ -31,6 +31,8 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ### Questions to reflect on
 
+*(Remember, you don’t need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 -   Why is qualitative data difficult to visualize?
 -   Why are word clouds so problematic? When is (not) okay to use them?
 

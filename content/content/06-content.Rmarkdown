@@ -39,6 +39,8 @@ slide_details <- tibble::tribble(
 
 ### Questions to reflect on
 
+*(Remember, you don't need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
+
 - Why is it important to deal with uncertainty in data?
 - What was good or bad about the New York Times' 2016 live election guage?
 - Why is it so hard to visualize uncertainty?
