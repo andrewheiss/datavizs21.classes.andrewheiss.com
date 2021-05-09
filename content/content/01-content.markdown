@@ -17,11 +17,14 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 ## Readings
 
 -   The [syllabus](/syllabus/), [content](/content/), [lessons](/lesson/), [examples](/example/), and [assignments](/assigment/) pages for this class
+-   <i class="fas fa-podcast"></i> Tim Harford, [“Florence Nightingale: Data Viz Pioneer,”](https://99percentinvisible.org/episode/florence-nightingale-data-viz-pioneer/) *99% Invisible*, episode 433, March 2, 2021 (*this is a podcast; listen to it in your browser or use an app like [Overcast](https://overcast.fm/) or [Spotify](https://spotify.com/)*)
 -   <i class="fas fa-book"></i> [Chapter 1](http://socviz.co/lookatdata.html) in Kieran Healy, *Data Visualization*[^1]
 -   <i class="fas fa-book"></i> Chapters 2 and 3 in Alberto Cairo, *The Truthful Art*[^2] (*skim the introduction and chapter 1*)
 -   <i class="fas fa-external-link-square-alt"></i> [Study: Charts change hearts and minds better than words do](https://www.washingtonpost.com/news/wonk/wp/2018/06/15/study-charts-change-hearts-and-minds-better-than-words-do/?utm_term=.4474599c0d5e)
 
 ### Questions to reflect on
+
+*(Remember, you don’t need to answer all of these—or even any of them! These are just here to help guide your thinking.)*
 
 -   How do we know what is true?
 -   Are facts truth?
