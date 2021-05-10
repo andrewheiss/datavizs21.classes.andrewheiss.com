@@ -3,7 +3,7 @@ title: Syllabus
 slug: syllabus
 citeproc: true
 bibliography: ../../static/bib/references.bib
-csl: ../../static/bib/chicago-syllabus-no-bib.csl
+csl: ../../static/bib/chicago-fullnote-bibliography-no-bib.csl
 output:
   blogdown::html_page:
     toc: true
@@ -17,7 +17,6 @@ library(pander)
 ```
 
 `r blogdown::shortcode("courseinfo")`
-
 
 ## Course objectives
 
@@ -62,17 +61,17 @@ All of the readings and software in this class are **free**. There are free onli
 
 We'll rely heavily on these books, which are all available online (**for free!**). I recommend getting the printed versions of these books if you are interested, but it is not required.
 
-- [@Cairo:2016]
+- Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (Berkeley, California: New Riders, 2016).
 
     > <span>$27</span> used, <span>$32</span> new at [Amazon](https://www.amazon.com/Truthful-Art-Data-Charts-Communication/dp/0321934075). A **free** eBook version is available through GSU's library through O'Reilly's Higher Education database. The easiest way to access it is to visit a special URL (<http://go.oreilly.com/georgia-state-university>), log in with your GSU account, and then search for "The Truthful Art".
 
-- [@Healy:2018]
+- Kieran Healy, *Data Visualization: A Practical Introduction* (Princeton: Princeton University Press, 2018), <http://socviz.co/>.
 
     > [**FREE** online](http://socviz.co/); <span>$30</span> used, <span>$36</span> new at [Amazon](https://www.amazon.com/Data-Visualization-Introduction-Kieran-Healy/dp/0691181624/).
 
-- [@Wilke:2018]
+- Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
 
-    > [**FREE** online](https://serialmentor.com/dataviz/); <span>$32</span> new at [Amazon](https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089). An eBook version is also available through [the O'Reilly database](http://go.oreilly.com/georgia-state-university), but you can just use [the online version](https://serialmentor.com/dataviz/).
+    > [**FREE** online](https://clauswilke.com/dataviz/); <span>$32</span> new at [Amazon](https://www.amazon.com/Fundamentals-Data-Visualization-Informative-Compelling/dp/1492031089). An eBook version is also available through [the O'Reilly database](http://go.oreilly.com/georgia-state-university), but you can just use [the online version](https://clauswilke.com/dataviz/).
 
 There will occasionally be additional articles and videos to read and watch. When this happens, links to these other resources will be included on the content page for that session.
 
