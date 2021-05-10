@@ -51,6 +51,10 @@ hp <- tibble(book = c("Philosopher's Stone", "Chamber of Secrets",
   mutate(book = fct_inorder(book))
 ```
 
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+```
+
 class: center middle main-title section-title-4
 
 # Text

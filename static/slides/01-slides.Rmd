@@ -29,6 +29,10 @@ knitr::opts_chunk$set(warning = FALSE, message = FALSE,
 library(tidyverse)
 ```
 
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+```
+
 class: center middle main-title section-title-4
 
 # Truth, beauty,<br>and data

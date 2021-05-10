@@ -29,6 +29,10 @@ library(tidyverse)
 set.seed(1234)
 ```
 
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+```
+
 class: center middle main-title section-title-4
 
 # Annotations
@@ -172,7 +176,7 @@ class: title title-5
 
 ???
 
-Source: Claus Wilke: https://serialmentor.com/dataviz/redundant-coding.html
+Source: Claus Wilke: https://clauswilke.com/dataviz/redundant-coding.html
 
 ---
 
@@ -196,7 +200,7 @@ Source: Claus Wilke: https://serialmentor.com/dataviz/redundant-coding.html
 
 ???
 
-Source: Claus Wilke: https://serialmentor.com/dataviz/redundant-coding.html
+Source: Claus Wilke: https://clauswilke.com/dataviz/redundant-coding.html
 
 ---
 
@@ -583,7 +587,7 @@ ggplot(gapminder_europe,
 
 ???
 
-Source: Claus Wilke: https://serialmentor.com/dataviz/figure-titles-captions.html
+Source: Claus Wilke: https://clauswilke.com/dataviz/figure-titles-captions.html
 
 ---
 

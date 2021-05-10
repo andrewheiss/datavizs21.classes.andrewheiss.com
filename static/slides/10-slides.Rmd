@@ -30,6 +30,10 @@ library(plotly)
 set.seed(1234)
 ```
 
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("tile_view"))
+```
+
 class: center middle main-title section-title-4
 
 # Interactivity
