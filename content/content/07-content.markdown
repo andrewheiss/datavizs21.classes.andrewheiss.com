@@ -17,7 +17,7 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 ## Readings
 
 -   <i class="fas fa-book"></i> Chapter 9 in Alberto Cairo, *The Truthful Art*[^1]
--   <i class="fas fa-book"></i> [Chapter 12](https://serialmentor.com/dataviz/visualizing-associations.html) in Claus Wilke, *Fundamentals of Data Visualization*[^2]
+-   <i class="fas fa-book"></i> [Chapter 12](https://clauswilke.com/dataviz/visualizing-associations.html) in Claus Wilke, *Fundamentals of Data Visualization*[^2]
 -   <i class="fas fa-external-link-square-alt"></i> Kieran Healy, [“Two y-axes”](https://kieranhealy.org/blog/archives/2016/01/16/two-y-axes/)
 -   <i class="fas fa-external-link-square-alt"></i> [Two Alternatives to Using a Second Y-Axis](http://stephanieevergreen.com/two-alternatives-to-using-a-second-y-axis/) & [Illusion of success](http://junkcharts.typepad.com/junk_charts/2006/06/illusion_of_suc.html) & [Dissecting two axes](http://junkcharts.typepad.com/junk_charts/2006/01/dissecting_two_.html)
 -   <i class="fas fa-external-link-square-alt"></i> [Dual-Scaled Axes in Graphs: Are They Ever the Best Solution?](http://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf)[^3]
@@ -129,7 +129,7 @@ You can also watch the playlist (and skip around to different sections) here:
 
 [^1]: Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (Berkeley, California: New Riders, 2016).
 
-[^2]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
+[^2]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://clauswilke.com/dataviz/>.
 
 [^3]: Stephen Few, “Dual-Scaled Axes in Graphs: Are They Ever the Best Solution?” *Visual Business Intelligence Newsletter*, March 2008, <http://www.perceptualedge.com/articles/visual_business_intelligence/dual-scaled_axes.pdf>.
 

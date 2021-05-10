@@ -16,7 +16,7 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ## Readings
 
--   <i class="fas fa-book"></i> [Chapter 7](https://serialmentor.com/dataviz/histograms-density-plots.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
+-   <i class="fas fa-book"></i> [Chapter 7](https://clauswilke.com/dataviz/histograms-density-plots.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
 -   <i class="fas fa-book"></i> Chapters 4, 7, and 11 in Alberto Cairo, *The Truthful Art*[^2]
 -   <i class="fas fa-external-link-square-alt"></i> [Why It’s So Hard for Us to Visualize Uncertainty](https://hbr.org/2016/11/why-its-so-hard-for-us-to-visualize-uncertainty)
 -   <i class="fab fa-youtube"></i> [Amanda Cox’s keynote address at the 2017 OpenVis Conf](https://www.youtube.com/watch?v=0L1tGo-DvD0)
@@ -110,6 +110,6 @@ You can also watch the playlist (and skip around to different sections) here:
 
 </div>
 
-[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
+[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://clauswilke.com/dataviz/>.
 
 [^2]: Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (Berkeley, California: New Riders, 2016).

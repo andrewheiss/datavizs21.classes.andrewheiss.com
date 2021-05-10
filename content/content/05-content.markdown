@@ -16,7 +16,7 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ## Readings
 
--   <i class="fas fa-book"></i> [Chapter 22](https://serialmentor.com/dataviz/figure-titles-captions.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
+-   <i class="fas fa-book"></i> [Chapter 22](https://clauswilke.com/dataviz/figure-titles-captions.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
 -   <i class="fas fa-external-link-square-alt"></i> [Naomi Robbins, “Are Grid Lines Useful or Chartjunk?”](https://www.forbes.com/sites/naomirobbins/2012/02/22/are-grid-lines-useful-or-chartjunk/#3b49a4044283)
 -   <i class="fas fa-external-link-square-alt"></i> [Stephen Few, “Grid Lines in Graphs are Rarely Useful”](http://www.perceptualedge.com/articles/dmreview/grid_lines.pdf)
 -   <i class="fas fa-external-link-square-alt"></i> [Henry Wang, “ggplot2 Theme Elements Demonstration”](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
@@ -107,4 +107,4 @@ You can also watch the playlist (and skip around to different sections) here:
 
 </div>
 
-[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
+[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://clauswilke.com/dataviz/>.

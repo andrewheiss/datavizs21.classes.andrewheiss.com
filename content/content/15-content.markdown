@@ -17,7 +17,7 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 ## Readings
 
 -   <i class="fas fa-book"></i> Chapter 12 in Alberto Cairo, *The Truthful Art*[^1]
--   <i class="fas fa-book"></i> [Chapter 26](https://serialmentor.com/dataviz/telling-a-story.html) in Claus Wilke, *Fundamentals of Data Visualization*[^2]
+-   <i class="fas fa-book"></i> [Chapter 26](https://clauswilke.com/dataviz/telling-a-story.html) in Claus Wilke, *Fundamentals of Data Visualization*[^2]
 -   <i class="fas fa-file-pdf"></i> Martin Krzywinski and Alberto Cairo, [“Storytelling”](https://www.nature.com/articles/nmeth.2571.pdf)
 -   <i class="fab fa-youtube"></i> Ben Wellington, [“Making data mean more through storytelling”](https://www.youtube.com/watch?v=6xsvGYIxJok)
 -   <i class="fab fa-vimeo"></i> Jonathan Schwabish, [“Better Data Communication,”](https://vimeo.com/230757062) National Bureau of Economic Research
@@ -112,4 +112,4 @@ You can also watch the playlist (and skip around to different sections) here:
 
 [^1]: Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (Berkeley, California: New Riders, 2016).
 
-[^2]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
+[^2]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://clauswilke.com/dataviz/>.

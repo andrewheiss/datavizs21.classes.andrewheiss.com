@@ -16,9 +16,9 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ## Readings
 
--   <i class="fas fa-book"></i> [Chapter 6](https://serialmentor.com/dataviz/visualizing-amounts.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
+-   <i class="fas fa-book"></i> [Chapter 6](https://clauswilke.com/dataviz/visualizing-amounts.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
 -   <i class="fas fa-book"></i> Chapter 6 in Alberto Cairo, *The Truthful Art*[^2]
--   <i class="fas fa-book"></i> [Chapter 10](https://serialmentor.com/dataviz/visualizing-proportions.html) in Claus Wilke, *Fundamentals of Data Visualization*[^3]
+-   <i class="fas fa-book"></i> [Chapter 10](https://clauswilke.com/dataviz/visualizing-proportions.html) in Claus Wilke, *Fundamentals of Data Visualization*[^3]
 -   <i class="fas fa-external-link-square-alt"></i> [Engaging Readers with Square Pie/Waffle Charts](https://eagereyes.org/blog/2008/engaging-readers-with-square-pie-waffle-charts)
 -   <i class="fas fa-external-link-square-alt"></i> [Understanding Pie Charts](https://eagereyes.org/techniques/pie-charts)
 -   <i class="fas fa-external-link-square-alt"></i> [Square pie chart beats out the rest in perception study](https://flowingdata.com/2016/07/15/square-pie-chart-beats-out-the-rest-in-perception-study/)
@@ -130,7 +130,7 @@ You can also watch the playlist (and skip around to different sections) here:
 
 </div>
 
-[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
+[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://clauswilke.com/dataviz/>.
 
 [^2]: Alberto Cairo, *The Truthful Art: Data, Charts, and Maps for Communication* (Berkeley, California: New Riders, 2016).
 

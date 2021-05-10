@@ -16,7 +16,7 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ## Readings
 
--   <i class="fas fa-book"></i> [Chapter 9](https://serialmentor.com/dataviz/boxplots-violins.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
+-   <i class="fas fa-book"></i> [Chapter 9](https://clauswilke.com/dataviz/boxplots-violins.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
 -   <i class="fas fa-external-link-square-alt"></i> Mike Bostock, [“Methods of Comparison, Compared”](https://observablehq.com/@mbostock/methods-of-comparison-compared). Explanation of the differences between showing relative differences, absolute differences, and log ratios.
 -   <i class="fas fa-external-link-square-alt"></i> [Sparkline theory and practice](https://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0001OR). This is a collection of posts by Edward Tufte about sparklines—scroll down a ways and check out his examples, analysis, and critiques.
 -   <i class="fas fa-external-link-square-alt"></i> [Time series sparklines](https://flowingdata.com/2017/01/24/one-dataset-visualized-25-ways/02-time-series-sparklines-2/)
@@ -116,4 +116,4 @@ You can also watch the playlist (and skip around to different sections) here:
 
 </div>
 
-[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
+[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://clauswilke.com/dataviz/>.

@@ -31,7 +31,7 @@ slide_details <- tibble::tribble(
 ## Readings
 
 - <i class="fas fa-book"></i> Chapter 12 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
-- <i class="fas fa-book"></i> [Chapter 26](https://serialmentor.com/dataviz/telling-a-story.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- <i class="fas fa-book"></i> [Chapter 26](https://clauswilke.com/dataviz/telling-a-story.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
 - <i class="fas fa-file-pdf"></i> Martin Krzywinski and Alberto Cairo, ["Storytelling"](https://www.nature.com/articles/nmeth.2571.pdf)
 - <i class="fab fa-youtube"></i> Ben Wellington, ["Making data mean more through storytelling"](https://www.youtube.com/watch?v=6xsvGYIxJok)
 - <i class="fab fa-vimeo"></i> Jonathan Schwabish, ["Better Data Communication,"](https://vimeo.com/230757062) National Bureau of Economic Research

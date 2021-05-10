@@ -17,7 +17,7 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 ## Readings
 
 -   <i class="fab fa-youtube"></i> Hans Rosling, [“200 Countries, 200 Years, 4 Minutes”](https://www.youtube.com/watch?v=jbkSRLYSojo)
--   <i class="fas fa-book"></i> [Chapter 2](https://serialmentor.com/dataviz/aesthetic-mapping.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
+-   <i class="fas fa-book"></i> [Chapter 2](https://clauswilke.com/dataviz/aesthetic-mapping.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
 -   <i class="fas fa-book"></i> [Chapter 3](http://socviz.co/makeplot.html) in Kieran Healy, *Data Visualization*[^2]
 
 ### Questions to reflect on
@@ -136,6 +136,6 @@ You can also watch the playlist (and skip around to different sections) here:
 
 </div>
 
-[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
+[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://clauswilke.com/dataviz/>.
 
 [^2]: Kieran Healy, *Data Visualization: A Practical Introduction* (Princeton: Princeton University Press, 2018), <http://socviz.co/>.

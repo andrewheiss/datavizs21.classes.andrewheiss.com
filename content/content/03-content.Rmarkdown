@@ -33,7 +33,7 @@ slide_details <- tibble::tribble(
 ## Readings
 
 - <i class="fab fa-youtube"></i> Hans Rosling, ["200 Countries, 200 Years, 4 Minutes"](https://www.youtube.com/watch?v=jbkSRLYSojo)
-- <i class="fas fa-book"></i> [Chapter 2](https://serialmentor.com/dataviz/aesthetic-mapping.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- <i class="fas fa-book"></i> [Chapter 2](https://clauswilke.com/dataviz/aesthetic-mapping.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
 - <i class="fas fa-book"></i> [Chapter 3](http://socviz.co/makeplot.html) in Kieran Healy, *Data Visualization* [@Healy:2018]
 
 ### Questions to reflect on

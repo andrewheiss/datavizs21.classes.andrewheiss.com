@@ -16,7 +16,7 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ## Readings
 
--   <i class="fas fa-book"></i> [Chapter 17](https://serialmentor.com/dataviz/redundant-coding.html), [Chapter 18](https://serialmentor.com/dataviz/multi-panel-figures.html), [Chapter 19](https://serialmentor.com/dataviz/figure-titles-captions.html), and [Chapter 21](https://serialmentor.com/dataviz/small-axis-labels.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
+-   <i class="fas fa-book"></i> [Chapter 17](https://clauswilke.com/dataviz/redundant-coding.html), [Chapter 18](https://clauswilke.com/dataviz/multi-panel-figures.html), [Chapter 19](https://clauswilke.com/dataviz/figure-titles-captions.html), and [Chapter 21](https://clauswilke.com/dataviz/small-axis-labels.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
 -   <i class="fas fa-book"></i> [Chapter 5](http://socviz.co/workgeoms.html) in Kieran Healy, *Data Visualization*[^2]
 
 ## Slides
@@ -112,6 +112,6 @@ You can also watch the playlist (and skip around to different sections) here:
 
 </div>
 
-[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
+[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://clauswilke.com/dataviz/>.
 
 [^2]: Kieran Healy, *Data Visualization: A Practical Introduction* (Princeton: Princeton University Press, 2018), <http://socviz.co/>.

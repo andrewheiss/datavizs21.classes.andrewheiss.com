@@ -30,7 +30,7 @@ slide_details <- tibble::tribble(
 
 ## Readings
 
-- <i class="fas fa-book"></i> [Chapter 7](https://serialmentor.com/dataviz/histograms-density-plots.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
+- <i class="fas fa-book"></i> [Chapter 7](https://clauswilke.com/dataviz/histograms-density-plots.html) in Claus Wilke, *Fundamentals of Data Visualization* [@Wilke:2018]
 - <i class="fas fa-book"></i> Chapters 4, 7, and 11 in Alberto Cairo, *The Truthful Art* [@Cairo:2016]
 - <i class="fas fa-external-link-square-alt"></i> [Why It's So Hard for Us to Visualize Uncertainty](https://hbr.org/2016/11/why-its-so-hard-for-us-to-visualize-uncertainty)
 - <i class="fab fa-youtube"></i> [Amanda Cox's keynote address at the 2017 OpenVis Conf](https://www.youtube.com/watch?v=0L1tGo-DvD0)

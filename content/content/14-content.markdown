@@ -16,7 +16,7 @@ csl: "../../static/bib/chicago-fullnote-bibliography-no-bib.csl"
 
 ## Readings
 
--   <i class="fas fa-book"></i> [Chapter 14](https://serialmentor.com/dataviz/proportional-ink.html), [Chapter 15](https://serialmentor.com/dataviz/overlapping-points.html), [Chapter 16](https://serialmentor.com/dataviz/color-pitfalls.html), [Chapter 22](https://serialmentor.com/dataviz/avoid-line-drawings.html), and [Chapter 23](https://serialmentor.com/dataviz/no-3d.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
+-   <i class="fas fa-book"></i> [Chapter 14](https://clauswilke.com/dataviz/proportional-ink.html), [Chapter 15](https://clauswilke.com/dataviz/overlapping-points.html), [Chapter 16](https://clauswilke.com/dataviz/color-pitfalls.html), [Chapter 22](https://clauswilke.com/dataviz/avoid-line-drawings.html), and [Chapter 23](https://clauswilke.com/dataviz/no-3d.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
 -   <i class="fas fa-book"></i> [Chapter 8](http://socviz.co/refineplots.html) in Kieran Healy, *Data Visualization*[^2]
 -   Browse through recent visualizations at [The Pudding](https://pudding.cool/) ([like this one!](https://pudding.cool/2018/08/pockets/)), [FiveThirtyEight](https://fivethirtyeight.com/), [Vox](https://www.vox.com/), [Christopher Ingraham’s articles at the Washington Post](https://www.washingtonpost.com/people/christopher-ingraham/?utm_term=.3bfc09eea703), [WSJ Graphics](https://graphics.wsj.com/), and the [New York Times’s TheUpshot](https://www.nytimes.com/section/upshot). Most (if not all) of these graphics were made in R (or something similar) and exported for enhancement in Illustrator or [D3](https://d3js.org/).
 
@@ -68,6 +68,6 @@ You can also watch the playlist (and skip around to different sections) here:
 
 </div>
 
-[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://serialmentor.com/dataviz/>.
+[^1]: Claus E. Wilke, *Fundamentals of Data Visualization* (Sebastopol, California: O’Reilly Media, 2018), <https://clauswilke.com/dataviz/>.
 
 [^2]: Kieran Healy, *Data Visualization: A Practical Introduction* (Princeton: Princeton University Press, 2018), <http://socviz.co/>.
