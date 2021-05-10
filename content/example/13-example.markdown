@@ -729,13 +729,6 @@ main_characters_by_chapter <- proper_nouns %>%
   # Make a cleaner chapter name column
   mutate(chapter_name = paste("Chapter", chapter)) %>% 
   mutate(chapter_name = fct_inorder(chapter_name))
-```
-
-```
-## `summarise()` has grouped output by 'doc_id'. You can override using the `.groups` argument.
-```
-
-```r
 main_characters_by_chapter
 ```
 

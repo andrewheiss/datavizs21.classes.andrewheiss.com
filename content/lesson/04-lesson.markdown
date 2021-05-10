@@ -411,8 +411,6 @@ gapminder %>%
   summarize(avg_life_exp = mean(lifeExp)) 
 ```
 
-    ## `summarise()` has grouped output by 'continent'. You can override using the `.groups` argument.
-
     ## # A tibble: 60 x 3
     ## # Groups:   continent [5]
     ##    continent  year avg_life_exp

@@ -253,13 +253,7 @@ We'll then make a sort of calendar with date of the month on the x axis, month o
 avg_births_month_day <- births %>% 
   group_by(month, date_of_month_categorical) %>% 
   summarize(avg_births = mean(births))
-```
 
-```
-## `summarise()` has grouped output by 'month'. You can override using the `.groups` argument.
-```
-
-```r
 ggplot(data = avg_births_month_day,
        # By default, the y-axis will have December at the top, so use fct_rev() to reverse it
        mapping = aes(x = date_of_month_categorical, y = fct_rev(month), fill = avg_births)) +

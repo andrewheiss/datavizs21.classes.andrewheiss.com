@@ -36,6 +36,7 @@ If you want to follow along with this example, you can download the data directl
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(fig.width = 6, fig.height = 3.6, fig.align = "center")
 set.seed(1234)
+options(dplyr.summarise.inform = FALSE)
 ```
 
 ### Load data

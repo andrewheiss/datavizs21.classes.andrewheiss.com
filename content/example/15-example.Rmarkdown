@@ -60,7 +60,7 @@ Blogdown is [incredibly well documented](https://bookdown.org/yihui/blogdown/), 
 
 If you don't want to create a website, you can use a package named [**bookdown**](https://bookdown.org/) to stitch a collection of R Markdown files into a PDF, Word, or HTML book. (You could even put all your exercises from this class into a single book!). **bookdown** is [incredibly well documented](https://bookdown.org/yihui/bookdown/) too (as a **bookdown** book), and you can get familiar with it fairly quickly. 
 
-[Dozens of real-world books](https://bookdown.org/home/archive/), dissertations, and theses have been written with **bookdown**, including both [Claus Wilke's](https://serialmentor.com/dataviz/) and [Kieran Healy's](https://socviz.co/) books from this course. Because of the magic of Markdown, you can create parallel HTML and PDF versions of your book and post one type of output on the internet and print and bind the other one.
+[Dozens of real-world books](https://bookdown.org/home/archive/), dissertations, and theses have been written with **bookdown**, including both [Claus Wilke's](https://clauswilke.com/dataviz/) and [Kieran Healy's](https://socviz.co/) books from this course. Because of the magic of Markdown, you can create parallel HTML and PDF versions of your book and post one type of output on the internet and print and bind the other one.
 
 
 ### Slides: xaringan

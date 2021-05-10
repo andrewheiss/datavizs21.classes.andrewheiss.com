@@ -44,6 +44,7 @@ If you want to see other examples of text visualizations with the **tidytext** p
 knitr::opts_chunk$set(fig.width = 7, fig.height = 4.2, fig.align = "center")
 set.seed(1234)
 options("digits" = 2, "width" = 150)
+options(dplyr.summarise.inform = FALSE)
 ```
 
 ### Get data

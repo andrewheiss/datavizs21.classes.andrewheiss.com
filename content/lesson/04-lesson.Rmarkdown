@@ -21,6 +21,7 @@ library(flair)
 
 knitr::opts_chunk$set(fig.width = 6, fig.height = 4.5, fig.align = "center")
 set.seed(1234)
+options(dplyr.summarise.inform = FALSE)
 ```
 
 

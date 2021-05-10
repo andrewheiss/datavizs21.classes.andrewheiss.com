@@ -15,6 +15,11 @@ editor_options:
 
 The United States has resettled more than 600,000 refugees from 60 different countries since 2006.
 
+```{r setup, include=FALSE}
+options(dplyr.summarise.inform = FALSE)
+```
+
+
 ```{r bad-example, echo=FALSE, out.width="70%", fig.align="center"}
 # Refugees welcome, by Attila Szervác, https://commons.wikimedia.org/wiki/File:Refugees_welcome.png
 knitr::include_graphics("/img/assignments/refugees_welcome.jpg", error = FALSE)

@@ -201,7 +201,7 @@ ggpairs(weather_correlations) +
 
 ### Correlograms
 
-Scatterplot matrices typically include way too much information to be used in actual publications. I use them when doing my own analysis just to see how different variables are related, but I rarely polish them up for public consumption. In the readings for today, Claus Wilke showed a type of plot called a [*correlogram*](https://serialmentor.com/dataviz/visualizing-associations.html#associations-correlograms) which *is* more appropriate for publication. 
+Scatterplot matrices typically include way too much information to be used in actual publications. I use them when doing my own analysis just to see how different variables are related, but I rarely polish them up for public consumption. In the readings for today, Claus Wilke showed a type of plot called a [*correlogram*](https://clauswilke.com/dataviz/visualizing-associations.html#associations-correlograms) which *is* more appropriate for publication. 
 
 These are essentially heatmaps of the different correlation coefficients. To make these with ggplot, we need to do a little bit of extra data processing, mostly to reshape data into a long, tidy format that we can plot. Here's how.
 

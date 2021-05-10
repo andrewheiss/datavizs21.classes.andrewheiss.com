@@ -15,6 +15,9 @@ editor_options:
 
 The United States has resettled more than 600,000 refugees from 60 different countries since 2006.
 
+
+
+
 <img src="/img/assignments/refugees_welcome.jpg" width="70%" style="display: block; margin: auto;" />
 
 In this mini project, you will use **R, ggplot, and [Illustrator](https://www.adobe.com/products/illustrator.html), [Inkscape](https://inkscape.org/en/), or [Gravit Designer](https://www.designer.io/)** to explore where these refugees have come from.
@@ -209,10 +212,6 @@ refugees_continents <- refugees_clean %>%
   summarize(total = sum(number, na.rm = TRUE))
 ```
 
-```
-## `summarise()` has grouped output by 'origin_continent'. You can override using the `.groups` argument.
-```
-
 
 ```
 ## # A tibble: 6 x 3
@@ -239,10 +238,6 @@ refugees_continents_cumulative <- refugees_clean %>%
   arrange(year_date) %>%
   group_by(origin_continent) %>%
   mutate(cumulative_total = cumsum(total))
-```
-
-```
-## `summarise()` has grouped output by 'origin_continent'. You can override using the `.groups` argument.
 ```
 
 
