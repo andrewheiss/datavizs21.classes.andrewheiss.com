@@ -16,7 +16,7 @@ The New York City Department of Buildings (DOB) maintains [a list of constructio
 
 ## Load and clean data
 
-First we load and clean the data.
+First we load and clean the data (downloaded in May 2020):
 
 ```{r load-clean-data, warning=FALSE, message=FALSE}
 # You'll only need the tidyverse library for this exercise

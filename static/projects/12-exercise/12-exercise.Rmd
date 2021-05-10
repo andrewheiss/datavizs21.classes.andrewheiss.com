@@ -41,4 +41,5 @@ Make a map showing the proportion of individuals in each country that had access
 
 ```{r plot-2015-internet-uses}
 # TODO: Make a map of internet users with ggplot() + geom_sf()
+# Important: Remember to consider the map projection
 ```

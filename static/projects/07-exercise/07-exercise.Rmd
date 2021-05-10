@@ -54,7 +54,7 @@ data_to_predict <- tibble(median_age = mean(results_2016$median_age, na.rm = TRU
                           state = "Georgia")  # Or whatever
 ```
 
-Use `augment()` to generate predictions from this dataset using the model you created before. Plot your varied variable on the x-axis, the fitted values (`.fitted`) on the y-axis, show the relationship with a line, and add a ribbon to show the 95% confidence interval.
+Use `augment()` to generate predictions from this dataset using the model you created before (make sure you include `se_fit = TRUE` to get standard errors). Plot your varied variable on the x-axis, the fitted values (`.fitted`) on the y-axis, show the relationship with a line, and add a ribbon to show the 95% confidence interval.
 
 
 # Bonus task! Correlograms

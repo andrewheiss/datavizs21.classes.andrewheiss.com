@@ -1,7 +1,7 @@
 ---
 title: "Analysis of life in the Good Place"
 author: "Eleanor Shellstrop"
-date: "June 1, 2020"
+date: "July 1, 2021"
 mainfont: "Source Sans Pro"
 monofont: "Consolas"
 fontsize: "11pt"

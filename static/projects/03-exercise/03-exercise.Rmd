@@ -36,8 +36,6 @@ lotr <- lotr_wide %>%
   # This is the new way to make data long
   pivot_longer(cols = c(Female, Male), 
                names_to = "Gender", values_to = "Words")
-  # This is the old way that you learned in the RStudio primer on tidy data
-  # gather(key = "Gender", value = "Words", Female, Male)
 ```
 
 
