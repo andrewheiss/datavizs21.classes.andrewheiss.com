@@ -17,7 +17,11 @@ toc: yes
 
 ## How to select the appropriate chart type
 
-Many people have created many useful tools for selecting the correct chart type for a given dataset or question. Here are some of the best:
+Many people have created many useful tools for selecting the correct chart type for a given dataset or question. The *Financial Times* has an excellent diagram that shows what kind of charts are appropriate for which kinds of data you have:
+
+- **The *Financial Times*'s "Visual Vocabulary"** ([PDF poster](https://github.com/ft-interactive/chart-doctor/tree/master/visual-vocabulary) and [interactive website](https://ft-interactive.github.io/visual-vocabulary/))
+
+Here are some other fantastic resources too:
 
 - [**The Data Visualisation Catalogue**](http://www.datavizcatalogue.com/): Descriptions, explanations, examples, and tools for creating 60 different types of visualizations.
 - [**The Data Viz Project**](http://datavizproject.com/): Descriptions and examples for 150 different types of visualizations. Also allows you to search by data shape and chart function (comparison, correlation, distribution, geographical, part to whole, trend over time, etc.).
