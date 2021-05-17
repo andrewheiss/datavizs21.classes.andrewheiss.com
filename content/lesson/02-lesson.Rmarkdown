@@ -92,7 +92,7 @@ knitr::include_graphics("/img/lesson/file-types/pie_chart.png", error = FALSE)
 ```{r pie-chart-question, echo=FALSE, results="asis"}
 check_question(c("PNG", "PDF"), options = c("PNG", "JPG", "PDF"), type = "radio", 
                button_label = "Check answer", question_id = 3,
-               right = "Correct! This is a grpah with a few colors in it, so should be vector-based. If you’re using this in a fancy publication or report, use a PDF. If you’e using Word or HTML, use a PNG.",
+               right = "Correct! This is a graph with a few colors in it, so should be vector-based. If you’re using this in a fancy publication or report, use a PDF. If you’e using Word or HTML, use a PNG.",
                wrong = "Not quite—this image doesn’t have a lot of colors in it…")
 ```
 
