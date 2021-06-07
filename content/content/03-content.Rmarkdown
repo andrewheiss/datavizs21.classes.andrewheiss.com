@@ -45,6 +45,10 @@ slide_details <- tibble::tribble(
 - What does it mean to map data to graph aesthetics?
 - What data was mapped to which aesthetics in Rosling's video?
 
+## Other resources
+
+[This tutorial by Cédric Scherer](https://www.cedricscherer.com/2019/05/17/the-evolution-of-a-ggplot-ep.-1/) is an excellent demonstration of the grammar of graphics and the sequential nature of building up a plot layer-by-layer.
+
 
 ## Slides
 

@@ -37,6 +37,10 @@ slides: "13-slides"
 -   Why is qualitative data difficult to visualize?
 -   Why are word clouds so problematic? When is (not) okay to use them?
 
+## Other resources
+
+Check out [this slide show demonstrating a bunch of different ways to visualize text](https://bocoup.github.io/text-vis-ovc/24-text-vis-examples/slides.html), as well as [this collection of 400+ different text visualization techniques](https://textvis.lnu.se/) (!!)
+
 ## Slides
 
 The slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.

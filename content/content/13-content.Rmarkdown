@@ -51,6 +51,9 @@ slide_details <- tibble::tribble(
 - Why is qualitative data difficult to visualize?
 - Why are word clouds so problematic? When is (not) okay to use them? 
 
+## Other resources
+
+Check out [this slide show demonstrating a bunch of different ways to visualize text](https://bocoup.github.io/text-vis-ovc/24-text-vis-examples/slides.html), as well as [this collection of 400+ different text visualization techniques](https://textvis.lnu.se/) (!!)
 
 ## Slides
 

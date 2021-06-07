@@ -39,7 +39,8 @@ It looks like this is a lot of reading, but lots of these are short videos or tw
 
 - <i class="fab fa-youtube"></i> [Why all world maps are wrong](https://www.youtube.com/watch?v=kIID5FDi2JQ)
 - <i class="fas fa-external-link-square-alt"></i> [The True Size Of…](https://thetruesize.com)
-- <i class="fas fa-external-link-square-alt"></i> [Map projections](https://xkcd.com/977/)
+- <i class="fas fa-external-link-square-alt"></i> [Projection comparison](https://observablehq.com/@d3/projection-comparison)
+- <i class="fas fa-external-link-square-alt"></i> [Map projections](https://xkcd.com/977/) (try comparing Robinson with Mercator to see how badly Mercator exaggerates the northern hemisphere)
 - <i class="fab fa-youtube"></i> [Gall-Peters Projection](https://www.youtube.com/watch?v=vVX-PrBRtTY)
 - <i class="fas fa-external-link-square-alt"></i> ["When Maps Lie"](https://www.citylab.com/design/2015/06/when-maps-lie/396761/)
 - <i class="fas fa-external-link-square-alt"></i> [Animated Mercator distortion](https://twitter.com/neilrkaye/status/1050740679008296967)
@@ -53,6 +54,12 @@ It looks like this is a lot of reading, but lots of these are short videos or tw
 
 - How can you know if a map projection is truthful or misleading?
 - What's wrong (or not wrong) with using points on maps? Choropleths? Lines?
+
+## Other resources
+
+Check out [this post where someone used **ggplot2** and **sf** to create fancy city map-based art that she printed for a friend](https://www.katiejolly.io/blog/2019-01-21/map-cutouts). You can do similar things after this session!
+
+In addition to the example for this session, you can [check out this tutorial on using the **sf** package to create maps](https://r-spatial.org//r/2018/10/25/ggplot2-sf.html). It shows how to include fancy map stuff like a north arrow and scale bar. 
 
 
 ## Slides

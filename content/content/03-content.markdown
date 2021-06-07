@@ -29,6 +29,10 @@ slides: "03-slides"
 -   What does it mean to map data to graph aesthetics?
 -   What data was mapped to which aesthetics in Rosling’s video?
 
+## Other resources
+
+[This tutorial by Cédric Scherer](https://www.cedricscherer.com/2019/05/17/the-evolution-of-a-ggplot-ep.-1/) is an excellent demonstration of the grammar of graphics and the sequential nature of building up a plot layer-by-layer.
+
 ## Slides
 
 The slides for today’s lesson are available online as an HTML file. Use the buttons below to open the slides either as an interactive website or as a static PDF (for printing or storing for later). You can also click in the slides below and navigate through them with your left and right arrow keys.

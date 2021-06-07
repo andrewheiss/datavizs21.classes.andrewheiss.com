@@ -20,6 +20,7 @@ toc: yes
 - [**viridis**](https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html): Percetually uniform color scales.
 - [**Scientific Colour-Maps**](http://www.fabiocrameri.ch/colourmaps.php): Perceptually uniform color scales like viridis. Use them in R with [**scico**](https://github.com/thomasp85/scico).
 - [**ColorBrewer**](http://colorbrewer2.org/): Sequential, diverging, and qualitative color palettes that take accessibility into account.
+- [**HCL palettes*](http://colorspace.r-forge.r-project.org/articles/ggplot2_color_scales.html#available-palettes-1): The **colorspace** package for R includes a ton of qualitative, sequential, and diverging [HCL (hue-chroma-luminance)](http://colorspace.r-forge.r-project.org/articles/hcl_palettes.html) palettes that use fancy mathematical rules that maintain perceptual distance
 - [**Colorgorical**](http://vrl.cs.brown.edu/color): Create color palettes based on fancy mathematical rules for perceptual distance.
 - [**Colorpicker for data**](http://tristen.ca/hcl-picker/): More fancy mathematical rules for color palettes ([explanation](https://www.vis4.net/blog/posts/avoid-equidistant-hsv-colors/)).
 - [**iWantHue**](http://tools.medialab.sciences-po.fr/iwanthue/): Yet another perceptual distance-based color palette builder.

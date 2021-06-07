@@ -23,6 +23,7 @@ slides: "06-slides"
 -   <i class="fab fa-youtube"></i> [Amanda Cox’s keynote address at the 2017 OpenVis Conf](https://www.youtube.com/watch?v=0L1tGo-DvD0)
 -   <i class="fas fa-external-link-square-alt"></i> [Communicating Uncertainty When Lives Are on the Line](https://eagereyes.org/blog/2017/communicating-uncertainty-when-lives-are-on-the-line)
 -   <i class="fas fa-external-link-square-alt"></i> [Showing uncertainty during the live election forecast](https://flowingdata.com/2016/11/15/showing-uncertainty-during-the-live-election-forecast/) & [Trolling the uncertainty dial](https://flowingdata.com/2017/06/27/trolling-the-uncertainty-dial/)
+-   <i class="fas fa-external-link-square-alt"></i> Cédric Scherer, [“Visualizing distributions with raincloud plots with ggplot2”](https://www.cedricscherer.com/2021/06/06/visualizing-distributions-with-raincloud-plots-with-ggplot2/)
 
 ### Questions to reflect on
 
