@@ -17,6 +17,7 @@ slides: "03-slides"
 
 ## Readings
 
+-   <i class="fas fa-external-link-square-alt"></i> Cédric Scherer, [“Colors and emotions in data visualization”](https://www.storytellingwithdata.com/blog/2021/6/8/colors-and-emotions-in-data-visualization) (this fits better with the material from session 2, but it was just barely published that week so I couldn’t include it then)
 -   <i class="fab fa-youtube"></i> Hans Rosling, [“200 Countries, 200 Years, 4 Minutes”](https://www.youtube.com/watch?v=jbkSRLYSojo)
 -   <i class="fas fa-book"></i> [Chapter 2](https://clauswilke.com/dataviz/aesthetic-mapping.html) in Claus Wilke, *Fundamentals of Data Visualization*[^1]
 -   <i class="fas fa-book"></i> [Chapter 3](http://socviz.co/makeplot.html) in Kieran Healy, *Data Visualization*[^2]
