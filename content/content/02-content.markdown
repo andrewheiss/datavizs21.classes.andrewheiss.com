@@ -18,7 +18,7 @@ slides: "02-slides"
 ## Readings
 
 -   <i class="fas fa-book"></i> Chapter 5 in Alberto Cairo, *The Truthful Art*[^1]
--   <i class="fas fa-book"></i> [Chapter 4](https://clauswilke.com/dataviz/color-basics.html) and [Chapter 22](https://clauswilke.com/dataviz/image-file-formats.html) in Claus Wilke, *Fundamentals of Data Visualization*[^2]
+-   <i class="fas fa-book"></i> [Chapter 4](https://clauswilke.com/dataviz/color-basics.html) and [Chapter 27](https://clauswilke.com/dataviz/image-file-formats.html) in Claus Wilke, *Fundamentals of Data Visualization*[^2]
 -   <i class="far fa-file-pdf"></i> [Summary of CRAP graphic design principles](http://www.presentationzen.com/chapter6_spread.pdf) from Garr Reynolds, *Presentation Zen*.[^3] These principles are from Robin Williams’ [*The Non-Designer’s Design & Type Books*](https://www.amazon.com/Non-Designers-Design-Book-4th/dp/0133966151),[^4] which you should really get if you’re interested in doing anything design-related ever. Her stuff is life-changing.
 -   <i class="fas fa-external-link-square-alt"></i> [Typography in ten minutes](https://practicaltypography.com/typography-in-ten-minutes.html). The rest of the *Practical Typography* book is phenomenal and you’d be remiss if you didn’t read the whole thing and bookmark it for life, but for now just read this quick summary.
 -   <i class="fas fa-external-link-square-alt"></i> [“What’s the Difference Between JPG, PNG, and GIF?”](https://gizmodo.com/5656669/whats-the-difference-between-jpg-png-and-gif)
