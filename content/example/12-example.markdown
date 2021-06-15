@@ -28,22 +28,24 @@ Shapefiles are special types of data that include information about geography, s
 
 ## Projections and coordinate reference systems
 
-As you read in this week's readings, projections matter a lot for maps. You can convert your geographic data between different coordinate systems (or projections)^[TECHNICALLY coordinate systems and projection systems [are different things](https://gis.stackexchange.com/a/149751/56265), but I'm not a geographer and I don't care that much about the nuance.] fairly easily with **sf**. You can use `coord_sf(crs = st_crs("XXXX"))` to convert coordinate reference systems (CRS) as you plot, or use `st_transform()` to convert data frames to a different CRS.
+As you read in this week's readings, projections matter a lot for maps. You can convert your geographic data between different coordinate systems (or projections)[^crs] fairly easily with **sf**. You can use `coord_sf(crs = st_crs("XXXX"))` to convert coordinate reference systems (CRS) as you plot, or use `st_transform()` to convert data frames to a different CRS.
 
-There are standard indexes of more than 4,000 of these projections (!!!) at [spatialreference.org](http://spatialreference.org/) or at [epsg.io](https://epsg.io/). 
+[^crs]: TECHNICALLY coordinate systems and projection systems [are different things](https://gis.stackexchange.com/a/149751/56265), but I'm not a geographer and I don't care that much about the nuance.
 
-**Super important**: When using these projections, you need to specify both the projection catalog (ESRI or EPSG; [see here for the difference](https://gis.stackexchange.com/a/169211/56265)) and the projection number, separated by a colon (e.g. "`ESRI:54030`"). Fortunately [spatialreference.org](http://spatialreference.org/) makes this super easy: go to the spatialreference.org page for the projection you want to use and the page title will have the correct name. 
+There are standard indexes of more than 4,000 of these projections (!!!) at [epsg.io](https://epsg.io/). 
+
+**Super important**: When using these projections, you need to specify both the projection catalog (ESRI or EPSG; [see here for the difference](https://gis.stackexchange.com/a/169211/56265)) and the projection number, separated by a colon (e.g. "`ESRI:54030`"). Fortunately [epsg.io](http://epsg.io/) makes this super easy: go to the epsg.io page for the projection you want to use and the page title will have the correct name. 
 
 Here are some common ones:
 
-- [ESRI:54002](http://spatialreference.org/ref/esri/54002/): Equidistant cylindrical projection for the world[^gall-peters]
-- [ESRI:54004](http://spatialreference.org/ref/esri/54004/): Mercator projection for the world
-- [ESRI:54008](http://spatialreference.org/ref/esri/54008/): Sinusoidal projection for the world
-- [ESRI:54009](http://spatialreference.org/ref/esri/54009/): Mollweide projection for the world
-- [ESRI:54030](http://spatialreference.org/ref/esri/54030/): Robinson projection for the world^[This is my favorite world projection.]
-- [EPSG:4326](http://spatialreference.org/ref/epsg/4326/): WGS 84: DOD GPS coordinates (standard -180 to 180 system)
-- [EPSG:4269](http://spatialreference.org/ref/epsg/4269/): NAD 83: Relatively common projection for North America
-- [ESRI:102003](http://spatialreference.org/ref/esri/102003/): Albers projection specifically for the contiguous United States
+- [ESRI:54002](http://epsg.io/54002): Equidistant cylindrical projection for the world[^gall-peters]
+- [EPSG:3395](http://epsg.io/3395): Mercator projection for the world
+- [ESRI:54008](http://epsg.io/54008): Sinusoidal projection for the world
+- [ESRI:54009](http://epsg.io/54009): Mollweide projection for the world
+- [ESRI:54030](http://epsg.io/54030): Robinson projection for the world (This is my favorite world projection.)
+- [EPSG:4326](http://epsg.io/4326): WGS 84: DOD GPS coordinates (standard −180 to 180 system)
+- [EPSG:4269](http://epsg.io/4269): NAD 83: Relatively common projection for North America
+- [ESRI:102003](https://epsg.io/102003): Albers projection specifically for the contiguous United States
 
 [^gall-peters]: This is essentially the [Gall-Peters projection](https://en.wikipedia.org/wiki/Gall%E2%80%93Peters_projection) from [the West Wing clip](https://www.youtube.com/watch?v=vVX-PrBRtTY).
 
@@ -248,7 +250,7 @@ And here's Mercator (ewww):
 ggplot() + 
   geom_sf(data = world_sans_antarctica, 
           fill = "#669438", color = "#32481B", size = 0.25) +
-  coord_sf(crs = st_crs("ESRI:54004")) +  # Mercator
+  coord_sf(crs = st_crs("EPSG:3395")) +  # Mercator
   # Or use the name instead of the number
   # coord_sf(crs = "+proj=merc")
   theme_void()
@@ -267,7 +269,7 @@ lower_48 <- us_states %>%
 
 ggplot() + 
   geom_sf(data = lower_48, fill = "#192DA1", color = "white", size = 0.25) +
-  coord_sf(crs = 4269) +  # NAD83
+  coord_sf(crs = st_crs("EPSG:4269")) +  # NAD83
   theme_void()
 ```
 
@@ -295,14 +297,7 @@ In addition to providing a ton of functions for getting shapefiles for states, c
 
 ```r
 library(tigris)
-```
 
-```
-## To enable 
-## caching of data, set `options(tigris_use_cache = TRUE)` in your R script or .Rprofile.
-```
-
-```r
 # This is the Census shapefile we loaded earlier. Note how we're not filtering
 # out AK, HI, and PR now
 us_states_shifted <- us_states %>% 
@@ -350,7 +345,7 @@ ggplot() +
 
 <img src="/example/12-example_files/figure-html/georgia-only-1.png" width="576" style="display: block; margin: auto;" />
 
-We can also use a different projection. If we look at [spatialreference.org](https://spatialreference.org/ref/epsg/), there's [a version of NAD83 that's focused specifically on Georgia](https://spatialreference.org/ref/epsg/2239/). 
+We can also use a different projection. If we look at [epsg.io](http://epsg.io/), there's [a version of NAD83 that's focused specifically on Georgia](http://epsg.io/2239-1713). 
 
 
 ```r
@@ -539,7 +534,7 @@ st_crs(rivers_na)
 ##     ID["EPSG",4326]]
 ```
 
-The Georgia map uses 4269 ([or NAD83](https://epsg.io/4269)), while the rivers map uses 4326 (or [the GPS system of latitude and longitude](https://epsg.io/4326)). We need to convert one of them to make them match. It doesn't matter which one.
+The Georgia map uses EPSG:4269 ([or NAD83](https://epsg.io/4269)), while the rivers map uses EPSG:4326 (or [the GPS system of latitude and longitude](https://epsg.io/4326)). We need to convert one of them to make them match. It doesn't matter which one.
 
 
 ```r
@@ -547,10 +542,6 @@ only_georgia_4326 <- only_georgia %>%
   st_transform(crs = st_crs("EPSG:4326"))
 
 ga_rivers_na <- st_intersection(only_georgia_4326, rivers_na)
-```
-
-```
-## although coordinates are longitude/latitude, st_intersection assumes that they are planar
 ```
 
 ```
@@ -577,7 +568,13 @@ Hey! It worked! Let's put all the rivers and lakes on at once and make it a litt
 ```r
 ga_rivers_na <- st_intersection(only_georgia_high, rivers_na)
 ga_rivers_global <- st_intersection(only_georgia_high, rivers_global)
-ga_lakes <- st_intersection(only_georgia_high, lakes)
+
+# sf v1.0 changed how it handles shapefiles with spherical elements, which
+# apparently the lakes data uses. Currently when using st_intersection() and
+# other GIS-related functions, it breaks. This can be fixed by feeding the lakes
+# data to st_make_valid(), which does something fancy behind the scenes to make
+# it work. See this: https://github.com/r-spatial/sf/issues/1649#issuecomment-853279986
+ga_lakes <- st_intersection(only_georgia_high, st_make_valid(lakes))
 
 ggplot() +
   geom_sf(data = only_georgia_high, 
@@ -742,7 +739,7 @@ ga_cities
 
 This is just a normal dataset, and the `lat` and `long` columns are just numbers. R doesn't know that those are actually geographic coordinates. This is similar to the rats data, or any other data that has columns for latitude and longitude.
 
-We can convert those two columns to the magic `geometry` column with the `st_as_sf()` function. We have to define two things in the function: which coordinates are the longitude and latitude, and what CRS the coordinates are using. Google Maps uses [4326, or the GPS system](http://spatialreference.org/ref/epsg/4326/), so we specify that:
+We can convert those two columns to the magic `geometry` column with the `st_as_sf()` function. We have to define two things in the function: which coordinates are the longitude and latitude, and what CRS the coordinates are using. Google Maps uses [EPSG:4326, or the GPS system](http://epsg.io/4326), so we specify that:
 
 
 ```r
