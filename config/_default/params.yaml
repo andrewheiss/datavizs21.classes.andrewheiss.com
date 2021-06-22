@@ -73,7 +73,7 @@ privacy_pack: false
 edit_page:
   repo_url: 'https://github.com/andrewheiss/datavizs21.classes.andrewheiss.com'
   content_dir: ''
-  repo_branch: master
+  repo_branch: main
   editable:
     docs: true
     page: false

@@ -65,7 +65,7 @@ If you don't want to create a website, you can use a package named [**bookdown**
 
 ### Slides: xaringan
 
-R Markdown isn't just for PDF, Word, and HTML documents. You can also make slides! All the slides for this course were made in R Markdown with a package named **xaringan**. You can see [the documentation here](https://bookdown.org/yihui/rmarkdown/xaringan.html), and see [the main example presentation here](https://slides.yihui.org/xaringan/). You can also [see all the R Markdown files I wrote to create the slides for this class here](https://github.com/andrewheiss/datavizm20.classes.andrewheiss.com/tree/master/static/slides).
+R Markdown isn't just for PDF, Word, and HTML documents. You can also make slides! All the slides for this course were made in R Markdown with a package named **xaringan**. You can see [the documentation here](https://bookdown.org/yihui/rmarkdown/xaringan.html), and see [the main example presentation here](https://slides.yihui.org/xaringan/). You can also [see all the R Markdown files I wrote to create the slides for this class here](https://github.com/andrewheiss/datavizs21.classes.andrewheiss.com/tree/main/static/slides).
 
 
 ### Code: GitHub and GitHub gists
