@@ -1,23 +1,22 @@
 ---
 title: "Amounts and proportions"
 linktitle: "4: Amounts and proportions"
-date: "2020-05-14"
+date: "2021-06-14"
 menu:
   lesson:
     parent: Lessons
     weight: 4
 type: docs
 toc: true
-bibliography: "../../static/bib/references.bib"
-csl: "../../static/bib/chicago-syllabus-no-bib.csl"
 editor_options: 
   chunk_output_type: console
+shiny: true
 ---
+
 
 ```{r setup, include=FALSE}
 library(tidyverse)
 library(gapminder)
-library(flair)
 
 knitr::opts_chunk$set(fig.width = 6, fig.height = 4.5, fig.align = "center")
 set.seed(1234)
@@ -45,17 +44,9 @@ There are 6 important verbs that you'll typically use when working with data:
 
 Every **dplyr** verb follows the same pattern. The first argument is always a data frame, and the function always returns a data frame:
 
-```{r dplyr-template, eval=FALSE, include=FALSE}
+```{r dplyr-template, eval=FALSE}
 VERB(DATA_TO_TRANSFORM, STUFF_IT_DOES)
 ```
-
-```{r decorate-dplyr-template, echo=FALSE}
-decorate("dplyr-template", eval = FALSE) %>% 
-  flair("VERB", background = "pink") %>% 
-  flair("DATA_TO_TRANSFORM", background = "yellow") %>% 
-  flair("STUFF_IT_DOES", background = "lightblue")
-```
-
 
 ### Filtering with `filter()`
 
@@ -63,15 +54,8 @@ The `filter()` function takes two arguments: a data frame to transform, and a se
 
 This code, for instance, will look at the `gapminder` dataset and return all rows where `country` is equal to "Denmark":
 
-```{r filter-denmark, include=FALSE}
+```{r filter-denmark}
 filter(gapminder, country == "Denmark")
-```
-
-```{r decorate-filter-denmark, echo=FALSE}
-decorate("filter-denmark") %>% 
-  flair("filter", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('country == "Denmark"', background = "lightblue")
 ```
 
 Notice that there are two equal signs (`==`). This is because it's a logical test, similar to greater than (`>`) or less than (`<`). When you use a single equal sign, you set an argument (like `data = gapminder`); when you use two, you are doing a test. There are lots of different ways to do logical tests:
@@ -88,31 +72,33 @@ Notice that there are two equal signs (`==`). This is because it's a logical tes
 | `is.na(x)`  | Is missing               |
 | `!is.na(x)` | Is not missing           |
 
-:::puzzle
+<div class="puzzle">
+
 **Your turn**: Use `filter()` and logical tests to show:
 
 1. The data for Canada
 2. All data for countries in Oceania
 3. Rows where life expectancy is greater than 82
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-1/", 
-                    id = "learnr-04-lesson-dplyr1")
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-1/" id="learnr-04-lesson-dplyr1" %}}
+
+```{r eval=FALSE, include=FALSE}
+# For unknown mysterious reasons, if blogdown::shortcode() is in a .Rmarkdown
+# file (or if `bibliography` or `csl` YAML options are set in the metadata), the
+# output of code chunks does not get the correct syntax highlighting, likely
+# because a different Markdown rendering engine gets used. This also breaks
+# pandoc's fenced divs.
+
+# So to fix this, shortcodes here have to be raw Hugo ones and not built with
+# blogdown::shortcode(), and fenced divs (i.e. ```puzzle) need to be actual HTML
 ```
 
 You can also use multiple conditions, and these will extract rows that meet every test. By default, if you separate the tests with a comma, R will consider this an "and" test and find rows that are *both* Denmark and greater than 2000.
 
-```{r filter-denmark-multiple, include=FALSE}
+```{r filter-denmark-multiple}
 filter(gapminder, country == "Denmark", year > 2000)
-```
-
-```{r decorate-filter-denmark-multiple, echo=FALSE}
-decorate("filter-denmark-multiple") %>% 
-  flair("filter", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('country == "Denmark", year > 2000', background = "lightblue")
 ```
 
 You can also use "or" with "`|`" and "not" with "`!`":
@@ -124,20 +110,17 @@ You can also use "or" with "`|`" and "not" with "`!`":
 | `!a`     | not     |
 
 
-:::puzzle
+<div class="puzzle">
+
 **Your turn**: Use `filter()` and logical tests to show:
 
 1. Canada before 1970
 2. Countries where life expectancy in 2007 is below 50
 3. Countries where life expectancy in 2007 is below 50 and are not in Africa
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-2/", 
-                    id = "learnr-04-lesson-dplyr2")
-```
+</div>
 
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-2/" id="learnr-04-lesson-dplyr2" %}}
 
 Beware of some common mistakes! You can't collapse multiple tests into one. Instead, use two separate tests:
 
@@ -165,85 +148,47 @@ filter(gapminder,
 
 You create new columns with the `mutate()` function. You can create a single column like this:
 
-```{r mutate-single, include=FALSE}
+```{r mutate-single}
 mutate(gapminder, gdp = gdpPercap * pop)
-```
-
-```{r decorate-mutate-single, echo=FALSE}
-decorate("mutate-single") %>% 
-  flair("mutate", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('gdp = gdpPercap * pop', background = "lightblue")
 ```
 
 And you can create multiple columns by including a comma-separated list of new columns to create:
 
-```{r mutate-multiple, include=FALSE}
+```{r mutate-multiple}
 mutate(gapminder, gdp = gdpPercap * pop,
                   pop_mill = round(pop / 1000000))
 ```
 
-```{r decorate-mutate-multiple, echo=FALSE}
-decorate("mutate-multiple") %>% 
-  flair("mutate", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('gdp = gdpPercap * pop', background = "lightblue") %>% 
-  flair('pop_mill = round(pop / 1000000)', background = "lightblue")
-```
-
 You can also do conditional tests within `mutate()` using the `ifelse()` function. This works like the `=IFELSE` function in Excel. Feed the function three arguments: (1) a test, (2) the value if the test is true, and (3) the value if the test is false:
 
-```{r show-ifelse, include=FALSE, eval=FALSE}
+```{r show-ifelse, eval=FALSE}
 ifelse(TEST, VALUE_IF_TRUE, VALUE_IF_FALSE)
-```
-
-```{r decorate-show-ifelse, echo=FALSE}
-decorate("show-ifelse", eval = FALSE) %>% 
-  flair("TEST", background = "#faca7d") %>% 
-  flair("VALUE_IF_TRUE", background = "#9bbffa") %>% 
-  flair("VALUE_IF_FALSE", background = "#f79b94")
 ```
 
 We can create a new column that is a binary indicator for whether the country's row is after 1960:
 
-```{r mutate-after-1960, include=FALSE}
+```{r mutate-after-1960}
 mutate(gapminder, after_1960 = ifelse(year > 1960, TRUE, FALSE))
-```
-
-```{r decorate-mutate-after-1960, echo=FALSE}
-decorate("mutate-after-1960") %>% 
-  flair("year > 1960", background = "#faca7d") %>% 
-  flair("TRUE", background = "#9bbffa") %>% 
-  flair("FALSE", background = "#f79b94")
 ```
 
 We can also use text labels instead of `TRUE` and `FALSE`:
 
-```{r mutate-after-1960-text, include=FALSE}
+```{r mutate-after-1960-text}
 mutate(gapminder, 
        after_1960 = ifelse(year > 1960, "After 1960", "Before 1960"))
 ```
 
-```{r decorate-mutate-after-1960-text, echo=FALSE}
-decorate("mutate-after-1960-text") %>% 
-  flair("year > 1960", background = "#faca7d") %>% 
-  flair('"After 1960"', background = "#9bbffa") %>% 
-  flair('"Before 1960"', background = "#f79b94")
-```
+<div class="puzzle">
 
-:::puzzle
 **Your turn**: Use `mutate()` to:
 
 1. Add an `africa` column that is TRUE if the country is on the African continent
 2. Add a column for logged GDP per capita
 3. Add an `africa_asia` column that says “Africa or Asia” if the country is in Africa or Asia, and “Not Africa or Asia” if it’s not
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-3/", 
-                    id = "learnr-04-lesson-dplyr3")
-```
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-3/" id="learnr-04-lesson-dplyr3" %}}
 
 ### Combining multiple verbs with pipes (`%>%`)
 
@@ -251,32 +196,19 @@ What if you want to filter to include only rows from 2002 *and* make a new colum
 
 One solution is to use intermediate variables for each step:
 
-```{r pipes-intermediate, eval=FALSE, include=FALSE}
+```{r pipes-intermediate, eval=FALSE}
 gapminder_2002_filtered <- filter(gapminder, year == 2002)
 
 gapminder_2002_logged <- mutate(gapminder_2002_filtered, log_gdpPercap = log(gdpPercap))
-```
-
-```{r decorate-pipes-intermediate, echo=FALSE}
-decorate("pipes-intermediate", eval = FALSE) %>% 
-  flair("gapminder_2002_filtered", background = "#faca7d") %>% 
-  flair("gapminder_2002_logged", background = "#9bbffa")
 ```
 
 That works fine, but your environment panel will start getting full of lots of intermediate data frames.
 
 Another solution is to nest the functions inside each other. Remember that all **dplyr** functions return data frames, so you can feed the results of one into another:
 
-```{r pipes-nested, eval=FALSE, include=FALSE}
+```{r pipes-nested, eval=FALSE}
 filter(mutate(gapminder, log_gdpPercap = log(gdpPercap)), 
        year == 2002)
-```
-
-```{r decorate-pipes-nested, echo=FALSE}
-decorate("pipes-nested", eval = FALSE) %>% 
-  flair("filter", background = "#faca7d") %>% 
-  flair("year == 2002", background = "#faca7d") %>% 
-  flair("mutate(gapminder, log_gdpPercap = log(gdpPercap))", background = "#9bbffa")
 ```
 
 That works too, but it gets *really* complicated once you have even more functions, and it's hard to keep track of which function's arguments go where. I'd avoid doing this entirely.
@@ -290,15 +222,10 @@ gapminder %>% filter(_____, country == "Canada")
 
 These two lines of code do the same thing:
 
-```{r pipe-equivalent, include=FALSE}
+```{r pipe-equivalent, eval=FALSE}
 filter(gapminder, country == "Canada")
 
 gapminder %>% filter(country == "Canada")
-```
-
-```{r decorate-pipe-equivalent, echo=FALSE}
-decorate("pipe-equivalent", eval = FALSE) %>% 
-  flair("gapminder", background = "#f79b94")
 ```
 
 Using pipes, you can start with a data frame, pass it to one verb, then pass the output of that verb to the next verb, and so on. **When reading any code with a `%>%`, it's easiest to read the `%>%` as "and then".** This would read:
@@ -313,22 +240,15 @@ gapminder %>%
 
 Here's another way to think about pipes more conceptually. This isn't valid R code, obviously, but imagine you're going to take yourself, and then wake up, get out of bed, get dressed, and leave the house. Writing that whole process as nested functions would look like this:
 
-```{r wake-up-nested, eval=FALSE, include=FALSE}
+```{r wake-up-nested, eval=FALSE}
 leave_house(get_dressed(get_out_of_bed(wake_up(me, time = "8:00"), side = "correct"), pants = TRUE, shirt = TRUE), car = TRUE, bike = FALSE)
-```
-
-```{r decorate-wake-up-nested, echo=FALSE}
-decorate("wake-up-nested", eval = FALSE) %>% 
-  flair_args(color = "CornflowerBlue") %>%
-  flair_funs(color = "Coral", underline = TRUE) %>%
-  flair_input_vals(background = "Aquamarine")
 ```
 
 Instead of nesting everything, we can use pipes to chain these together. This would read
 
 > Take myself, *and then* wake up at 8:00, *and then* get out of bed on the correct side, *and then* get dressed with pants and a shirt, *and then* leave the house in a car
 
-```{r wake-up-pipes, eval=FALSE, include=FALSE}
+```{r wake-up-pipes, eval=FALSE}
 me %>% 
   wake_up(time = "8:00") %>% 
   get_out_of_bed(side = "correct") %>% 
@@ -336,82 +256,48 @@ me %>%
   leave_house(car = TRUE, bike = FALSE)
 ```
 
-```{r decorate-wake-up-pipes, echo=FALSE}
-decorate("wake-up-pipes", eval = FALSE) %>% 
-  flair_args(color = "CornflowerBlue") %>%
-  flair_funs(color = "Coral", underline = TRUE) %>%
-  flair_input_vals(background = "Aquamarine")
-```
-
 ### Summarizing data by groups with `group_by() %>% summarize()`
 
 The `summarize()` verb takes an entire frame and calculates summary information about it. For instance, this will find the average life expectancy for the whole `gapminder` data:
 
-```{r summarize-full-single, include=FALSE}
+```{r summarize-full-single}
 gapminder %>% summarize(mean_life = mean(lifeExp))
-```
-
-```{r decorate-summarize-full-single, echo=FALSE}
-decorate("summarize-full-single") %>% 
-  flair("summarize", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('mean_life = mean(lifeExp)', background = "lightblue")
 ```
 
 You can also make multiple summary variables, just like `mutate()`, and it will return a column for each:
 
-```{r summarize-full-multiple, include=FALSE}
+```{r summarize-full-multiple}
 gapminder %>% summarize(mean_life = mean(lifeExp),
                         min_life = min(lifeExp))
 ```
 
-```{r decorate-summarize-full-multiple, echo=FALSE}
-decorate("summarize-full-multiple") %>% 
-  flair("summarize", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('mean_life = mean(lifeExp)', background = "lightblue") %>% 
-  flair('min_life = min(lifeExp)', background = "lightblue")
-```
+<div class="puzzle">
 
-:::puzzle
 **Your turn**: Use `summarize()` to calculate:
 
 1. The first (minimum) year in the `gapminder` dataset
 2. The last (maximum) year in the dataset
 3. The number of rows in the dataset (use the [**dplyr** cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf))
 4. The number of distinct countries in the dataset (use the [**dplyr** cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf))
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-4/", 
-                    id = "learnr-04-lesson-dplyr4")
-```
+</div>
 
-:::puzzle
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-4/" id="learnr-04-lesson-dplyr4" %}}
+
+<div class="puzzle">
+
 **Your turn**: Use `filter()` and `summarize()` to calculate the median life expectancy on the African continent in 2007:
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-5/", 
-                    id = "learnr-04-lesson-dplyr5")
-```
+</div>
 
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-5/" id="learnr-04-lesson-dplyr5" %}}
 
 Notice that `summarize()` on its own summarizes the whole dataset, so you only get a single row back. These values are the averages and minimums for the entire data frame. If you group your data into separate subgroups, you can use `summarize()` to calculate summary statistics for each group. Do this with `group_by()`.
 
 The `group_by()` function puts rows into groups based on values in a column. If you run this:
 
-```{r summarize-groupby, include=FALSE}
+```{r summarize-groupby}
 gapminder %>% group_by(continent)
-```
-
-```{r decorate-summarize-groupby, echo=FALSE}
-decorate("summarize-groupby") %>% 
-  flair("group_by", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('continent', background = "lightblue")
 ```
 
 …you won't see anything different! R has put the dataset into separate invisible groups behind the scenes, but you haven't done anything with those groups, so nothing has really happened. If you do things with those groups with `summarize()`, though, `group_by()` becomes much more useful.
@@ -433,25 +319,21 @@ gapminder %>%
             avg_life_exp = mean(lifeExp)) 
 ```
 
-:::puzzle
+<div class="puzzle">
+
 **Your turn**: Find the minimum, maximum, and median life expectancy for each continent:
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-6/", 
-                    id = "learnr-04-lesson-dplyr6")
-```
+</div>
 
-:::puzzle
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-6/" id="learnr-04-lesson-dplyr6" %}}
+
+<div class="puzzle">
+
 **Your turn**: Find the minimum, maximum, and median life expectancy for each continent in 2007 only:
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-7/", 
-                    id = "learnr-04-lesson-dplyr7")
-```
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_04-dplyr-7/" id="learnr-04-lesson-dplyr7" %}}
 
 Finally, you can group by multiple columns and R will create subgroups for every combination of the groups and return the number of rows of combinations. For instance, we can calculate the average life expectancy by both year and continent and we'll get 60 rows, since there are 5 continents and 12 years (5 × 12 = 60):
 
@@ -468,96 +350,47 @@ The last two verbs are far simpler than `filter()`, `mutate()`, and `group_by() 
 
 You can choose specific columns with the `select()` verb. This will only keep two columns: `lifeExp` and `year`:
 
-```{r select-single, include=FALSE}
+```{r select-single}
 gapminder %>% select(lifeExp, year)
-```
-
-```{r decorate-select-single, echo=FALSE}
-decorate("select-single") %>% 
-  flair("select", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('lifeExp, year', background = "lightblue")
 ```
 
 You can remove specific columns by prefacing the column names with `-`, like `-lifeExp`:
 
-```{r omit-single, include=FALSE}
+```{r omit-single}
 gapminder %>% select(-lifeExp)
-```
-
-```{r decorate-omit-single, echo=FALSE}
-decorate("omit-single") %>% 
-  flair("select", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('-lifeExp', background = "lightblue")
 ```
 
 You can also rename columns using `select()`. Follow this pattern: `select(old_name = new_name)`.
 
-```{r rename-select, include=FALSE}
+```{r rename-select}
 gapminder %>% select(year, country, life_expectancy = lifeExp)
-```
-
-```{r decorate-rename-select, echo=FALSE}
-decorate("rename-select") %>% 
-  flair("select", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('year, country, life_expectancy = lifeExp', background = "lightblue")
 ```
 
 Alternatively, there's a special `rename()` verb that will, um, rename, while keeping all the other columns:
 
-```{r rename-rename, include=FALSE}
+```{r rename-rename}
 gapminder %>% rename(life_expectancy = lifeExp)
-```
-
-```{r decorate-rename-rename, echo=FALSE}
-decorate("rename-rename") %>% 
-  flair("rename", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('life_expectancy = lifeExp', background = "lightblue")
 ```
 
 ### Arranging data with `arrange()`
 
 The `arrange()` verb sorts data. By default it sorts ascendingly, putting the lowest values first:
 
-```{r arrange-single, include=FALSE}
+```{r arrange-single}
 gapminder %>% arrange(lifeExp)
-```
-
-```{r decorate-arrange-single, echo=FALSE}
-decorate("arrange-single") %>% 
-  flair("arrange", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('lifeExp', background = "lightblue")
 ```
 
 You can reverse that by wrapping the column name with `desc()`:
 
-```{r arrange-single-desc, include=FALSE}
+```{r arrange-single-desc}
 gapminder %>% arrange(desc(lifeExp))
-```
-
-```{r decorate-arrange-single-desc, echo=FALSE}
-decorate("arrange-single-desc") %>% 
-  flair("arrange", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('desc(lifeExp)', background = "lightblue")
 ```
 
 You can sort by multiple columns by specifying them in a comma separated list. For example, we can sort by continent and then sort by life expectancy within the continents:
 
-```{r arrange-multiple, include=FALSE}
+```{r arrange-multiple}
 gapminder %>% 
   arrange(continent, desc(lifeExp))
-```
-
-```{r decorate-arrange-multiple, echo=FALSE}
-decorate("arrange-multiple") %>% 
-  flair("arrange", background = "pink") %>% 
-  flair("gapminder", background = "yellow") %>% 
-  flair('continent, desc(lifeExp)', background = "lightblue")
 ```
 
 ### That's it!
@@ -577,39 +410,19 @@ In tomorrow's session, you'll learn all about the Theme layer. Here we'll briefl
 
 All the functions that deal with scales conveniently follow the same naming pattern: 
 
-```{r scale-template, eval=FALSE, include=FALSE}
+```{r scale-template, eval=FALSE}
 scale_AESTHETIC_DETAILS()
-```
-
-```{r decorate-scale-template, echo=FALSE}
-decorate("scale-template", eval = FALSE) %>% 
-  flair("AESTHETIC", background = "pink") %>% 
-  flair("DETAILS", background = "yellow")
 ```
 
 Here are some common scale functions:
 
-```{r scale-examples, eval=FALSE, include=FALSE}
+```{r scale-examples, eval=FALSE}
 scale_x_continuous()
 scale_y_reverse()
 scale_color_viridis_c()
 scale_shape_manual(values = c(19, 13, 15))
 scale_fill_manual(values = c("red", "orange", "blue"))
 ```
-
-```{r decorate-scale-examples, echo=FALSE}
-decorate("scale-examples", eval = FALSE) %>% 
-  flair("x", background = "pink") %>% 
-  flair("y", background = "pink") %>% 
-  flair("color", background = "pink") %>% 
-  flair("shape", background = "pink") %>% 
-  flair("fill", background = "pink") %>% 
-  flair("continuous", background = "yellow") %>% 
-  flair("reverse", background = "yellow") %>% 
-  flair("viridis_c", background = "yellow") %>% 
-  flair("manual", background = "yellow")
-```
-
 
 You can see a [list of all of the possible scale functions here](https://ggplot2.tidyverse.org/reference/index.html#section-scales), and you should reference that documentation (and the excellent examples) often when working with these functions.
 

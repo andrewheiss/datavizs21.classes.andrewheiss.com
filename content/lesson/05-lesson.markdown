@@ -1,23 +1,23 @@
 ---
 title: "Themes"
 linktitle: "5: Themes"
-date: "2020-05-15"
+date: "2021-05-15"
 menu:
   lesson:
     parent: Lessons
     weight: 5
 type: docs
 toc: true
-bibliography: "../../static/bib/references.bib"
-csl: "../../static/bib/chicago-syllabus-no-bib.csl"
 editor_options: 
   chunk_output_type: console
 shiny: true
 ---
 
+
+
 ## Complete ggplot themes
 
-There are many built-in complete themes that have a good combination of all the different `theme()` options already set for you. By default, ggplot uses `theme_gray()` (also spelled `theme_grey()` for UK English; because the first developer of ggplot (Hadley Wickham) is from New Zealand, British spelling works throughout (e.g. you can use `colour` instead of `color`))
+There are many built-in complete themes that have a good combination of all the different `theme()` options already set for you. By default, ggplot uses `theme_gray()` (also spelled `theme_grey()` for UK English; because the first developer of ggplot (Hadley Wickham) is from New Zealand, British spelling works throughout (e.g. you can use `colour` instead of `color`))
 
 <div class="puzzle">
 
@@ -29,7 +29,7 @@ There are many built-in complete themes that have a good combination of all the 
 
 Hopefully that was easy!
 
-If you look at [the documentation for the different theme functions](https://ggplot2.tidyverse.org/reference/ggtheme.html), you’ll notice that there are a few optional arguments, like `base_size` and `base_family`. The `base_size` argument changes the base font size for the text in the plot, and it is 11 by default. Changing it to something like 20 will not make all the text in the plot be sized at 20—functions like `theme_minimal()` set the size of plot elements based on the `base_size`. For instance, in `theme_minimal()`, the plot title is set to be 120% of `base_size`, while the caption is 80%. Changing `base_size` will resize all the different elements accordingly.
+If you look at [the documentation for the different theme functions](https://ggplot2.tidyverse.org/reference/ggtheme.html), you'll notice that there are a few optional arguments, like `base_size` and `base_family`. The `base_size` argument changes the base font size for the text in the plot, and it is 11 by default. Changing it to something like 20 will not make all the text in the plot be sized at 20—functions like `theme_minimal()` set the size of plot elements based on the `base_size`. For instance, in `theme_minimal()`, the plot title is set to be 120% of `base_size`, while the caption is 80%. Changing `base_size` will resize all the different elements accordingly.
 
 <div class="puzzle">
 
@@ -41,19 +41,20 @@ If you look at [the documentation for the different theme functions](https://ggp
 
 Hopefully that was also fairly straightforward!
 
+
 ## Modifying plot elements with `theme()`
 
-Using a complete theme like `theme_minimal()` or `theme_bw()` is a great starting point for getting a nice, clean, well designed plot. You’ll often need to make adjustments to smaller, more specific parts of the plot though. To do this, you can use the `theme()` function.
+Using a complete theme like `theme_minimal()` or `theme_bw()` is a great starting point for getting a nice, clean, well designed plot. You'll often need to make adjustments to smaller, more specific parts of the plot though. To do this, you can use the `theme()` function.
 
-`theme()` is a massive function and has perhaps the most possible arguments of any function in R. It is impossible to remember everything it can possibly do. Fortunately its documentation is incredible. Run `?theme` in your R console to see the help page, or [go to this page online](https://ggplot2.tidyverse.org/reference/theme.html).
+`theme()` is a massive function and has perhaps the most possible arguments of any function in R. It is impossible to remember everything it can possibly do. Fortunately its documentation is incredible. Run `?theme` in your R console to see the help page, or [go to this page online](https://ggplot2.tidyverse.org/reference/theme.html). 
 
 ### Deal with general plot elements
 
-A few arguments to `theme()` don’t use any special function—you can just specify settings with text like `"bottom"` or `"right"`
+A few arguments to `theme()` don't use any special function—you can just specify settings with text like `"bottom"` or `"right"`
 
 <div class="puzzle">
 
-**Your turn**: Look at the [documentation for `theme()` online](https://ggplot2.tidyverse.org/reference/theme.html). Make this plot’s legend appear on the bottom instead of the left.
+**Your turn**: Look at the [documentation for `theme()` online](https://ggplot2.tidyverse.org/reference/theme.html). Make this plot's legend appear on the bottom instead of the left.
 
 </div>
 
@@ -61,7 +62,7 @@ A few arguments to `theme()` don’t use any special function—you can just spe
 
 ### Disable elements completely with `element_blank()`
 
-Any plot element can be disabled by using `element_blank()`. For instance, if you want to remove the axis ticks, you can use `theme(axis.ticks = element_blank())`.
+Any plot element can be disabled by using `element_blank()`. For instance, if you want to remove the axis ticks, you can use `theme(axis.ticks = element_blank())`. 
 
 <div class="puzzle">
 
@@ -77,9 +78,9 @@ You can also target more specific plot elements. You can specify something like 
 
 **Your turn**: Look at the [documentation for `theme()` online](https://ggplot2.tidyverse.org/reference/theme.html). Make the following changes to this plot:
 
--   Disable the major panel grid for the x-axis
--   Disable the minor panel grid for the x-axis
--   Disable the minor panel grid for the y-axis.
+- Disable the major panel grid for the x-axis
+- Disable the minor panel grid for the x-axis
+- Disable the minor panel grid for the y-axis. 
 
 You should only have three horizontal lines for the grid.
 
@@ -87,7 +88,7 @@ You should only have three horizontal lines for the grid.
 
 {{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_05-themes-5/" id="learnr-05-lesson-theme5" %}}
 
-------------------------------------------------------------------------
+---
 
 Almost every other plot element fits into one of three categories: a rectangle, a line, or text. Changing the settings on these elements requires specific functions that correspond to these categories.
 
@@ -99,8 +100,8 @@ Things like the plot background or the panel background or the legend background
 
 **Your turn**: Look at the [documentation for `theme()`](https://ggplot2.tidyverse.org/reference/theme.html) and the [documentation for `element()`](https://ggplot2.tidyverse.org/reference/element.html) online. Make the following changes to this plot:
 
--   Fill the plot background with <span style="color: #F2D8CE">\#F2D8CE</span>
--   Fill the panel background with <span style="color: #608BA6">\#608BA6</span>, and make the border <span style="color: #184759">\#184759</span> with size = 5
+- Fill the plot background with <span style="color: #F2D8CE">#F2D8CE</span>
+- Fill the panel background with <span style="color: #608BA6">#608BA6</span>, and make the border <span style="color: #184759">#184759</span> with size = 5
 
 This will be a fairly ugly plot.
 
@@ -116,7 +117,7 @@ Things like the panel grid, tick marks, and axis lines are all lines and can be 
 
 **Your turn**: Look at the [documentation for `theme()`](https://ggplot2.tidyverse.org/reference/theme.html) and the [documentation for `element()`](https://ggplot2.tidyverse.org/reference/element.html) online. Make the following changes to this plot:
 
--   Make the major panel gridlines blue and dashed with size = 1
+- Make the major panel gridlines blue and dashed with size = 1
 
 This will also be a fairly ugly plot.
 
@@ -132,9 +133,9 @@ Finally, anything with text can be manipulated with `element_text()`, and you ca
 
 **Your turn**: Look at the [documentation for `theme()`](https://ggplot2.tidyverse.org/reference/theme.html) and the [documentation for `element()`](https://ggplot2.tidyverse.org/reference/element.html) online. Make the following changes to this plot:
 
--   Make the y-axis text italic
--   Make the plot title right aligned, bold, and colored with <span style="color: #8C7811">\#8C7811</span>
--   Make the plot subtitle right aligned
+- Make the y-axis text italic
+- Make the plot title right aligned, bold, and colored with <span style="color: #8C7811">#8C7811</span>
+- Make the plot subtitle right aligned
 
 </div>
 
@@ -144,16 +145,18 @@ Finally, anything with text can be manipulated with `element_text()`, and you ca
 
 Things like `theme_grey()` or `theme_minimal()` are really just collections of changes to `theme()`, so the order is important when using a complete theme. If you do something like this to turn off the gridlines in the plot panel:
 
-``` r
+
+```r
 ggplot(...) +
   geom_point(...) +
   theme(panel.grid = element_blank()) +
   theme_bw()
 ```
 
-…you’ll still have panel gridlines! That’s because `theme_bw()` turns them on, and you typed it after you turned it off. If you want to use both `theme_bw()` and remove the gridlines, you need to make sure any theme adjustments come after `theme_bw()`:
+…you'll still have panel gridlines! That's because `theme_bw()` turns them on, and you typed it after you turned it off. If you want to use both `theme_bw()` and remove the gridlines, you need to make sure any theme adjustments come after `theme_bw()`:
 
-``` r
+
+```r
 ggplot(...) +
   geom_point(...) +
   theme_bw() +
@@ -162,15 +165,17 @@ ggplot(...) +
 
 ## Fonts
 
-You can use `theme()` to change the fonts as well, though sometimes it’s a little tricky to get R to see the fonts on your computer—especially if you use Windows. [This detailed blog post](https://www.andrewheiss.com/blog/2017/09/27/working-with-r-cairo-graphics-custom-fonts-and-ggplot/) explains how to work with custom fonts in ggplot and shows how to get it set up on Windows. It should Just Work™ on macOS.
+You can use `theme()` to change the fonts as well, though sometimes it's a little tricky to get R to see the fonts on your computer—especially if you use Windows. [This detailed blog post](https://www.andrewheiss.com/blog/2017/09/27/working-with-r-cairo-graphics-custom-fonts-and-ggplot/) explains how to work with custom fonts in ggplot and shows how to get it set up on Windows. It should Just Work™ on macOS.
 
 In short, as long as you load the fonts correctly, you can specify different fonts either in a complete theme like `theme_minimal(base_family = "Comic Sans MS")` or in `theme()` like `theme(plot.title = element_text(family = "Papyrus"))`.
 
+
 ## Reusing themes
 
-If you want to repeat specific theme settings throughout a document, you can save yourself a ton of typing by storing the results of `theme()` to an object and reusing it. For instance, suppose you want your plots to be based on theme\_minimal, have right aligned title and subtitle text, have the legend at the bottom, and have no minor gridlines. You can save all of that into an object named `my_neato_theme` or something, and then reuse it:
+If you want to repeat specific theme settings throughout a document, you can save yourself a ton of typing by storing the results of `theme()` to an object and reusing it. For instance, suppose you want your plots to be based on theme_minimal, have right aligned title and subtitle text, have the legend at the bottom, and have no minor gridlines. You can save all of that into an object named `my_neato_theme` or something, and then reuse it:
 
-``` r
+
+```r
 my_neato_theme <- theme_minimal() +
   theme(plot.title = element_text(hjust = 1),
         plot.subtitle = element_text(hjust = 1),
@@ -188,7 +193,7 @@ ggplot(data = mpg,
 
 <img src="/lesson/05-lesson_files/figure-html/saved-theme-1.png" width="576" style="display: block; margin: auto;" />
 
-``` r
+```r
 # Make another plot
 ggplot(data = mpg,
        mapping = aes(x = displ, y = hwy, color = cty)) +
@@ -200,15 +205,17 @@ ggplot(data = mpg,
 
 <img src="/lesson/05-lesson_files/figure-html/saved-theme-2.png" width="576" style="display: block; margin: auto;" />
 
+
 ## Saving plots
 
-So far, all your plots have ended up either in RStudio or in a knitted HTML, Word, or PDF document. But what if you want to save just the plot to your computer so you can send it out to the world?! You could take a screenshot, but that won’t provide the highest resolution, and that will only save the plot as a bitmap-based PNG, not an infinitely resizable vector-based PDF!
+So far, all your plots have ended up either in RStudio or in a knitted HTML, Word, or PDF document. But what if you want to save just the plot to your computer so you can send it out to the world?! You could take a screenshot, but that won't provide the highest resolution, and that will only save the plot as a bitmap-based PNG, not an infinitely resizable vector-based PDF!
 
-Fortunately it’s pretty easy to save a plot using the special `ggsave()` function. You can specify whatever dimensions you want and whatever file type you want and save the standalone plot to your computer. You should look at the [documentation for `ggsave()`](https://ggplot2.tidyverse.org/reference/ggsave.html) for complete details of all the different options and arguments it can take. Typically, you do something like this.
+Fortunately it's pretty easy to save a plot using the special `ggsave()` function. You can specify whatever dimensions you want and whatever file type you want and save the standalone plot to your computer. You should look at the [documentation for `ggsave()`](https://ggplot2.tidyverse.org/reference/ggsave.html) for complete details of all the different options and arguments it can take. Typically, you do something like this.
 
-First create a plot and store it as an object. We haven’t done that yet in this lesson—so far we’ve just run `ggplot()` and seen the output immediately. If you save the output of `ggplot()` to an object, you actually won’t see anything until you run the name of the object.
+First create a plot and store it as an object. We haven't done that yet in this lesson—so far we've just run `ggplot()` and seen the output immediately. If you save the output of `ggplot()` to an object, you actually won't see anything until you run the name of the object.
 
-``` r
+
+```r
 a_cool_plot <- ggplot(data = mpg,
                       mapping = aes(x = displ, y = hwy, color = drv)) +
   geom_point(size = 3) +
@@ -225,7 +232,8 @@ Next you can feed your saved plot to `ggsave()` to save it. It will automaticall
 
 You can also save the plot as multiple files. I typically make PNG and PDF versions of any plots I export like so:
 
-``` r
+
+```r
 ggsave(filename = "a_cool_plot.pdf", plot = a_cool_plot,
        width = 6, height = 4.5, units = "in")
 
@@ -235,14 +243,19 @@ ggsave(filename = "a_cool_plot.png", plot = a_cool_plot,
 
 From a file management perspective, it often makes sense to store all your output in a separate folder in your project, like `output` or `figures` or something. If you want to put saved images in a subfolder, include the name in the file name:
 
-``` r
+
+```r
 ggsave(filename = "figures/a_cool_plot.png", plot = a_cool_plot,
        width = 6, height = 4.5, units = "in")
 ```
 
-And finally, if you’re using custom fonts, you need to add one bit of wizardry to get the fonts to embed correctly in PDFs. This is something you just have to memorize or copy and paste a lot—if you want to know the full details, [see this blog post](https://www.andrewheiss.com/blog/2017/09/27/working-with-r-cairo-graphics-custom-fonts-and-ggplot/). In short, R’s default PDF writer doesn’t know how to embed fonts and will panic if you make it try. R can use a different PDF-writing engine named Cairo that embeds fonts just fine, though, so you need to tell `ggsave()` to use it:
+And finally, if you're using custom fonts, you need to add one bit of wizardry to get the fonts to embed correctly in PDFs. This is something you just have to memorize or copy and paste a lot—if you want to know the full details, [see this blog post](https://www.andrewheiss.com/blog/2017/09/27/working-with-r-cairo-graphics-custom-fonts-and-ggplot/). In short, R's default PDF writer doesn't know how to embed fonts and will panic if you make it try. R can use a different PDF-writing engine named Cairo that embeds fonts just fine, though, so you need to tell `ggsave()` to use it:
 
-``` r
+
+```r
 ggsave(filename = "figures/a_cool_plot.pdf", plot = a_cool_plot,
        width = 6, height = 4.5, units = "in", device = cairo_pdf)
 ```
+
+
+

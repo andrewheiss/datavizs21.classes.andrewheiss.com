@@ -1,15 +1,13 @@
 ---
 title: "Themes"
 linktitle: "5: Themes"
-date: "2020-05-15"
+date: "2021-05-15"
 menu:
   lesson:
     parent: Lessons
     weight: 5
 type: docs
 toc: true
-bibliography: "../../static/bib/references.bib"
-csl: "../../static/bib/chicago-syllabus-no-bib.csl"
 editor_options: 
   chunk_output_type: console
 shiny: true
@@ -25,29 +23,25 @@ set.seed(1234)
 
 There are many built-in complete themes that have a good combination of all the different `theme()` options already set for you. By default, ggplot uses `theme_gray()` (also spelled `theme_grey()` for UK English; because the first developer of ggplot (Hadley Wickham) is from New Zealand, British spelling works throughout (e.g. you can use `colour` instead of `color`))
 
-:::puzzle
-**Your turn**: Add `theme_minimal()` to this plot:
-:::
+<div class="puzzle">
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_05-themes-1/", 
-                    id = "learnr-05-lesson-theme1")
-```
+**Your turn**: Add `theme_minimal()` to this plot:
+
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_05-themes-1/" id="learnr-05-lesson-theme1" %}}
 
 Hopefully that was easy!
 
 If you look at [the documentation for the different theme functions](https://ggplot2.tidyverse.org/reference/ggtheme.html), you'll notice that there are a few optional arguments, like `base_size` and `base_family`. The `base_size` argument changes the base font size for the text in the plot, and it is 11 by default. Changing it to something like 20 will not make all the text in the plot be sized at 20—functions like `theme_minimal()` set the size of plot elements based on the `base_size`. For instance, in `theme_minimal()`, the plot title is set to be 120% of `base_size`, while the caption is 80%. Changing `base_size` will resize all the different elements accordingly.
 
-:::puzzle
-**Your turn**: Modify this plot to use `theme_minimal()` with a base size of 16:
-:::
+<div class="puzzle">
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_05-themes-2/", 
-                    id = "learnr-05-lesson-theme2")
-```
+**Your turn**: Modify this plot to use `theme_minimal()` with a base size of 16:
+
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_05-themes-2/" id="learnr-05-lesson-theme2" %}}
 
 Hopefully that was also fairly straightforward!
 
@@ -62,33 +56,30 @@ Using a complete theme like `theme_minimal()` or `theme_bw()` is a great startin
 
 A few arguments to `theme()` don't use any special function—you can just specify settings with text like `"bottom"` or `"right"`
 
-:::puzzle
-**Your turn**: Look at the [documentation for `theme()` online](https://ggplot2.tidyverse.org/reference/theme.html). Make this plot's legend appear on the bottom instead of the left.
-:::
+<div class="puzzle">
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_05-themes-3/", 
-                    id = "learnr-05-lesson-theme3")
-```
+**Your turn**: Look at the [documentation for `theme()` online](https://ggplot2.tidyverse.org/reference/theme.html). Make this plot's legend appear on the bottom instead of the left.
+
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_05-themes-3/" id="learnr-05-lesson-theme3" %}}
 
 ### Disable elements completely with `element_blank()`
 
 Any plot element can be disabled by using `element_blank()`. For instance, if you want to remove the axis ticks, you can use `theme(axis.ticks = element_blank())`. 
 
-:::puzzle
-**Your turn**: Look at the [documentation for `theme()` online](https://ggplot2.tidyverse.org/reference/theme.html). Disable the panel grid in this plot.
-:::
+<div class="puzzle">
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_05-themes-4/", 
-                    id = "learnr-05-lesson-theme4")
-```
+**Your turn**: Look at the [documentation for `theme()` online](https://ggplot2.tidyverse.org/reference/theme.html). Disable the panel grid in this plot.
+
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_05-themes-4/" id="learnr-05-lesson-theme4" %}}
 
 You can also target more specific plot elements. You can specify something like `axis.text`, which applies to all axis text, or you can use `axis.text.y` to only target the text on the y-axis.
 
-:::puzzle
+<div class="puzzle">
+
 **Your turn**: Look at the [documentation for `theme()` online](https://ggplot2.tidyverse.org/reference/theme.html). Make the following changes to this plot:
 
 - Disable the major panel grid for the x-axis
@@ -96,13 +87,10 @@ You can also target more specific plot elements. You can specify something like 
 - Disable the minor panel grid for the y-axis. 
 
 You should only have three horizontal lines for the grid.
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_05-themes-5/", 
-                    id = "learnr-05-lesson-theme5")
-```
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_05-themes-5/" id="learnr-05-lesson-theme5" %}}
 
 ---
 
@@ -112,56 +100,50 @@ Almost every other plot element fits into one of three categories: a rectangle, 
 
 Things like the plot background or the panel background or the legend background are rectangles and can be manipulated with `element_rect()`. If you want the legend box to be yellow with a thin black border, you would use `theme(legend.box.background = element_rect(fill = "yellow", color = "black", size = 1)`.
 
-:::puzzle
+<div class="puzzle">
+
 **Your turn**: Look at the [documentation for `theme()`](https://ggplot2.tidyverse.org/reference/theme.html) and the [documentation for `element()`](https://ggplot2.tidyverse.org/reference/element.html) online. Make the following changes to this plot:
 
 - Fill the plot background with <span style="color: #F2D8CE">#F2D8CE</span>
 - Fill the panel background with <span style="color: #608BA6">#608BA6</span>, and make the border <span style="color: #184759">#184759</span> with size = 5
 
 This will be a fairly ugly plot.
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_05-themes-6/", 
-                    id = "learnr-05-lesson-theme6")
-```
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_05-themes-6/" id="learnr-05-lesson-theme6" %}}
 
 ### Deal with lines with `element_line()`
 
 Things like the panel grid, tick marks, and axis lines are all lines and can be manipulated with `element_line()`. If you want the x-axis line to be a dotted orange like, you would use `theme(axis.line.x = element_line(color = "orange", linetype = "dotted")`.
 
-:::puzzle
+<div class="puzzle">
+
 **Your turn**: Look at the [documentation for `theme()`](https://ggplot2.tidyverse.org/reference/theme.html) and the [documentation for `element()`](https://ggplot2.tidyverse.org/reference/element.html) online. Make the following changes to this plot:
 
 - Make the major panel gridlines blue and dashed with size = 1
 
 This will also be a fairly ugly plot.
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_05-themes-7/", 
-                    id = "learnr-05-lesson-theme7")
-```
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_05-themes-7/" id="learnr-05-lesson-theme7" %}}
 
 ### Deal with text with `element_text()`
 
 Finally, anything with text can be manipulated with `element_text()`, and you can specify all sorts of things, including font family (`family`), font weight (`face`), color (`color`), horizontal justification (`hjust`), angle (`angle`), and a bunch of other options. If you want the x-axis text to be italicized and rotated at a 45º angle, you would use `theme(axis.text.x = element_text(face = "italic", angle = 45))`.
 
-:::puzzle
+<div class="puzzle">
+
 **Your turn**: Look at the [documentation for `theme()`](https://ggplot2.tidyverse.org/reference/theme.html) and the [documentation for `element()`](https://ggplot2.tidyverse.org/reference/element.html) online. Make the following changes to this plot:
 
 - Make the y-axis text italic
 - Make the plot title right aligned, bold, and colored with <span style="color: #8C7811">#8C7811</span>
 - Make the plot subtitle right aligned
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_05-themes-8/", 
-                    id = "learnr-05-lesson-theme8")
-```
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_05-themes-8/" id="learnr-05-lesson-theme8" %}}
 
 ## Important note about ordering
 

@@ -40,6 +40,8 @@ Complete this:
 - **Tidy Your Data**
   - [Reshape Data](https://rstudio.cloud/learn/primers/4.1)
 
-:::note
+<div class="note">
+
 Recent versions of **tidyr** have renamed these core functions: `gather()` is now `pivot_longer()` and `spread()` is now `pivot_wider()`. The syntax for these `pivot_*()` functions is *slightly* different from what it was in `gather()` and `spread()`, so you can't just replace the names. Fortunately, both `gather()` and `spread()` still work and won't go away for a while, so you can still use them as you learn about reshaping and tidying data. It would be worth learning how the newer `pivot_*()` functions work, eventually, though ([see here for examples](https://tidyr.tidyverse.org/articles/pivot.html)).
-:::
+
+</div>

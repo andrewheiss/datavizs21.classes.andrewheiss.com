@@ -8,8 +8,6 @@ menu:
     weight: 12
 type: docs
 toc: true
-bibliography: "../../static/bib/references.bib"
-csl: "../../static/bib/chicago-syllabus-no-bib.csl"
 editor_options: 
   chunk_output_type: console
 shiny: true
@@ -99,16 +97,13 @@ lotr <- bind_rows(fellowship, tt, rotk)
 
 That worked well because each of the individual data frames had the same columns in them, and R was able to line up the matching columns. If columns were missing, R would have placed `NA` in the appropriate locations.
 
-:::puzzle
+<div class="puzzle">
+
 **Your turn**: Combine `national_data` and `puerto_rico_data` into a single dataset named `us_data` using `bind_rows`. Pay attention to what happens with the inflation column. Also notice that the columns in the Puerto Rico data are in a different order.
-:::
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_12-joining-1/", 
-                    id = "learnr-12-lesson-joining1")
-```
+</div>
 
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_12-joining-1/" id="learnr-12-lesson-joining1" %}}
 
 ## Combining datasets horizontally
 
@@ -175,15 +170,13 @@ national_libraries_2019
 
 We want to bring the libraries and schools columns into the general national data. Notice how both datasets have a state column.
 
-:::puzzle
-**Your turn**: Create a new dataset named `combined_data` that uses `inner_join()` to merge `national_data_2019` and `national_libraries_2019`.
-:::
+<div class="puzzle">
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_12-joining-2/", 
-                    id = "learnr-12-lesson-joining2")
-```
+**Your turn**: Create a new dataset named `combined_data` that uses `inner_join()` to merge `national_data_2019` and `national_libraries_2019`.
+
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_12-joining-2/" id="learnr-12-lesson-joining2" %}}
 
 
 ## `left_join()`
@@ -202,15 +195,13 @@ I find this much more useful when combining data. I often have a larger dataset 
 
 *([Look at this for a real life example](https://stats.andrewheiss.com/canary-ngos/01_get-merge-data.html#final_clean_combined_data): I create a dataset I name `panel_skeleton` that is just all the combinations of countries and years (Afghanistan 1990, Afghanistan 1991, etc.), and then I bring in all sorts of other datasets that match the same countries and years. When there aren't matches, nothing in the skeleton gets thrown away—R just adds missing values instead.)*
 
-:::puzzle
-**Your turn**: Create a new dataset named `combined_data` that uses `left_join()` to merge `national_data_2019` and `national_libraries_2019`.
-:::
+<div class="puzzle">
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_12-joining-5/", 
-                    id = "learnr-12-lesson-joining5")
-```
+**Your turn**: Create a new dataset named `combined_data` that uses `left_join()` to merge `national_data_2019` and `national_libraries_2019`.
+
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_12-joining-5/" id="learnr-12-lesson-joining5" %}}
 
 Left joining is also often surprisingly helpful for recoding lots of variables. Right now in our fake national data, we have a column for state, but it would be nice if we could have a column for region so we could facet or fill or color by region in a plot. Hunting around on the internet, you find this dataset that has a column for state and a column for abbreviations:
 
@@ -218,15 +209,13 @@ Left joining is also often surprisingly helpful for recoding lots of variables. 
 state_regions
 ```
 
-:::puzzle
-**Your turn**: Create a new dataset named `national_data_with_region` that uses `left_join()` to combine `national_data_2019` with `state_regions`.
-:::
+<div class="puzzle">
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_12-joining-3/", 
-                    id = "learnr-12-lesson-joining3")
-```
+**Your turn**: Create a new dataset named `national_data_with_region` that uses `left_join()` to combine `national_data_2019` with `state_regions`.
+
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_12-joining-3/" id="learnr-12-lesson-joining3" %}}
 
 Because `left_join()` only keeps rows from the second dataset that match the first, we don't actually bring in all 50 rows from the `state_regions` data—only the rows that match the first dataset (`national_data_2019`) come over. We could have done with if some massive recoding (`mutate(region = ifelse(state == "GA" | state == "NC", "South", ifelse(state == "CO"), "West", NA))`), but that's awful. Left joining is far easier here.
 
@@ -238,15 +227,13 @@ national_data
 
 Previously, we've been specifying the ID column with `by = "state"`, but now we have two ID columns: `state` and `year`. We can specify both with `by = c("state", "year")`.
 
-:::puzzle
-**Your turn**: Create a new dataset named `national_data_combined` that uses `left_join()` to combine `national_data` with `national_libraries` by state and year.
-:::
+<div class="puzzle">
 
-```{r echo=FALSE}
-blogdown::shortcode("learnr", 
-                    url = "https://andrewheiss.shinyapps.io/datavizm20_12-joining-4/", 
-                    id = "learnr-12-lesson-joining4")
-```
+**Your turn**: Create a new dataset named `national_data_combined` that uses `left_join()` to combine `national_data` with `national_libraries` by state and year.
+
+</div>
+
+{{% learnr url="https://andrewheiss.shinyapps.io/datavizm20_12-joining-4/" id="learnr-12-lesson-joining4" %}}
 
 If one dataset has things like state and year, but another only has state, `left_join()` will still work, but it will only join where the state is the same. For instance, here's what happens when we join the region data to the yearly national data:
 
