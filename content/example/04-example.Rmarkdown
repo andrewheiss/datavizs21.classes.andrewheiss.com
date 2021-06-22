@@ -124,7 +124,7 @@ ggplot(data = total_births_weekday,
        mapping = aes(x = day_of_week, y = total, fill = day_of_week)) +
   geom_col() +
   # Turn off the fill legend because it's redundant
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 If we fill by day of the week, we get 7 different colors, which is fine (I guess), but doesn't really help tell a story. The main story here is that there are far fewer births during weekends. If we create a new column that flags if a row is Saturday or Sunday, we can fill by that column instead:
@@ -151,7 +151,7 @@ ggplot(data = total_births_weekday,
   # Use commas instead of scientific notation
   scale_y_continuous(labels = comma) +
   # Turn off the legend since the title shows what the orange is
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(title = "Weekends are unpopular times for giving birth",
        x = NULL, y = "Total births")
 ```
@@ -175,7 +175,7 @@ ggplot(data = total_births_weekday,
   # Use commas instead of scientific notation
   scale_y_continuous(labels = comma) +
   # Turn off the legend since the title shows what the orange is
-  guides(color = FALSE) +
+  guides(color = "none") +
   labs(title = "Weekends are unpopular times for giving birth",
        x = NULL, y = "Total births")
 ```
@@ -190,7 +190,7 @@ ggplot(data = births,
        mapping = aes(x = day_of_week, y = births, color = weekend)) +
   scale_color_manual(values = c("grey70", "#f2ad22")) +
   geom_point(size = 0.5, position = position_jitter(height = 0)) +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 There are some interesting points in the low ends, likely because of holidays like Labor Day and Memorial Day (for the Mondays) and Thanksgiving (for the Thursday). If we had a column that indicated whether a day was a holiday, we could color by that and it would probably explain most of those low numbers. Unfortunately we don't have that column, and it'd be hard to make. Some holidays are constant (Halloween is always October 31), but some aren't (Thanksgiving is the fourth Thursday in November, so we'd need to find out which November 20-somethingth each year is the fourth Thursday, and good luck doing that at scale).
@@ -207,7 +207,7 @@ ggplot(data = births,
   scale_color_manual(values = c("grey70", "#f2ad22")) +
   # Make these points suuuper tiny
   geom_quasirandom(size = 0.0001) +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 ### Heatmap

@@ -4,7 +4,7 @@ plot_health_wealth <- ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colo
   geom_point(alpha = 0.7) +
   scale_size(range = c(2, 12)) +
   scale_x_log10(labels = scales::dollar) +
-  guides(size = FALSE, color = FALSE) +
+  guides(size = "none", color = "none") +
   facet_wrap(~continent) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
   # Special gganimate stuff

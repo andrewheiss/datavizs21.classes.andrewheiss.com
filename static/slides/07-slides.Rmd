@@ -217,7 +217,7 @@ ggplot(car_counts,
       trans = ~ . / total_cars,
       labels = scales::percent)
   ) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 ]
 
@@ -425,7 +425,7 @@ ggplot(cars_cor_long, aes(x = measure2, y = measure1, color = cor)) +
   geom_point(aes(size = abs(cor))) +
   scale_color_gradient2(low = "#E16462", mid = "white", high = "#0D0887",
                         limits = c(-1, 1)) +
-  scale_size_area(max_size = 15, limits = c(-1, 1), guide = FALSE) +
+  scale_size_area(max_size = 15, limits = c(-1, 1), guide = "none") +
   labs(x = NULL, y = NULL) +
   coord_equal() +
   theme_minimal() +
@@ -1039,7 +1039,7 @@ ggplot(predicted_mpg_fancy,
                   fill = drv),
               alpha = 0.5) +
   geom_line(aes(color = drv), size = 1) + 
-  guides(fill = FALSE, color = FALSE) + #<<
+  guides(fill = "none", color = "none") + #<<
   facet_wrap(vars(drv)) #<<
 ```
 ]

@@ -436,7 +436,7 @@ counties_ga <-  counties_sf("longlat") %>%
 ```{r ga1, echo=FALSE, fig.width=5, fig.height=6}
 ggplot(counties_ga) +
   geom_sf(aes(fill = census_area)) + 
-  scale_fill_gradientn(colors = rainbow(5), guide = FALSE) +
+  scale_fill_gradientn(colors = rainbow(5), guide = "none") +
   theme_void()
 ```
 
@@ -451,7 +451,7 @@ ggplot(counties_ga) +
 ```{r ga2, echo=FALSE, fig.width=5, fig.height=6}
 ggplot(counties_ga) +
   geom_sf(aes(fill = census_area)) + 
-  scale_fill_viridis_c(guide = FALSE) +
+  scale_fill_viridis_c(guide = "none") +
   theme_void()
 ```
 
@@ -466,7 +466,7 @@ ggplot(counties_ga) +
 ```{r ga3, echo=FALSE, fig.width=5, fig.height=6}
 ggplot(counties_ga) +
   geom_sf(aes(fill = census_area)) + 
-  scale_fill_viridis_c(option = "inferno", guide = FALSE) +
+  scale_fill_viridis_c(option = "inferno", guide = "none") +
   theme_void()
 ```
 

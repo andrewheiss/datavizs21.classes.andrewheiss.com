@@ -229,7 +229,7 @@ ggplot() +
           aes(fill = as.factor(MAPCOLOR7)),
           color = "#401D16", size = 0.25) +
   scale_fill_viridis_d(option = "plasma") +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   theme_void()
 ```
 

@@ -107,7 +107,7 @@ This is colorful, but it's impossible to actually interpret. Instead of only fil
 ggplot(weather_atl, aes(x = windSpeed, fill = Month)) +
   geom_histogram(binwidth = 1, color = "white", boundary = 1) +
   scale_x_continuous(breaks = seq(0, 12, by = 1)) + 
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   facet_wrap(vars(Month))
 ```
 
@@ -154,7 +154,7 @@ Even with the transparency, this is really hard to interpret. We can fix this by
 ```r
 ggplot(weather_atl, aes(x = windSpeed, fill = Month)) +
   geom_density(alpha = 0.5) +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   facet_wrap(vars(Month))
 ```
 
@@ -166,7 +166,7 @@ Or we can stack the density plots behind each other with [**ggridges**](https://
 ```r
 ggplot(weather_atl, aes(x = windSpeed, y = fct_rev(Month), fill = Month)) +
   geom_density_ridges() +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 <img src="/example/06-example_files/figure-html/ggridges-basic-1.png" width="576" style="display: block; margin: auto;" />
@@ -177,7 +177,7 @@ We can add some extra information to `geom_density_ridges()` with some other arg
 ```r
 ggplot(weather_atl, aes(x = windSpeed, y = fct_rev(Month), fill = Month)) +
   geom_density_ridges(quantile_lines = TRUE, quantiles = 2) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 <img src="/example/06-example_files/figure-html/ggridges-quantile-1.png" width="576" style="display: block; margin: auto;" />
@@ -188,7 +188,7 @@ Now that we have good working code, we can easily substitute in other variables 
 ```r
 ggplot(weather_atl, aes(x = temperatureHigh, y = fct_rev(Month), fill = Month)) +
   geom_density_ridges(quantile_lines = TRUE, quantiles = 2) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 <img src="/example/06-example_files/figure-html/ggridges-quantile-temp-1.png" width="576" style="display: block; margin: auto;" />
@@ -284,7 +284,7 @@ ggplot(weather_atl,
        aes(y = windSpeed, x = Day, fill = Day)) +
   geom_violin() +
   geom_point(size = 0.5, position = position_jitter(width = 0.1)) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 <img src="/example/06-example_files/figure-html/violin-strip-1.png" width="576" style="display: block; margin: auto;" />
@@ -298,7 +298,7 @@ ggplot(weather_atl,
   geom_violin() +
   stat_summary(geom = "point", fun = "mean", size = 5, color = "white") +
   geom_point(size = 0.5, position = position_jitter(width = 0.1)) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 <img src="/example/06-example_files/figure-html/violin-strip-mean-1.png" width="576" style="display: block; margin: auto;" />
@@ -312,7 +312,7 @@ ggplot(weather_atl,
   geom_violin() +
   stat_summary(geom = "pointrange", fun.data = "mean_se", size = 1, color = "white") +
   geom_point(size = 0.5, position = position_jitter(width = 0.1)) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 <img src="/example/06-example_files/figure-html/violin-strip-mean-ci-1.png" width="576" style="display: block; margin: auto;" />
@@ -325,7 +325,7 @@ ggplot(weather_atl,
        aes(x = fct_rev(Day), y = temperatureHigh)) +
   geom_half_point(aes(color = Day), side = "l", size = 0.5) +
   geom_half_boxplot(aes(fill = Day), side = "r") +
-  guides(color = FALSE, fill = FALSE)
+  guides(color = "none", fill = "none")
 ```
 
 <img src="/example/06-example_files/figure-html/gghalves-point-boxplot-1.png" width="576" style="display: block; margin: auto;" />
@@ -338,7 +338,7 @@ ggplot(weather_atl,
        aes(x = fct_rev(Day), y = temperatureHigh)) +
   geom_half_point(aes(color = Day), side = "l", size = 0.5) +
   geom_half_violin(aes(fill = Day), side = "r") +
-  guides(color = FALSE, fill = FALSE)
+  guides(color = "none", fill = "none")
 ```
 
 <img src="/example/06-example_files/figure-html/gghalves-point-violon-1.png" width="576" style="display: block; margin: auto;" />
@@ -351,7 +351,7 @@ ggplot(weather_atl,
   geom_half_boxplot(aes(fill = Day), side = "l", width = 0.5, nudge = 0.1) +
   geom_half_point(aes(color = Day), side = "l", size = 0.5) +
   geom_half_violin(aes(fill = Day), side = "r") +
-  guides(color = FALSE, fill = FALSE) + 
+  guides(color = "none", fill = "none") + 
   coord_flip()
 ```
 

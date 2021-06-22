@@ -248,7 +248,7 @@ ggplot(co2_rankings,
        subtitle = "Countries that <span style='color: #0074D9'>**improved**</span> or <span style='color: #FF4136'>**worsened**</span> more than 25 positions in the rankings highlighted",
        caption = "Source: The World Bank.\nCountries with populations of less than 200,000 excluded.") +
   # Turn off the legends for color and fill, since the subtitle includes that
-  guides(color = FALSE, fill = FALSE) +
+  guides(color = "none", fill = "none") +
   # Use theme_bw() with IBM Plex Sans
   theme_bw(base_family = "IBM Plex Sans") +
   # Tell the title and subtitle to be treated as Markdown/HTML, make the title

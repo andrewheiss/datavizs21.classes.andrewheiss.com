@@ -314,7 +314,7 @@ ggplot(example_df, aes(x = "", y = count, fill = group)) +
 ```{r example-bar, echo=FALSE, fig.dim=c(4.8, 3), out.width="100%"}
 ggplot(example_df, aes(x = group, y = count, fill = group)) +
   geom_col() +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(x = "Head of state", y = "Count") +
   theme_minimal()
 ```
@@ -401,7 +401,7 @@ animals_mean <- animals %>%
 ggplot(animals_mean, aes(x = animal_type, y = avg_weight, fill = animal_type)) + 
   geom_col() +
   labs(x = NULL, y = "Weight") +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 ]
@@ -415,7 +415,7 @@ ggplot(animals, aes(x = animal_type, y = weight, color = animal_type)) +
   geom_point(position = position_jitter(height = 0), size = 1) +
   stat_summary(geom = "point", fun = "mean", size = 5, color = "darkred") +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 ]
@@ -433,7 +433,7 @@ ggplot(animals,
   geom_point(position = position_jitter(height = 0),
              size = 1) +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -456,7 +456,7 @@ ggplot(animals, aes(x = animal_type,
   # Or try this too:
   # geom_quasirandom() +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -477,7 +477,7 @@ ggplot(animals, aes(x = animal_type,
   geom_point(position = position_jitter(height = 0), 
              size = 1, alpha = 0.5) +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -498,7 +498,7 @@ ggplot(animals, aes(x = animal_type,
   geom_point(position = position_jitter(height = 0), 
              size = 1, alpha = 0.5) +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -519,7 +519,7 @@ ggplot(animals, aes(x = weight,
                     fill = animal_type)) +
   geom_density_ridges() +
   labs(x = "Weight", y = NULL) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 ]
 
@@ -561,7 +561,7 @@ gapminder_continents <- gapminder %>%
 ggplot(gapminder_continents, 
        aes(x = continent, y = n, fill = continent)) +
   geom_col() +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(x = NULL, y = "Number of countries")
 ```
 ]
@@ -585,7 +585,7 @@ ggplot(gapminder_continents,
        aes(x = continent, y = n, 
            color = continent)) +
   geom_pointrange(aes(ymin = 0, ymax = n)) +
-  guides(color = FALSE) +
+  guides(color = "none") +
   labs(x = NULL, y = "Number of countries")
 ```
 ]

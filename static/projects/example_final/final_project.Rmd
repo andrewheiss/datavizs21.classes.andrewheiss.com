@@ -112,7 +112,7 @@ figure2 <- ggplot(example_data_time, aes(x = year, y = x_avg, color = x_names)) 
   geom_line(size = 1) + 
   scale_color_manual(values = c("#FA6900", "#69D1E8")) + 
   scale_y_continuous(labels = percent) +
-  guides(color = guide_legend(title = NULL), fill = FALSE) +
+  guides(color = guide_legend(title = NULL), fill = "none") +
   labs(x = NULL, y = "Whatever this is measuring") +
   facet_wrap(~ y2, nrow = 1) + 
   my_beautiful_fancy_theme + 

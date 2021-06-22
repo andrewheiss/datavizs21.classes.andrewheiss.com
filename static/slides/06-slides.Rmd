@@ -120,7 +120,7 @@ tibble(x = rep(1:5, 2),
   mutate(highlight = x == 1) %>% 
   ggplot(aes(x = x, y = y, color = highlight)) +
   geom_point(size = 30) +
-  scale_color_manual(values = c("grey90", "#FCCE25"), guide = FALSE) +
+  scale_color_manual(values = c("grey90", "#FCCE25"), guide = "none") +
   theme_void() +
   theme(panel.background = element_rect(fill = "#0D0887"))
 ```
@@ -294,7 +294,7 @@ animals_mean <- animals %>%
 ggplot(animals_mean, aes(x = animal_type, y = avg_weight, fill = animal_type)) + 
   geom_col() +
   labs(x = NULL, y = "Weight") +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 ]
@@ -308,7 +308,7 @@ ggplot(animals, aes(x = animal_type, y = weight, color = animal_type)) +
   geom_point(position = position_jitter(height = 0), size = 1) +
   stat_summary(geom = "point", fun = "mean", size = 5, color = "darkred") +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 ]
@@ -669,7 +669,7 @@ ggplot(gapminder_2002,
   geom_histogram(binwidth = 5, 
                  color = "white", 
                  boundary = 50) +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   facet_wrap(vars(continent))
 ```
 ]
@@ -802,7 +802,7 @@ ggplot(filter(gapminder_2002,
                     alpha = 0.3, nudge = 0.1) +
   geom_half_violin(aes(fill = continent), 
                    side = "r") +
-  guides(fill = FALSE, color = FALSE) +
+  guides(fill = "none", color = "none") +
   coord_flip()  #<<
 ```
 ]

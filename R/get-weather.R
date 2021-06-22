@@ -48,7 +48,7 @@ ggplot(weather_atl, aes(x = windSpeed, fill = Month)) +
 
 ggplot(weather_atl, aes(x = windSpeed, fill = Month)) +
   geom_histogram(binwidth = 1, color = "white") + 
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   facet_wrap(vars(Month))
 
 
@@ -57,7 +57,7 @@ ggplot(weather_atl, aes(x = windSpeed)) +
 
 ggplot(weather_atl, aes(x = windSpeed, fill = Month)) +
   geom_density() +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   facet_wrap(~ Month)
 
 ggplot(weather_atl, aes(x = windSpeed, fill = Month)) +
@@ -70,14 +70,14 @@ library(ggridges)
 ggplot(weather_atl, aes(x = windSpeed, y = fct_rev(Month),
                         fill = Month)) +
   geom_density_ridges(scale = 5) +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(x = "Wind speed", y = NULL) +
   theme_minimal()
 
 ggplot(weather_atl, aes(x = temperatureHigh, y = fct_rev(Month),
                         fill = Month)) +
   geom_density_ridges(scale = 5, quantile_lines = TRUE, quantiles = 2) +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(x = "Wind speed", y = NULL) +
   theme_minimal()
 
@@ -121,14 +121,14 @@ ggplot(weather_atl,
        aes(y = windSpeed, x = Day, fill = Day)) +
   geom_violin() +
   geom_point(size = 0.5, position = position_jitter(width = 0.1)) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 
 ggplot(weather_atl,
        aes(y = windSpeed, x = Day, fill = Day)) +
   geom_violin() +
   stat_summary(geom = "point", fun = "mean", size = 5, color = "white") +
   geom_point(size = 0.5, position = position_jitter(width = 0.1)) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 
 library(gghalves)
 

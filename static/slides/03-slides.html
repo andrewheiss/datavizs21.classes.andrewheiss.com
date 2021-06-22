@@ -4,11 +4,11 @@
     <title>Mapping data to graphics</title>
     <meta charset="utf-8" />
     <meta name="author" content="Andrew Heiss" />
-    <meta name="date" content="2021-05-10" />
-    <script src="libs/header-attrs-2.7.12/header-attrs.js"></script>
+    <meta name="date" content="2021-06-22" />
+    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/tile-view-0.2.1/tile-view.css" rel="stylesheet" />
-    <script src="libs/tile-view-0.2.1/tile-view.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
     <link rel="stylesheet" href="css/ath-slides.css" type="text/css" />
     <link rel="stylesheet" href="css/ath-inferno-fonts.css" type="text/css" />
     <link rel="stylesheet" href="css/animate.css" type="text/css" />
@@ -235,12 +235,10 @@ class: title title-4
 # `ggplot()` template
 
 
-&lt;code class ='r hljs remark-code'&gt;ggplot(data = &lt;b&gt;&lt;span style='background-color:#CBB5FF'&gt;DATA&lt;/span&gt;&lt;/b&gt;) +&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFDFD1'&gt;GEOM_FUNCTION&lt;/span&gt;&lt;/b&gt;(mapping = aes(&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;AESTHETIC MAPPINGS&lt;/span&gt;&lt;/b&gt;))&lt;/code&gt;
 
 --
 
 
-&lt;code class ='r hljs remark-code'&gt;ggplot(data = &lt;b&gt;&lt;span style='background-color:#CBB5FF'&gt;troops&lt;/span&gt;&lt;/b&gt;) +&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFDFD1'&gt;geom_path&lt;/span&gt;&lt;/b&gt;(mapping = aes(&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;x = longitude&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;y = latitude&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;color = direction&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;size = survivors&lt;/span&gt;&lt;/b&gt;))&lt;/code&gt;
 
 ---
 
@@ -288,7 +286,6 @@ layout: false
 --
 
 
-&lt;code class ='r hljs remark-code'&gt;ggplot(data = &lt;b&gt;&lt;span style='background-color:#CBB5FF'&gt;troops&lt;/span&gt;&lt;/b&gt;) +&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFDFD1'&gt;geom_path&lt;/span&gt;&lt;/b&gt;(mapping = aes(&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;x = longitude&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;y = latitude&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;color = direction&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;size = survivors&lt;/span&gt;&lt;/b&gt;))&lt;/code&gt;
 
 ---
 
@@ -399,7 +396,6 @@ layout: false
 --
 
 
-&lt;code class ='r hljs remark-code'&gt;ggplot(data = &lt;b&gt;&lt;span style='background-color:#CBB5FF'&gt;gapminder_2007&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;mapping = aes(&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;x = gdpPercap&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;y = lifeExp&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;color = continent&lt;/span&gt;&lt;/b&gt;,&lt;br&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFD0CF'&gt;size = pop&lt;/span&gt;&lt;/b&gt;)) +&lt;br&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;&lt;span style='background-color:#FFDFD1'&gt;geom_point&lt;/span&gt;&lt;/b&gt;() +&lt;br&gt;&amp;nbsp;&amp;nbsp;scale_x_log10()&lt;/code&gt;
 
 ---
 
@@ -1180,7 +1176,7 @@ ggplot(data = gapminder_2007,
                      fill = continent)) +
   geom_histogram(binwidth = 5, 
                  color = "white") +
-  guides(fill = FALSE) +  # Turn off legend
+  guides(fill = "none") +  # Turn off legend
   facet_wrap(vars(continent))
 ```
 ]
@@ -1204,7 +1200,7 @@ ggplot(data = gapminder,
                      fill = continent)) +
   geom_violin() +
   geom_boxplot(alpha = 0.5) +
-  guides(fill = FALSE)  # Turn off legend
+  guides(fill = "none")  # Turn off legend
 ```
 ]
 
@@ -1239,7 +1235,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp,
   geom_point(alpha = 0.7) +
   scale_size(range = c(2, 12)) +
   scale_x_log10(labels = scales::dollar) +
-  guides(size = FALSE, color = FALSE) +
+  guides(size = "none", color = "none") +
   facet_wrap(~continent) +
   # Special gganimate stuff
   labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +

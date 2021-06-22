@@ -34,7 +34,7 @@ plot_hotdogs <- ggplot(hotdogs,
                      expand = c(0, 0)) +
   scale_y_continuous(breaks = seq(0, 70, 10), 
                      expand = c(0, 0)) +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(y = "Hot dogs and buns", x = NULL) +
   theme_minimal() +
   theme(panel.background = element_rect(fill = "transparent", colour = NA),

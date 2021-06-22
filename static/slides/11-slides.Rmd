@@ -111,7 +111,7 @@ tibble(y = seq(0, 0.995, 0.005)) %>%
            family = "Fira Sans Condensed Black", fontface = "plain", size = 25) +
   scale_x_continuous(expand = c(0, 0)) +
   scale_y_continuous(labels = percent_format(accuracy = 0.1)) +
-  scale_fill_manual(values = c("#FF4136", "#0074D9"), guide = FALSE) +
+  scale_fill_manual(values = c("#FF4136", "#0074D9"), guide = "none") +
   labs(x = NULL, y = "Percent of the time") +
   coord_cartesian(ylim = c(.98, 1)) +
   theme_minimal(base_size = 25, base_family = "Fira Sans Condensed") +
@@ -303,7 +303,7 @@ ggplot(fake_survey, aes(x = response, y = count, group = 1)) +
   scale_color_scico_d(palette = "berlin", direction = -1) +
   expand_limits(y = 0) +
   labs(title = "This is BAD", x = NULL, y = "Count") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -315,7 +315,7 @@ ggplot(fake_survey, aes(x = response, y = count)) +
   geom_pointrange(aes(ymin = 0, ymax = count, color = response), size = 2) +
   scale_color_scico_d(palette = "berlin", direction = -1) +
   labs(title = "This is BETTER", x = NULL, y = "Count") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -773,7 +773,7 @@ ggplot(sales_model_components, aes(x = year_month, y = value)) +
   scale_color_manual(values = c("grey60", "#111111")) +
   labs(x = NULL, y = "Millions of dollars",
        caption = "Source: RSXFSN from FRED. Recessions highlighted in <span style='color: #B10DC9;'>purple</span>.") +
-  guides(color = FALSE) +
+  guides(color = "none") +
   facet_wrap(vars(component), ncol = 1, scales = "free_y") +
   theme_minimal(base_family = "Fira Sans Condensed") +
   theme(strip.text = element_text(hjust = 0, face = "bold", size = rel(1.3)),

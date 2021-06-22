@@ -298,7 +298,7 @@ hp_tokens <- hp %>%
 
 ggplot(hp_tokens, aes(x = n, y = fct_rev(word), fill = book)) +
   geom_col() +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(x = NULL, y = NULL) +
   scale_fill_viridis_d() +
   facet_wrap(vars(book), scales = "free_y") +
@@ -324,7 +324,7 @@ hp_bigrams <- hp %>%
 
 ggplot(hp_bigrams, aes(x = n, y = fct_rev(bigram), fill = book)) +
   geom_col() +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(x = NULL, y = NULL) +
   scale_fill_viridis_d() +
   facet_wrap(vars(book), scales = "free_y") +
@@ -533,7 +533,7 @@ hp_sentiment <- hp %>%
 ggplot(hp_sentiment, 
        aes(x = index, y = net_sentiment, fill = net_sentiment > 0)) +
   geom_col() +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(x = NULL, y = "Net sentiment") +
   facet_wrap(vars(book), scales = "free_x") +
   theme_bw()
@@ -580,7 +580,7 @@ hp_tf_idf_plot <- hp_tf_idf %>%
 
 ggplot(hp_tf_idf_plot, aes(y = fct_rev(word), x = tf_idf, fill = book)) +
   geom_col() +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(y = "tf-idf", x = NULL) +
   facet_wrap(~ book, scales = "free") +
   theme_bw()

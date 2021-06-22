@@ -525,7 +525,7 @@ eg <- tribble(
 # Color, discrete
 ggplot(eg, aes(x = x, y = y, color = x)) +
   geom_point(size = 30) +
-  guides(color = FALSE) +
+  guides(color = "none") +
   theme(axis.text.y = element_blank(),
         axis.ticks = element_blank())
 ```
@@ -536,7 +536,7 @@ ggplot(eg, aes(x = x, y = y, color = x)) +
 # Color, continuous
 ggplot(eg, aes(x = x1, y = y, color = x1)) +
   geom_point(size = 30) +
-  guides(color = FALSE) +
+  guides(color = "none") +
   coord_cartesian(xlim = c(0.5, 3.5)) +
   theme(axis.text.y = element_blank(),
         axis.ticks = element_blank())
@@ -552,7 +552,7 @@ ggplot(eg, aes(x = x1, y = y, color = x1)) +
 ggplot(eg, aes(x = x, y = y, size = x)) +
   geom_point() +
   scale_size_discrete(range = c(2, 30)) +
-  guides(size = FALSE) +
+  guides(size = "none") +
   theme(axis.text.y = element_blank(),
         axis.ticks = element_blank())
 ```
@@ -563,7 +563,7 @@ ggplot(eg, aes(x = x, y = y, size = x)) +
 # Fill
 ggplot(eg, aes(x = x, y = y, fill = x)) +
   geom_point(size = 30, pch = 21, stroke = 5) +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   theme(axis.text.y = element_blank(),
         axis.ticks = element_blank())
 ```
@@ -577,7 +577,7 @@ ggplot(eg, aes(x = x, y = y, fill = x)) +
 # Shape
 ggplot(eg, aes(x = x, y = y, shape = x)) +
   geom_point(size = 30) +
-  guides(shape = FALSE) +
+  guides(shape = "none") +
   theme(axis.text.y = element_blank(),
         axis.ticks = element_blank())
 ```
@@ -588,7 +588,7 @@ ggplot(eg, aes(x = x, y = y, shape = x)) +
 # Alpha
 ggplot(eg, aes(x = x, y = y, alpha = x)) +
   geom_point(size = 30) +
-  guides(alpha = FALSE) +
+  guides(alpha = "none") +
   theme(axis.text.y = element_blank(),
         axis.ticks = element_blank())
 ```
@@ -1315,7 +1315,7 @@ ggplot(data = gapminder_2007,
                      fill = continent)) +
   geom_histogram(binwidth = 5, 
                  color = "white") +
-  guides(fill = FALSE) +  # Turn off legend
+  guides(fill = "none") +  # Turn off legend
   facet_wrap(vars(continent))
 ```
 ]
@@ -1338,7 +1338,7 @@ ggplot(data = gapminder,
                      fill = continent)) +
   geom_violin() +
   geom_boxplot(alpha = 0.5) +
-  guides(fill = FALSE)  # Turn off legend
+  guides(fill = "none")  # Turn off legend
 ```
 ]
 
@@ -1372,7 +1372,7 @@ ggplot(gapminder, aes(x = gdpPercap, y = lifeExp,
   geom_point(alpha = 0.7) +
   scale_size(range = c(2, 12)) +
   scale_x_log10(labels = scales::dollar) +
-  guides(size = FALSE, color = FALSE) +
+  guides(size = "none", color = "none") +
   facet_wrap(~continent) +
   # Special gganimate stuff
   labs(title = 'Year: {frame_time}', x = 'GDP per capita', y = 'life expectancy') +

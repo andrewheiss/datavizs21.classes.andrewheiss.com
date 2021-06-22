@@ -386,7 +386,7 @@ ggplot(gapminder_europe,
   scale_color_manual(values = c("grey50", 
                                 "red")) +
   scale_fill_manual(values = c("red")) +
-  guides(color = FALSE, fill = FALSE)
+  guides(color = "none", fill = "none")
 ```
 ]
 
@@ -415,7 +415,7 @@ ggplot(gapminder_highlighted,
   scale_color_manual(values = c("grey70", 
                                 "red")) +
   scale_size_manual(values = c(0.1, 0.5)) +
-  guides(color = FALSE, size = FALSE) +
+  guides(color = "none", size = "none") +
   theme_minimal()
 ```
 ]

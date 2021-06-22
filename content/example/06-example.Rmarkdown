@@ -99,7 +99,7 @@ This is colorful, but it's impossible to actually interpret. Instead of only fil
 ggplot(weather_atl, aes(x = windSpeed, fill = Month)) +
   geom_histogram(binwidth = 1, color = "white", boundary = 1) +
   scale_x_continuous(breaks = seq(0, 12, by = 1)) + 
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   facet_wrap(vars(Month))
 ```
 
@@ -134,7 +134,7 @@ Even with the transparency, this is really hard to interpret. We can fix this by
 ```{r density-facet-by-month, fig.width=8, fig.height=4.8}
 ggplot(weather_atl, aes(x = windSpeed, fill = Month)) +
   geom_density(alpha = 0.5) +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   facet_wrap(vars(Month))
 ```
 
@@ -143,7 +143,7 @@ Or we can stack the density plots behind each other with [**ggridges**](https://
 ```{r ggridges-basic, message=FALSE}
 ggplot(weather_atl, aes(x = windSpeed, y = fct_rev(Month), fill = Month)) +
   geom_density_ridges() +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 We can add some extra information to `geom_density_ridges()` with some other arguments like `quantile_lines`. We can use the `quantiles` argument to tell the plow how many parts to be cut into. Since we just want to show the median, we'll set that to 2 so each density plot is divided in half:
@@ -151,7 +151,7 @@ We can add some extra information to `geom_density_ridges()` with some other arg
 ```{r ggridges-quantile, message=FALSE}
 ggplot(weather_atl, aes(x = windSpeed, y = fct_rev(Month), fill = Month)) +
   geom_density_ridges(quantile_lines = TRUE, quantiles = 2) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 Now that we have good working code, we can easily substitute in other variables by changing the x mapping:
@@ -159,7 +159,7 @@ Now that we have good working code, we can easily substitute in other variables 
 ```{r ggridges-quantile-temp, message=FALSE}
 ggplot(weather_atl, aes(x = temperatureHigh, y = fct_rev(Month), fill = Month)) +
   geom_density_ridges(quantile_lines = TRUE, quantiles = 2) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 We can get extra fancy if we fill by temperature instead of filling by month. To get this to work, we need to use `geom_density_ridges_gradient()`, and we need to change the `fill` mapping to the strange looking `..x..`, which is a weird ggplot trick that tells it to use the variable we mapped to the x-axis. For whatever reason, `fill = temperatureHigh` doesn't work `r emo::ji("shrug")`:
@@ -227,7 +227,7 @@ ggplot(weather_atl,
        aes(y = windSpeed, x = Day, fill = Day)) +
   geom_violin() +
   geom_point(size = 0.5, position = position_jitter(width = 0.1)) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 We can also add larger points for the daily averages. We'll use a special layer for this: `stat_summary()`. It has a slightly different syntax, since we're not actually mapping a column from the dataset. Instead, we're feeding a column from a dataset into a function (here `"mean"`) and then plotting that result:
@@ -238,7 +238,7 @@ ggplot(weather_atl,
   geom_violin() +
   stat_summary(geom = "point", fun = "mean", size = 5, color = "white") +
   geom_point(size = 0.5, position = position_jitter(width = 0.1)) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 We can also show the mean and confidence interval at the same time by changing the summary function:
@@ -249,7 +249,7 @@ ggplot(weather_atl,
   geom_violin() +
   stat_summary(geom = "pointrange", fun.data = "mean_se", size = 1, color = "white") +
   geom_point(size = 0.5, position = position_jitter(width = 0.1)) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 Overlaying the points directly on top of the violins shows extra information, but it's also really crowded and hard to read. If we use [the **gghalves** package](https://github.com/erocoar/gghalves), we can use special halved versions of some of these geoms like so:
@@ -259,7 +259,7 @@ ggplot(weather_atl,
        aes(x = fct_rev(Day), y = temperatureHigh)) +
   geom_half_point(aes(color = Day), side = "l", size = 0.5) +
   geom_half_boxplot(aes(fill = Day), side = "r") +
-  guides(color = FALSE, fill = FALSE)
+  guides(color = "none", fill = "none")
 ```
 
 Note the `side` argument for specifying which half of the column the geom goes. We can also use `geom_half_violin()`:
@@ -269,7 +269,7 @@ ggplot(weather_atl,
        aes(x = fct_rev(Day), y = temperatureHigh)) +
   geom_half_point(aes(color = Day), side = "l", size = 0.5) +
   geom_half_violin(aes(fill = Day), side = "r") +
-  guides(color = FALSE, fill = FALSE)
+  guides(color = "none", fill = "none")
 ```
 
 If we flip the plot, we can make a [rain cloud plot](https://micahallen.org/2018/03/15/introducing-raincloud-plots/): 
@@ -279,7 +279,7 @@ ggplot(weather_atl,
   geom_half_boxplot(aes(fill = Day), side = "l", width = 0.5, nudge = 0.1) +
   geom_half_point(aes(color = Day), side = "l", size = 0.5) +
   geom_half_violin(aes(fill = Day), side = "r") +
-  guides(color = FALSE, fill = FALSE) + 
+  guides(color = "none", fill = "none") + 
   coord_flip()
 ```
 

@@ -283,7 +283,7 @@ Cool! We're getting closer. We can definitely see different slopes, but with 7 d
 ggplot(gdp_south_asia, aes(x = year, y = gdp_per_cap, group = country, color = country)) +
   geom_line(size = 1.5) +
   geom_text(aes(label = country)) +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 <img src="/example/08-example_files/figure-html/slopegraph-sa-simple-text-1.png" width="576" style="display: block; margin: auto;" />
@@ -296,7 +296,7 @@ ggplot(gdp_south_asia, aes(x = year, y = gdp_per_cap, group = country, color = c
   geom_line(size = 1.5) +
   geom_text(aes(label = label_first)) +
   geom_text(aes(label = label_last)) +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 <img src="/example/08-example_files/figure-html/slopegraph-sa-simple-text-fancier-1.png" width="576" style="display: block; margin: auto;" />
@@ -309,7 +309,7 @@ ggplot(gdp_south_asia, aes(x = year, y = gdp_per_cap, group = country, color = c
   geom_line(size = 1.5) +
   geom_text_repel(aes(label = label_first)) +
   geom_text_repel(aes(label = label_last)) +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 <img src="/example/08-example_files/figure-html/slopegraph-sa-getting-warmer-1.png" width="576" style="display: block; margin: auto;" />
@@ -322,7 +322,7 @@ ggplot(gdp_south_asia, aes(x = year, y = gdp_per_cap, group = country, color = c
   geom_line(size = 1.5) +
   geom_text_repel(aes(label = label_first), direction = "y", nudge_x = -1, seed = 1234) +
   geom_text_repel(aes(label = label_last), direction = "y", nudge_x = 1, seed = 1234) +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 <img src="/example/08-example_files/figure-html/slopegraph-sa-fancier-1.png" width="576" style="display: block; margin: auto;" />
@@ -335,7 +335,7 @@ ggplot(gdp_south_asia, aes(x = year, y = gdp_per_cap, group = country, color = c
   geom_line(size = 1.5) +
   geom_text_repel(aes(label = label_first), direction = "y", nudge_x = -1, seed = 1234) +
   geom_text_repel(aes(label = label_last), direction = "y", nudge_x = 1, seed = 1234) +
-  guides(color = FALSE) +
+  guides(color = "none") +
   scale_color_viridis_d(option = "magma", end = 0.9) +
   theme_void()
 ```
@@ -383,7 +383,7 @@ ggplot(sa_co2, aes(x = year, y = rank, color = country)) +
   geom_text(data = filter(sa_co2, year == 2014),
             aes(label = iso2c, x = 2014.75),
             fontface = "bold") +
-  guides(color = FALSE) +
+  guides(color = "none") +
   scale_y_reverse(breaks = 1:8) +
   scale_x_continuous(breaks = 2004:2014) +
   scale_color_viridis_d(option = "magma", begin = 0.2, end = 0.9) +

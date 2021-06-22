@@ -4,11 +4,11 @@
     <title>Amounts and proportions</title>
     <meta charset="utf-8" />
     <meta name="author" content="Andrew Heiss" />
-    <meta name="date" content="2021-05-10" />
-    <script src="libs/header-attrs-2.7.12/header-attrs.js"></script>
+    <meta name="date" content="2021-06-22" />
+    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/tile-view-0.2.1/tile-view.css" rel="stylesheet" />
-    <script src="libs/tile-view-0.2.1/tile-view.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
     <link rel="stylesheet" href="css/ath-slides.css" type="text/css" />
     <link rel="stylesheet" href="css/ath-inferno-fonts.css" type="text/css" />
     <link rel="stylesheet" href="css/animate.css" type="text/css" />
@@ -377,7 +377,7 @@ ggplot(animals,
   geom_point(position = position_jitter(height = 0),
              size = 1) +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -401,7 +401,7 @@ ggplot(animals, aes(x = animal_type,
   # Or try this too:
   # geom_quasirandom() +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -423,7 +423,7 @@ ggplot(animals, aes(x = animal_type,
   geom_point(position = position_jitter(height = 0), 
              size = 1, alpha = 0.5) +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -445,7 +445,7 @@ ggplot(animals, aes(x = animal_type,
   geom_point(position = position_jitter(height = 0), 
              size = 1, alpha = 0.5) +
   labs(x = NULL, y = "Weight") +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 ]
 
@@ -467,7 +467,7 @@ ggplot(animals, aes(x = weight,
                     fill = animal_type)) +
   geom_density_ridges() +
   labs(x = "Weight", y = NULL) +
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 ]
 
@@ -510,7 +510,7 @@ gapminder_continents &lt;- gapminder %&gt;%
 ggplot(gapminder_continents, 
        aes(x = continent, y = n, fill = continent)) +
   geom_col() +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(x = NULL, y = "Number of countries")
 ```
 ]
@@ -535,7 +535,7 @@ ggplot(gapminder_continents,
        aes(x = continent, y = n, 
            color = continent)) +
   geom_pointrange(aes(ymin = 0, ymax = n)) +
-  guides(color = FALSE) +
+  guides(color = "none") +
   labs(x = NULL, y = "Number of countries")
 ```
 ]

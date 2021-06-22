@@ -137,7 +137,7 @@ ggplot(data = total_births_weekday,
        mapping = aes(x = day_of_week, y = total, fill = day_of_week)) +
   geom_col() +
   # Turn off the fill legend because it's redundant
-  guides(fill = FALSE)
+  guides(fill = "none")
 ```
 
 <img src="/example/04-example_files/figure-html/plot-bar-chart-1.png" width="576" style="display: block; margin: auto;" />
@@ -170,7 +170,7 @@ ggplot(data = total_births_weekday,
   # Use commas instead of scientific notation
   scale_y_continuous(labels = comma) +
   # Turn off the legend since the title shows what the orange is
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(title = "Weekends are unpopular times for giving birth",
        x = NULL, y = "Total births")
 ```
@@ -197,7 +197,7 @@ ggplot(data = total_births_weekday,
   # Use commas instead of scientific notation
   scale_y_continuous(labels = comma) +
   # Turn off the legend since the title shows what the orange is
-  guides(color = FALSE) +
+  guides(color = "none") +
   labs(title = "Weekends are unpopular times for giving birth",
        x = NULL, y = "Total births")
 ```
@@ -215,7 +215,7 @@ ggplot(data = births,
        mapping = aes(x = day_of_week, y = births, color = weekend)) +
   scale_color_manual(values = c("grey70", "#f2ad22")) +
   geom_point(size = 0.5, position = position_jitter(height = 0)) +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 <img src="/example/04-example_files/figure-html/strip-plot-1.png" width="576" style="display: block; margin: auto;" />
@@ -235,7 +235,7 @@ ggplot(data = births,
   scale_color_manual(values = c("grey70", "#f2ad22")) +
   # Make these points suuuper tiny
   geom_quasirandom(size = 0.0001) +
-  guides(color = FALSE)
+  guides(color = "none")
 ```
 
 <img src="/example/04-example_files/figure-html/beeswarm-plot-1.png" width="576" style="display: block; margin: auto;" />

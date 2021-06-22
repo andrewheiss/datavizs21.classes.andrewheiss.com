@@ -85,7 +85,7 @@ wdi_2019 <- wdi_clean %>%
 static_plot <- ggplot(wdi_2019, 
                       aes(y = fct_rev(region), x = prop_women_parl, color = region)) +
   geom_point(position = position_jitter(width = 0, height = 0.15, seed = 1234)) +
-  guides(color = FALSE) +
+  guides(color = "none") +
   scale_x_continuous(labels = percent) +
   # I used https://medialab.github.io/iwanthue/ to generate these colors
   scale_color_manual(values = c("#425300", "#e680ff", "#01bd71", "#ff3aad",
@@ -121,7 +121,7 @@ static_plot_toolip <- ggplot(wdi_2019,
                              aes(y = fct_rev(region), x = prop_women_parl, color = region)) +
   geom_point(aes(text = country),
              position = position_jitter(width = 0, height = 0.15, seed = 1234)) +
-  guides(color = FALSE) +
+  guides(color = "none") +
   scale_x_continuous(labels = percent) +
   # I used https://medialab.github.io/iwanthue/ to generate these colors
   scale_color_manual(values = c("#425300", "#e680ff", "#01bd71", "#ff3aad",
@@ -203,7 +203,7 @@ static_plot_toolip_fancy <- ggplot(wdi_2019,
                                        color = region)) +
   geom_point(aes(text = fancy_label),
              position = position_jitter(width = 0, height = 0.15, seed = 1234)) +
-  guides(color = FALSE) +
+  guides(color = "none") +
   scale_x_continuous(labels = percent) +
   # I used https://medialab.github.io/iwanthue/ to generate these colors
   scale_color_manual(values = c("#425300", "#e680ff", "#01bd71", "#ff3aad",

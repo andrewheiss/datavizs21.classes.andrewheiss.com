@@ -30,6 +30,13 @@
       "Repository": "CRAN",
       "Hash": "030aaec5bc6553f35347cbb1e70b1a17"
     },
+    "DT": {
+      "Package": "DT",
+      "Version": "0.18",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "a7d6660c869d4f41f856504828af4645"
+    },
     "GGally": {
       "Package": "GGally",
       "Version": "2.1.2",
@@ -226,10 +233,10 @@
     },
     "blogdown": {
       "Package": "blogdown",
-      "Version": "1.2",
+      "Version": "1.3",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "53420f3802e87f8670db68c3f3147880"
+      "Hash": "dc232d89c6552820c03a71a7e094c7f2"
     },
     "blscrapeR": {
       "Package": "blscrapeR",
@@ -1537,10 +1544,15 @@
     },
     "waffle": {
       "Package": "waffle",
-      "Version": "0.7.0",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Hash": "a4660b9502f987f6613bbb3ede52b0f6"
+      "Version": "1.0.1",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "waffle",
+      "RemoteUsername": "hrbrmstr",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "3f61463e6ab8d088ecff35db7cc1edfe633ee9f3",
+      "Hash": "50c3c422b1061d31431e21a22bb2265d"
     },
     "warp": {
       "Package": "warp",

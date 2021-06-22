@@ -317,7 +317,7 @@ ggplot(things_to_correlate_long,
   geom_point(aes(size = abs(cor))) +
   scale_color_gradient2(low = "#E16462", mid = "white", high = "#0D0887",
                         limits = c(-1, 1)) +
-  scale_size_area(max_size = 15, limits = c(-1, 1), guide = FALSE) +
+  scale_size_area(max_size = 15, limits = c(-1, 1), guide = "none") +
   labs(x = NULL, y = NULL) +
   coord_equal() +
   theme_minimal() +
@@ -620,7 +620,7 @@ ggplot(predicted_values_fancy, aes(x = windSpeed, y = .fitted)) +
   geom_line(aes(color = cloudCover_scaled), size = 1) +
   labs(x = "Wind speed (MPH)", y = "Predicted high temperature (F)") +
   theme_minimal() +
-  guides(fill = FALSE, color = FALSE) +
+  guides(fill = "none", color = "none") +
   facet_wrap(vars(cloudCover_scaled), nrow = 1)
 ```
 
