@@ -118,7 +118,7 @@ You will be graded based on completion using the standard ✓ system, but I'll p
 
 For this assignment, I am less concerned with detailed graphic design principles—select appropriate colors, change fonts if you're brave, and choose a nice ggplot theme and make some adjustments like moving the legend around (`theme(legend.position = "bottom")`).
 
-**The assignment is due by 11:59 PM on Friday, May 226**.
+**The assignment is due by 11:59 PM on Monday, July 5**.
 
 **Please seek out help when you need it!** You know enough R (and have enough examples of code from class and your readings) to be able to do this. Your project has to be turned in individually, and your visualization should be your own (i.e. if you work with others, don't all turn in the same graph), but you should work with others! Reach out to me for help too—I'm here to help!
 

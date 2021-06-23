@@ -79,7 +79,7 @@ You will be graded based on completion using the standard ✓ system, but I'll p
 
 For this assignment, I am less concerned with the code (that's why I gave most of it to you), and more concerned with the *design*. Choose good colors based on palettes. Choose good, clean fonts. Use the heck out of `theme()`. Add informative design elements in Illustrator/Inkscape/Gravit Designer. Make it look beautiful and CRAPpy. Refer to [the design resources here](/resource/design/).
 
-**The assignment is due by 11:59 PM on Friday, May 29**.
+**The assignment is due by 11:59 PM on Monday, July 19**.
 
 **Please seek out help when you need it!** You know enough R (and have enough examples of code from class and your readings) to be able to do this. Your project has to be turned in individually, and your visualization should be your own (i.e. if you work with others, don't all turn in the same graph), but you should work with others! Reach out to me for help too—I'm here to help!
 
