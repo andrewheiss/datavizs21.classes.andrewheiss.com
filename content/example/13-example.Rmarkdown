@@ -57,7 +57,7 @@ library(tidytext)    # For neat text things
 library(gutenbergr)  # For downloading books from Project Gutenberg
 ```
 
-We're going to use the **gutenbergr** package to download some books directly from Project Gutenberg. The IDs for these books come from the URLs at their website. For instance, [*Little Women* is book #514](https://www.gutenberg.org/ebooks/514). We'll store these books as `*_raw* and then clean them up later.
+We're going to use the **gutenbergr** package to download some books directly from Project Gutenberg. The IDs for these books come from the URLs at their website. For instance, [*Little Women* is book #514](https://www.gutenberg.org/ebooks/514). We'll store these books as `*_raw` and then clean them up later.
 
 ```{r get-text-fake, eval=FALSE}
 # 514 Little Women
@@ -209,6 +209,8 @@ tragedies_bigrams <- tragedies_raw %>%
   drop_na(text) %>% 
   # n = 2 here means bigrams. We could also make trigrams (n = 3) or any type of n-gram
   unnest_tokens(bigram, text, token = "ngrams", n = 2) %>% 
+  # Get rid of NAs in the new bigram column
+  drop_na(bigram) %>% 
   # Split the bigrams into two words so we can remove stopwords
   separate(bigram, c("word1", "word2"), sep = " ") %>% 
   filter(!word1 %in% stop_words$word,

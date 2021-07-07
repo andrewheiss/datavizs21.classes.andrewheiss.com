@@ -53,7 +53,7 @@ library(tidytext)    # For neat text things
 library(gutenbergr)  # For downloading books from Project Gutenberg
 ```
 
-We're going to use the **gutenbergr** package to download some books directly from Project Gutenberg. The IDs for these books come from the URLs at their website. For instance, [*Little Women* is book #514](https://www.gutenberg.org/ebooks/514). We'll store these books as `*_raw* and then clean them up later.
+We're going to use the **gutenbergr** package to download some books directly from Project Gutenberg. The IDs for these books come from the URLs at their website. For instance, [*Little Women* is book #514](https://www.gutenberg.org/ebooks/514). We'll store these books as `*_raw` and then clean them up later.
 
 
 ```r
@@ -251,7 +251,7 @@ Now we can plot these results, facetting and filling by title:
 ```r
 ggplot(top_words_tragedies, aes(y = fct_rev(word), x = n, fill = title)) + 
   geom_col() + 
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(y = "Count", x = NULL, 
        title = "15 most frequent words in four Shakespearean tragedies") +
   facet_wrap(vars(title), scales = "free_y") +
@@ -274,6 +274,8 @@ tragedies_bigrams <- tragedies_raw %>%
   drop_na(text) %>% 
   # n = 2 here means bigrams. We could also make trigrams (n = 3) or any type of n-gram
   unnest_tokens(bigram, text, token = "ngrams", n = 2) %>% 
+  # Get rid of NAs in the new bigram column
+  drop_na(bigram) %>% 
   # Split the bigrams into two words so we can remove stopwords
   separate(bigram, c("word1", "word2"), sep = " ") %>% 
   filter(!word1 %in% stop_words$word,
@@ -286,7 +288,7 @@ tragedies_bigrams
 ```
 
 ```
-## # A tibble: 13,283 x 3
+## # A tibble: 9,579 x 3
 ##    gutenberg_id title            bigram             
 ##           <dbl> <chr>            <chr>              
 ##  1         1513 Romeo and Juliet william shakespeare
@@ -294,12 +296,12 @@ tragedies_bigrams
 ##  3         1513 Romeo and Juliet escalus prince     
 ##  4         1513 Romeo and Juliet nobleman kinsman   
 ##  5         1513 Romeo and Juliet montague heads     
-##  6         1513 Romeo and Juliet NA NA              
-##  7         1513 Romeo and Juliet romeo son          
-##  8         1513 Romeo and Juliet mercutio kinsman   
-##  9         1513 Romeo and Juliet benvolio nephew    
-## 10         1513 Romeo and Juliet tybalt nephew      
-## # … with 13,273 more rows
+##  6         1513 Romeo and Juliet romeo son          
+##  7         1513 Romeo and Juliet mercutio kinsman   
+##  8         1513 Romeo and Juliet benvolio nephew    
+##  9         1513 Romeo and Juliet tybalt nephew      
+## 10         1513 Romeo and Juliet lady capulet       
+## # … with 9,569 more rows
 ```
 
 ```r
@@ -321,7 +323,7 @@ top_bigrams <- tragedies_bigrams %>%
 ```r
 ggplot(top_bigrams, aes(y = fct_rev(bigram), x = n, fill = title)) + 
   geom_col() + 
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(y = "Count", x = NULL, 
        title = "15 most frequent bigrams in four Shakespearean tragedies") +
   facet_wrap(vars(title), scales = "free") +
@@ -464,7 +466,7 @@ tragedy_tf_idf_plot <- tragedy_tf_idf %>%
 ggplot(tragedy_tf_idf_plot, 
        aes(y = fct_rev(word), x = tf_idf, fill = title)) +
   geom_col() +
-  guides(fill = FALSE) +
+  guides(fill = "none") +
   labs(x = "tf-idf", y = NULL) +
   facet_wrap(~ title, scales = "free") +
   theme_bw()
