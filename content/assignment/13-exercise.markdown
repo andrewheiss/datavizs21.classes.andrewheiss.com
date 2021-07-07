@@ -52,9 +52,11 @@ Write your reflection for the day's readings.
 
 ## Task 2: Word frequencies
 
-Download 4+ books by some author on [Project Gutenberg](http://www.gutenberg.org/). Jane Austen, Victor Hugo, Emily Brontë, Lucy Maud Montgomery, Arthur Conan Doyle, Mark Twain, Henry David Thoreau, Fyodor Dostoyevsky, Leo Tolstoy. Anyone. Just make sure it's all from the same author.
+Use the **gutenbergr** package to download 4+ books by some author on [Project Gutenberg](http://www.gutenberg.org/). Jane Austen, Victor Hugo, Emily Brontë, Lucy Maud Montgomery, Arthur Conan Doyle, Mark Twain, Henry David Thoreau, Fyodor Dostoyevsky, Leo Tolstoy. Anyone. Just make sure it's all from the same author. [The example page](/example/13-example/) shows how to do that.
 
-Make these two plots and describe what each tell about your author's books:
+Alternatively, you can try using text from a source other than Project Gutenberg. Check out, for instance, [**harrypotter**](https://github.com/bradleyboehmke/harrypotter) (the full text of all 7 Harry Potter books), [**quRan**](https://github.com/andrewheiss/quRan) (the full text of the Qur'an; [here's an example of some text analysis with it](https://www.andrewheiss.com/blog/2018/12/28/tidytext-pos-arabic/)), or [**scriptuRs**](https://github.com/andrewheiss/scriptuRs) (the full text of the King James Version of the Bible; [here's an example of some text analysis with it](https://www.andrewheiss.com/blog/2018/12/26/tidytext-pos-john/)).
+
+**Make these two plots and describe what each tell about your author's books:**
 
 1. Top 10 most frequent words *in each book*
 2. Top 10 most unique words *in each book* (i.e. tf-idf)
@@ -62,7 +64,7 @@ Make these two plots and describe what each tell about your author's books:
 
 ## 100% optional bonus fun tasks
 
-If you want, do some other things with the text you've downloaded. Make a "he verbs vs. she verbs" plot. Tag the parts of speech and find the most common verbs or nouns. Try some sentiment analysis. 
+If you want, do some other things with the text you've downloaded. Make a "he verbs vs. she verbs" plot. Tag the parts of speech and find the most common verbs or nouns. Try some sentiment analysis. Do something fun.
 
 
 ## Turning everything in
