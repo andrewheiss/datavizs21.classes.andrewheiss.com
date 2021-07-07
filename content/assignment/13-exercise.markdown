@@ -56,7 +56,7 @@ Use the **gutenbergr** package to download 4+ books by some author on [Project G
 
 Alternatively, you can try using text from a source other than Project Gutenberg. Check out, for instance, [**harrypotter**](https://github.com/bradleyboehmke/harrypotter) (the full text of all 7 Harry Potter books), [**quRan**](https://github.com/andrewheiss/quRan) (the full text of the Qur'an; [here's an example of some text analysis with it](https://www.andrewheiss.com/blog/2018/12/28/tidytext-pos-arabic/)), or [**scriptuRs**](https://github.com/andrewheiss/scriptuRs) (the full text of the King James Version of the Bible; [here's an example of some text analysis with it](https://www.andrewheiss.com/blog/2018/12/26/tidytext-pos-john/)).
 
-**Make these two plots and describe what each tell about your author's books:**
+**Make these two plots and describe what each tell about your author's books:** (you'll probably want to facet by book)
 
 1. Top 10 most frequent words *in each book*
 2. Top 10 most unique words *in each book* (i.e. tf-idf)
