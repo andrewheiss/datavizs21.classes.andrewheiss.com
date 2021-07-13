@@ -188,8 +188,10 @@ rivers_na <- read_sf(here::here("static", "data",
 lakes <- read_sf(here::here("static", "data", "ne_10m_lakes",
                             "ne_10m_lakes.shp"))
 
-ga_schools <- read_sf(here::here("static", "data","schools_2009", 
+ga_schools <- read_sf(here::here("static", "data", "schools_2009", 
                                  "DOE Schools 2009.shp"))
+
+geocoded_addresses <- read_csv(here::here("static", "data", "geocoded_addresses.csv"))
 ```
 
 ### Basic plotting
@@ -601,6 +603,82 @@ ggplot() +
   geom_sf(data = ga_cities_geometry, size = 3) +
   geom_sf_label(data = ga_cities_geometry, aes(label = city),
                 nudge_y = 0.2) +
+  theme_void()
+```
+
+### Automatic geoencoding by address
+
+Using `st_as_sf()` is neat when you have latitude and longitude data already, but what if you have a list of addresses or cities instead, with no fancy geographic information? It's easy enough to right click on Google Maps, but you don't really want to do that hundreds of times for large-scale data.
+
+Fortunately there are a bunch of different online geoencoding services that return GIS data for addresses and locations that you feed them, like magic. 
+
+The easiest way to use any of these services is to use the [**tidygeocoder**](https://jessecambon.github.io/tidygeocoder/) package, which connects with all these different free and paid services (run `?geo` in R for complete details):
+
+- `"osm"`: OpenStreetMap through [Nominatim](https://nominatim.org/). **FREE**.
+- `"census"`: [US Census](https://geocoding.geo.census.gov/). Geographic coverage is limited to the United States. **FREE**.
+- `"arcgis"`: [ArcGIS](https://developers.arcgis.com/rest/geocode/api-reference/overview-world-geocoding-service.htm). **FREE** and paid.
+- `"geocodio"`: [Geocodio](https://www.geocod.io/). Geographic coverage is limited to the United States and Canada. An API key must be stored in `"GEOCODIO_API_KEY"`.
+- `"iq"`: [Location IQ](https://locationiq.com/). An API key must be stored in `"LOCATIONIQ_API_KEY"`.
+- `"google"`: [Google](https://developers.google.com/maps/documentation/geocoding/overview). An API key must be stored in `"GOOGLEGEOCODE_API_KEY"`.
+- `"opencage"`: [OpenCage](https://opencagedata.com/). An API key must be stored in `"OPENCAGE_KEY"`.
+- `"mapbox"`: [Mapbox](https://docs.mapbox.com/api/search/). An API key must be stored in `"MAPBOX_API_KEY"`.
+- `"here"`: [HERE](https://developer.here.com/products/geocoding-and-search). An API key must be stored in `"HERE_API_KEY"`.
+- `"tomtom"`: [TomTom](https://developer.tomtom.com/search-api/search-api-documentation/geocoding). An API key must be stored in `"TOMTOM_API_KEY"`.
+- `"mapquest"`: [MapQuest](https://developer.mapquest.com/documentation/geocoding-api/). An API key must be stored in `"MAPQUEST_API_KEY"`.
+- `"bing"`: [Bing](https://docs.microsoft.com/en-us/bingmaps/rest-services/locations/). An API key must be stored in `"BINGMAPS_API_KEY"`.
+
+Not all services work equally well, and the free ones have rate limits (like, don't try to geocode a million rows of data with the US Census), so you'll have to play around with different services. You can also provide a list of services and **tidygeocoder** will cascade through them—if it can't geocode an address with OpenStreetMap, it can move on to the Census, then ArcGIS, and so on. You need to set the `cascade_order` argument in `geocode()` for this to work.
+
+Let's make a little dataset with some addresses to geocode: 
+
+```{r build-some-addresses}
+some_addresses <- tribble(
+  ~name,             ~address,
+  "The White House", "1600 Pennsylvania Ave NW, Washington, DC",
+  "The Andrew Young School of Public Policy", "14 Marietta Street NW, Atlanta, GA 30303"
+)
+
+some_addresses
+```
+
+To geocode these addresses, we can feed this data into `geocode()` and tell it to use the `address` column. We'll use the Census geocoding system for fun (surely they know where the White House is):
+
+```{r geocode-fake, eval=FALSE}
+geocoded_addresses <- some_addresses %>% 
+  geocode(address, method = "census")
+
+geocoded_addresses
+```
+
+```{r show-geocode, echo=FALSE}
+geocoded_addresses %>% 
+  select(name, lat, long)
+```
+
+It worked!
+
+Those are just numbers, though, and not the magical `geometry` column, so we need to use `st_as_sf()` to convert them to actual GIS data.
+
+```{r st-as-sf-geocoded}
+addresses_geometry <- geocoded_addresses %>% 
+  st_as_sf(coords = c("long", "lat"), crs = st_crs("EPSG:4326"))
+
+addresses_geometry %>% select(-address)
+```
+
+Let's plot these on a US map:
+
+```{r plot-geocoded-cities}
+ggplot() + 
+  geom_sf(data = lower_48, fill = "#192DA1", color = "white", size = 0.25) +
+  geom_sf(data = addresses_geometry, size = 5, color = "#FF851B") +
+  # Albers uses meters as its unit of measurement, so we need to nudge these
+  # labels up by a lot. I only settled on 175,000 here after a bunch of trial
+  # and error, adding single zeroes and rerunning the plot until the labels
+  # moved. 175,000 meters = 108.74 miles
+  geom_sf_label(data = addresses_geometry, aes(label = name),
+                size = 4, fill = "#FF851B", nudge_y = 175000) + 
+  coord_sf(crs = st_crs("ESRI:102003")) +  # Albers
   theme_void()
 ```
 

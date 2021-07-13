@@ -788,6 +788,113 @@ ggplot() +
 
 <img src="/example/12-example_files/figure-html/ga-with-cities-text-1.png" width="960" style="display: block; margin: auto;" />
 
+### Automatic geoencoding by address
+
+Using `st_as_sf()` is neat when you have latitude and longitude data already, but what if you have a list of addresses or cities instead, with no fancy geographic information? It's easy enough to right click on Google Maps, but you don't really want to do that hundreds of times for large-scale data.
+
+Fortunately there are a bunch of different online geoencoding services that return GIS data for addresses and locations that you feed them, like magic. 
+
+The easiest way to use any of these services is to use the [**tidygeocoder**](https://jessecambon.github.io/tidygeocoder/) package, which connects with all these different free and paid services (run `?geo` in R for complete details):
+
+- `"osm"`: OpenStreetMap through [Nominatim](https://nominatim.org/). **FREE**.
+- `"census"`: [US Census](https://geocoding.geo.census.gov/). Geographic coverage is limited to the United States. **FREE**.
+- `"arcgis"`: [ArcGIS](https://developers.arcgis.com/rest/geocode/api-reference/overview-world-geocoding-service.htm). **FREE** and paid.
+- `"geocodio"`: [Geocodio](https://www.geocod.io/). Geographic coverage is limited to the United States and Canada. An API key must be stored in `"GEOCODIO_API_KEY"`.
+- `"iq"`: [Location IQ](https://locationiq.com/). An API key must be stored in `"LOCATIONIQ_API_KEY"`.
+- `"google"`: [Google](https://developers.google.com/maps/documentation/geocoding/overview). An API key must be stored in `"GOOGLEGEOCODE_API_KEY"`.
+- `"opencage"`: [OpenCage](https://opencagedata.com/). An API key must be stored in `"OPENCAGE_KEY"`.
+- `"mapbox"`: [Mapbox](https://docs.mapbox.com/api/search/). An API key must be stored in `"MAPBOX_API_KEY"`.
+- `"here"`: [HERE](https://developer.here.com/products/geocoding-and-search). An API key must be stored in `"HERE_API_KEY"`.
+- `"tomtom"`: [TomTom](https://developer.tomtom.com/search-api/search-api-documentation/geocoding). An API key must be stored in `"TOMTOM_API_KEY"`.
+- `"mapquest"`: [MapQuest](https://developer.mapquest.com/documentation/geocoding-api/). An API key must be stored in `"MAPQUEST_API_KEY"`.
+- `"bing"`: [Bing](https://docs.microsoft.com/en-us/bingmaps/rest-services/locations/). An API key must be stored in `"BINGMAPS_API_KEY"`.
+
+Not all services work equally well, and the free ones have rate limits (like, don't try to geocode a million rows of data with the US Census), so you'll have to play around with different services. You can also provide a list of services and **tidygeocoder** will cascade through them—if it can't geocode an address with OpenStreetMap, it can move on to the Census, then ArcGIS, and so on. You need to set the `cascade_order` argument in `geocode()` for this to work.
+
+Let's make a little dataset with some addresses to geocode: 
+
+
+```r
+some_addresses <- tribble(
+  ~name,             ~address,
+  "The White House", "1600 Pennsylvania Ave NW, Washington, DC",
+  "The Andrew Young School of Public Policy", "14 Marietta Street NW, Atlanta, GA 30303"
+)
+
+some_addresses
+```
+
+```
+## # A tibble: 2 x 2
+##   name                                     address                                 
+##   <chr>                                    <chr>                                   
+## 1 The White House                          1600 Pennsylvania Ave NW, Washington, DC
+## 2 The Andrew Young School of Public Policy 14 Marietta Street NW, Atlanta, GA 30303
+```
+
+To geocode these addresses, we can feed this data into `geocode()` and tell it to use the `address` column. We'll use the Census geocoding system for fun (surely they know where the White House is):
+
+
+```r
+geocoded_addresses <- some_addresses %>% 
+  geocode(address, method = "census")
+
+geocoded_addresses
+```
+
+
+```
+## # A tibble: 2 x 3
+##   name                                       lat  long
+##   <chr>                                    <dbl> <dbl>
+## 1 The White House                           38.9 -77.0
+## 2 The Andrew Young School of Public Policy  33.8 -84.4
+```
+
+It worked!
+
+Those are just numbers, though, and not the magical `geometry` column, so we need to use `st_as_sf()` to convert them to actual GIS data.
+
+
+```r
+addresses_geometry <- geocoded_addresses %>% 
+  st_as_sf(coords = c("long", "lat"), crs = st_crs("EPSG:4326"))
+
+addresses_geometry %>% select(-address)
+```
+
+```
+## Simple feature collection with 2 features and 1 field
+## Geometry type: POINT
+## Dimension:     XY
+## Bounding box:  xmin: -84 ymin: 34 xmax: -77 ymax: 39
+## Geodetic CRS:  WGS 84
+## # A tibble: 2 x 2
+##   name                                        geometry
+##   <chr>                                    <POINT [°]>
+## 1 The White House                             (-77 39)
+## 2 The Andrew Young School of Public Policy    (-84 34)
+```
+
+Let's plot these on a US map:
+
+
+```r
+ggplot() + 
+  geom_sf(data = lower_48, fill = "#192DA1", color = "white", size = 0.25) +
+  geom_sf(data = addresses_geometry, size = 5, color = "#FF851B") +
+  # Albers uses meters as its unit of measurement, so we need to nudge these
+  # labels up by a lot. I only settled on 175,000 here after a bunch of trial
+  # and error, adding single zeroes and rerunning the plot until the labels
+  # moved. 175,000 meters = 108.74 miles
+  geom_sf_label(data = addresses_geometry, aes(label = name),
+                size = 4, fill = "#FF851B", nudge_y = 175000) + 
+  coord_sf(crs = st_crs("ESRI:102003")) +  # Albers
+  theme_void()
+```
+
+<img src="/example/12-example_files/figure-html/plot-geocoded-cities-1.png" width="576" style="display: block; margin: auto;" />
+
 ### Plotting other data on maps
 
 So far we've just plotted whatever data the shapefile creators decided to include and publish in their data. But what if you want to visualize some other variable on a map? We can do this by combining our shapefile data with any other kind of data, as long as the two have a shared column. For instance, we can make a choropleth map of life expectancy with data from the World Bank.
