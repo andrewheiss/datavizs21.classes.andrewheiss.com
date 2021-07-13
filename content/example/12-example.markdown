@@ -818,7 +818,7 @@ Let's make a little dataset with some addresses to geocode:
 some_addresses <- tribble(
   ~name,             ~address,
   "The White House", "1600 Pennsylvania Ave NW, Washington, DC",
-  "The Andrew Young School of Public Policy", "14 Marietta Street NW, Atlanta, GA 30303"
+  "The Andrew Young School of Policy Studies", "14 Marietta Street NW, Atlanta, GA 30303"
 )
 
 some_addresses
@@ -826,10 +826,10 @@ some_addresses
 
 ```
 ## # A tibble: 2 x 2
-##   name                                     address                                 
-##   <chr>                                    <chr>                                   
-## 1 The White House                          1600 Pennsylvania Ave NW, Washington, DC
-## 2 The Andrew Young School of Public Policy 14 Marietta Street NW, Atlanta, GA 30303
+##   name                                      address                                 
+##   <chr>                                     <chr>                                   
+## 1 The White House                           1600 Pennsylvania Ave NW, Washington, DC
+## 2 The Andrew Young School of Policy Studies 14 Marietta Street NW, Atlanta, GA 30303
 ```
 
 To geocode these addresses, we can feed this data into `geocode()` and tell it to use the `address` column. We'll use the Census geocoding system for fun (surely they know where the White House is):
@@ -845,10 +845,10 @@ geocoded_addresses
 
 ```
 ## # A tibble: 2 x 3
-##   name                                       lat  long
-##   <chr>                                    <dbl> <dbl>
-## 1 The White House                           38.9 -77.0
-## 2 The Andrew Young School of Public Policy  33.8 -84.4
+##   name                                        lat  long
+##   <chr>                                     <dbl> <dbl>
+## 1 The White House                            38.9 -77.0
+## 2 The Andrew Young School of Policy Studies  33.8 -84.4
 ```
 
 It worked!
@@ -870,10 +870,10 @@ addresses_geometry %>% select(-address)
 ## Bounding box:  xmin: -84 ymin: 34 xmax: -77 ymax: 39
 ## Geodetic CRS:  WGS 84
 ## # A tibble: 2 x 2
-##   name                                        geometry
-##   <chr>                                    <POINT [°]>
-## 1 The White House                             (-77 39)
-## 2 The Andrew Young School of Public Policy    (-84 34)
+##   name                                         geometry
+##   <chr>                                     <POINT [°]>
+## 1 The White House                              (-77 39)
+## 2 The Andrew Young School of Policy Studies    (-84 34)
 ```
 
 Let's plot these on a US map:

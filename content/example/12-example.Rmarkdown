@@ -635,7 +635,7 @@ Let's make a little dataset with some addresses to geocode:
 some_addresses <- tribble(
   ~name,             ~address,
   "The White House", "1600 Pennsylvania Ave NW, Washington, DC",
-  "The Andrew Young School of Public Policy", "14 Marietta Street NW, Atlanta, GA 30303"
+  "The Andrew Young School of Policy Studies", "14 Marietta Street NW, Atlanta, GA 30303"
 )
 
 some_addresses
